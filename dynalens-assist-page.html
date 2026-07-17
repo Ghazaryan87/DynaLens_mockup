@@ -192,6 +192,36 @@
   .nav-status--mp:hover{color:#F472B6}
   .nav-current--fo{color:#FFB546!important}
   .nav-current--as{color:#22D3EE!important}
+  /* ---------- PRODUCTS DROPDOWN (live apps) ---------- */
+  .nav-drop{position:relative}
+  .nav-drop>a::after{content:"\25BE";font-size:9px;margin-left:6px;opacity:.6;vertical-align:1px}
+  .drop-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60}
+  .nav-drop:hover .drop-panel,.nav-drop:focus-within .drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+  .drop-in{width:600px;background:rgba(10,18,71,.97);backdrop-filter:blur(18px);border:1px solid var(--line-strong);border-radius:18px;padding:14px;box-shadow:0 30px 70px -20px rgba(0,0,0,.7);display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .drop-item{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+  .drop-item:hover{background:rgba(255,255,255,.05);transform:translateY(-2px)}
+  .drop-item.fo:hover{border-color:rgba(255,181,70,.45)}
+  .drop-item.as:hover{border-color:rgba(34,211,238,.45)}
+  .drop-hd{display:flex;align-items:center;gap:10px}
+  .drop-glyph{width:36px;height:36px;flex-shrink:0;border-radius:10px;font-family:'Space Grotesk';font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:center}
+  .drop-glyph.fo{background:rgba(255,181,70,.12);border:1px solid rgba(255,181,70,.35);color:#FFB546}
+  .drop-glyph.as{background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);color:#22D3EE}
+  .drop-hd b{font-family:'Space Grotesk';font-weight:600;font-size:15.5px;color:#F5F7FF;flex:1}
+  .drop-pill{font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:100px;padding:3px 9px;white-space:nowrap}
+  .drop-pill.fo{color:#FFB546;border:1px solid rgba(255,181,70,.4);background:rgba(255,181,70,.1)}
+  .drop-pill.as{color:#22D3EE;border:1px solid rgba(34,211,238,.4);background:rgba(34,211,238,.1)}
+  .drop-item p{font-size:12.5px;color:#A6AED6;line-height:1.5;flex:1;margin:0}
+  .drop-cta{align-self:flex-start;font-family:'Inter';font-weight:600;font-size:12.5px;border-radius:9px;padding:8px 14px;transition:all .2s ease;white-space:nowrap}
+  .drop-cta.fo{border:1px solid #FFB546;color:#FFB546;background:rgba(255,181,70,.1)}
+  .drop-item.fo:hover .drop-cta.fo{background:#FFB546;color:#070B2E}
+  .drop-cta.as{border:1px solid #22D3EE;color:#22D3EE;background:rgba(34,211,238,.1)}
+  .drop-item.as:hover .drop-cta.as{background:#22D3EE;color:#070B2E}
+  .drop-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 6px 0;flex-wrap:wrap}
+  .drop-foot .dfl{font-size:11.5px;color:#6B73A0}
+  .drop-foot a{font-size:12px;font-weight:600;color:#A6AED6;text-decoration:none;transition:color .2s}
+  .drop-foot a:hover{color:#F5F7FF}
+  @media(max-width:820px){.drop-panel{display:none}}
+
 
   /* ---------- FINOPS PRODUCT THEME (amber accent page-wide) ---------- */
   .theme-finops{--cyan:#FFB546;--cyan-soft:rgba(255,181,70,.12)}
@@ -746,7 +776,27 @@
   <div class="nav-in">
     <a href="/" class="logo" style="text-decoration:none;color:inherit"><span class="dot"></span>DynaLens</a>
     <div class="nav-links">
-      <a href="/#suite">Products</a>
+      <div class="nav-drop">
+        <a href="/#suite">Products</a>
+        <div class="drop-panel">
+          <div class="drop-in">
+            <a class="drop-item fo" href="/finops">
+              <span class="drop-hd"><span class="drop-glyph fo">FO</span><b>FinOps</b><span class="drop-pill fo">Live</span></span>
+              <p>See exactly what drives your Dynatrace DPS bill, forecast where it's heading, and fix cost drivers in one click — before the invoice surprises you.</p>
+              <span class="drop-cta fo">Open FinOps →</span>
+            </a>
+            <a class="drop-item as" href="/assist">
+              <span class="drop-hd"><span class="drop-glyph as">AS</span><b>Assist</b><span class="drop-pill as">Live</span></span>
+              <p>Ask your Dynatrace environment questions in plain English — grounded answers, RCA reports, and briefings for the whole team, with the LLM on your premises.</p>
+              <span class="drop-cta as">Open Assist →</span>
+            </a>
+            <div class="drop-foot">
+              <span class="dfl">Signal · Flow · Map — coming soon</span>
+              <a href="/#suite">See the full suite →</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <a href="/finops" class="nav-status nav-status--fo">FinOps</a>
       <a href="/assist" class="nav-status nav-status--as nav-current--as">Assist</a>
       <a href="/#security">Security</a>
