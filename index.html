@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DynaLens — A suite of focused apps for Dynatrace</title>
+<title>DynaLens — Dynatrace Apps for Cost Optimization & AI-Assisted Operations | YourCompass</title>
+<meta name="description" content="DynaLens is a suite of Dynatrace apps by YourCompass: FinOps for DPS cost optimization and forecasting, Assist for AI-assisted operations in plain English — SaaS or fully on-prem, with GCC data residency. Built by a Dynatrace Premier Partner.">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is DynaLens?", "acceptedAnswer": {"@type": "Answer", "text": "DynaLens is a suite of apps that extends Dynatrace: FinOps for DPS cost attribution, forecasting, and optimization; Assist for plain-English operations backed by an on-prem LLM; and upcoming apps for incident communications, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner."}}, {"@type": "Question", "name": "How does DynaLens reduce Dynatrace costs?", "acceptedAnswer": {"@type": "Answer", "text": "FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimization actions scored by savings, impact, and effort \u2014 several applicable back into your Dynatrace tenant with one click."}}, {"@type": "Question", "name": "Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and on-prem environments, including air-gapped deployments with a locally hosted LLM."}}, {"@type": "Question", "name": "Can Dynatrace partners manage multiple customers with DynaLens?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FinOps is multi-tenant by design: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer a partner operates."}}, {"@type": "Question", "name": "Does our data leave our environment?", "acceptedAnswer": {"@type": "Answer", "text": "Dynatrace access is read-only by default and isolated per customer. On-premises deployment offers full feature parity, Assist runs its LLM locally, and GCC data residency is available in the UAE and KSA."}}, {"@type": "Question", "name": "How is DynaLens licensed?", "acceptedAnswer": {"@type": "Answer", "text": "Each app is licensed as a subscription with free trial and demo tiers. Enterprise and partner arrangements, including multi-tenant and bespoke terms, are handled directly."}}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -681,6 +685,283 @@
   @media(max-width:380px){
     .built-stats{grid-template-columns:1fr}
   }
+
+  /* ═══════════════ GLASSMORPHISM LAYER ═══════════════ */
+  /* ambient color fields — the glass needs color behind it to refract */
+  section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(34,211,238,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.10), transparent 62%)}
+  .theme-finops section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(255,181,70,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.09), transparent 62%)}
+  .section-light{background:
+    radial-gradient(640px 400px at 10% 12%, rgba(12,123,158,.10), transparent 60%),
+    radial-gradient(720px 480px at 90% 88%, rgba(110,92,224,.10), transparent 62%),
+    radial-gradient(900px 480px at 88% -8%, rgba(12,123,158,.05), transparent 60%),
+    linear-gradient(180deg, #F2F4FA, var(--surface-0) 18%, #EAEEF6)}
+
+  /* ---- dark glass surfaces ---- */
+  .soonapp,.scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
+  .video-frame,.clip,.shot,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
+  .integ-row span,.drop-in,.nav-mobile{
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.13);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09)}
+  .final-box{
+    background:linear-gradient(160deg, rgba(34,211,238,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.1)}
+  .theme-finops .final-box{
+    background:linear-gradient(160deg, rgba(255,181,70,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14)}
+  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
+  .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+  .btn-ghost{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.18)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .fv-stat,.av-block,.reco{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
+  .clip .cframe,.shot .ss-frame,.video-frame .vt~*{background:transparent}
+  .clip .cframe,.shot .ss-frame{background:rgba(255,255,255,.02)}
+
+  /* ---- light glass surfaces (frosted white) ---- */
+  .section-light .soonapp,.section-light .scard,.section-light .seccard,.section-light .step,
+  .section-light .faq details,.section-light .shot,.section-light .integ-row span,
+  .section-light .dps-table-wrap,.section-light .hiw-cta,.section-light .video-frame,
+  .section-light .pbadge,.section-light .clip{
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(16px) saturate(170%);
+    -webkit-backdrop-filter:blur(16px) saturate(170%);
+    border-color:rgba(255,255,255,.85);
+    box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
+  .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .shot:hover{background:rgba(255,255,255,.72)}
+  .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
+  .section-light .btn-ghost{
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.9);color:var(--text)}
+  .section-light .btn-ghost:hover{background:rgba(255,255,255,.75)}
+  /* the dark Assist Q&A screenshot panel stays dark — re-assert over generic glass */
+  .section-light .assist-visual{
+    background:linear-gradient(160deg, rgba(14,26,102,.92), rgba(7,11,46,.94));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(120,140,255,.3)}
+
+  /* partner strip as a glass band */
+  .partner-strip{
+    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(16px) saturate(150%);
+    -webkit-backdrop-filter:blur(16px) saturate(150%)}
+
+
+  /* ---- problem/value-gap cards ---- */
+  .gap-kick{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.09em;color:var(--text-faint);text-transform:uppercase;display:block;margin-bottom:10px}
+  .symp{margin-top:14px;display:flex;flex-direction:column;gap:7px;padding-top:12px;border-top:1px solid var(--line)}
+  .symp span{font-size:12.5px;color:var(--text-faint);padding-left:15px;position:relative;line-height:1.45}
+  .symp span::before{content:"";position:absolute;left:0;top:6.5px;width:5px;height:5px;border-radius:2px;background:var(--cyan);opacity:.55}
+
+
+  .trust.spec span{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.02em}
+
+  .hero-lede{font-family:'Space Grotesk';font-size:clamp(17px,1.9vw,21px);font-weight:500;color:var(--text);line-height:1.45;margin:18px 0 14px;max-width:520px;letter-spacing:-.01em}
+
+  /* ---- problem ledger ---- */
+  .pled{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+  .pled-row{display:grid;grid-template-columns:44px 1.05fr 1.45fr auto;gap:20px;align-items:start;padding:20px 24px;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.3), inset 0 1px 0 rgba(255,255,255,.09);transition:background .2s,border-color .2s}
+  .pled-row:hover{background:rgba(255,255,255,.085);border-color:rgba(255,255,255,.2)}
+  .pled-num{font-family:'JetBrains Mono';font-size:12px;color:var(--text-faint);padding-top:3px}
+  .pled-p{font-family:'Space Grotesk';font-weight:600;font-size:16.5px;line-height:1.35;color:var(--text);letter-spacing:-.015em}
+  .pled-s{font-size:13.5px;color:var(--text-dim);line-height:1.55}
+  .pled-s b{color:var(--text);font-weight:600}
+  .pled-tag{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:100px;padding:4px 11px;white-space:nowrap;justify-self:end}
+  .pled-tag.fo{color:#FFB546;border:1px solid rgba(255,181,70,.4);background:rgba(255,181,70,.1)}
+  .pled-tag.as{color:#22D3EE;border:1px solid rgba(34,211,238,.4);background:rgba(34,211,238,.1)}
+  .pled-tag.rm{color:#9B8CFF;border:1px solid rgba(155,140,255,.4);background:rgba(155,140,255,.1)}
+  @media(max-width:860px){.pled-row{grid-template-columns:1fr;gap:10px;padding:18px}.pled-num{display:none}.pled-tag{justify-self:start}}
+
+  /* ---- problems: vertical two-column tabs ---- */
+  .pver-label{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9B8CFF;border:1px dashed rgba(155,140,255,.5);border-radius:8px;padding:6px 12px;display:inline-block;margin-bottom:20px}
+  .ptabs{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:22px;align-items:stretch}
+  .ptab-list{display:flex;flex-direction:column;gap:10px}
+  .ptab-item{position:relative;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
+  .ptab-item::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background .2s}
+  .ptab-item:hover{background:rgba(255,255,255,.07);color:var(--text)}
+  .ptab-item.active{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);color:var(--text)}
+  .ptab-item.active[data-app="fo"]::before{background:#FFB546}
+  .ptab-item.active[data-app="as"]::before{background:#22D3EE}
+  .ptab-item.active[data-app="rm"]::before{background:#9B8CFF}
+  .ptab-item .pt-app{display:block;font-family:'JetBrains Mono';font-weight:400;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;color:var(--text-faint)}
+  .ptab-item.active[data-app="fo"] .pt-app{color:#FFB546}
+  .ptab-item.active[data-app="as"] .pt-app{color:#22D3EE}
+  .ptab-item.active[data-app="rm"] .pt-app{color:#9B8CFF}
+  .ppanel{border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09);padding:30px 34px;display:flex;flex-direction:column}
+  .ppanel-item{display:none;flex-direction:column;flex:1}
+  .ppanel-item.active{display:flex}
+  .ppanel-kick{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
+  .ppanel-kick.fo{color:#FFB546}.ppanel-kick.as{color:#22D3EE}.ppanel-kick.rm{color:#9B8CFF}
+  .ppanel h3{font-family:'Space Grotesk';font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.02em;margin-bottom:14px;color:var(--text)}
+  .ppanel .pp-sol{font-size:14.5px;color:var(--text-dim);line-height:1.65;margin-bottom:18px}
+  .ppanel .pp-sol b{color:var(--text);font-weight:600}
+  .ppanel .pp-pts{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+  .ppanel .pp-pts span{font-size:13px;color:var(--text-dim);padding-left:16px;position:relative;line-height:1.5}
+  .ppanel .pp-pts span::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:2px;background:currentColor;opacity:.5}
+  .ppanel .pp-cta{margin-top:auto}
+  @media(max-width:860px){.ptabs{grid-template-columns:1fr}.ppanel{padding:22px}}
+
+  /* ---- visual roadmap cards ---- */
+  .rmv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rmv-card{border:1px solid rgba(255,255,255,.85);border-radius:18px;background:rgba(255,255,255,.55);backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);box-shadow:0 2px 6px rgba(16,24,64,.05),0 20px 44px -18px rgba(16,24,64,.16),inset 0 1px 0 rgba(255,255,255,.95);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,background .25s}
+  .rmv-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.72)}
+  .rmv-hd{display:flex;align-items:center;gap:12px;padding:18px 20px 14px}
+  .rmv-hd .sa-glyph{width:42px;height:42px;font-size:15px;border-radius:12px}
+  .rmv-hd .nm{font-family:'Space Grotesk';font-weight:600;font-size:18px;color:var(--text);flex:1}
+  .rmv-frame{position:relative;margin:0 20px;border-radius:12px;overflow:hidden;border:1px solid rgba(110,92,224,.3);aspect-ratio:16/10;background:linear-gradient(160deg,#151F6E,#0A1140);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+  .rmv-frame .rp{width:46px;height:46px;border-radius:50%;background:rgba(155,140,255,.14);border:1.5px solid rgba(155,140,255,.5);display:flex;align-items:center;justify-content:center}
+  .rmv-frame .rp svg{width:16px;height:16px;fill:#9B8CFF;margin-left:2px}
+  .rmv-frame .rl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#9B8CFF}
+  .rmv-cap{padding:14px 20px 20px;font-size:13.5px;color:var(--text-dim);line-height:1.5}
+  .rmv-foot{padding:0 20px 20px;margin-top:auto}
+  @media(max-width:860px){.rmv{grid-template-columns:1fr}}
+
+  /* ---- FAQ redesign ---- */
+  .faqx{display:grid;grid-template-columns:minmax(280px,0.9fr) 1.6fr;gap:44px;align-items:start}
+  .faqx-left{position:sticky;top:96px}
+  .faqx-cta{margin-top:26px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.3),inset 0 1px 0 rgba(255,255,255,.09);padding:22px}
+  .faqx-cta b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:16px;color:var(--text);margin-bottom:6px}
+  .faqx-cta p{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:16px}
+  .faqx .faq{max-width:none}
+  .faqx .faq summary{gap:16px;justify-content:flex-start}
+  .faqx .faq summary .qn{font-family:'JetBrains Mono';font-weight:400;font-size:11.5px;color:var(--text-faint);flex-shrink:0;padding-top:3px}
+  .faqx .faq summary .qt{flex:1}
+  .faqx .faq .faq-a{padding-left:52px}
+  @media(max-width:900px){.faqx{grid-template-columns:1fr;gap:28px}.faqx-left{position:static}.faqx .faq .faq-a{padding-left:22px}}
+
+  /* ---- accordion v2 ---- */
+  .acc-item{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.25),inset 0 1px 0 rgba(255,255,255,.08);margin-bottom:12px;overflow:hidden;transition:border-color .3s,background .3s}
+  .acc-item::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:rgba(255,255,255,.1);transition:background .3s}
+  .acc-item:hover{background:rgba(255,255,255,.075)}
+  .acc-item.open{background:rgba(255,255,255,.085);border-color:rgba(34,211,238,.32)}
+  .acc-item.open::before{background:var(--cyan)}
+  .acc-q{width:100%;background:none;border:0;display:flex;align-items:center;gap:16px;padding:20px 22px 20px 26px;cursor:pointer;text-align:left}
+  .acc-q .qn{font-family:'JetBrains Mono';font-size:11.5px;color:var(--text-faint);flex-shrink:0;transition:color .3s}
+  .acc-item.open .acc-q .qn{color:var(--cyan)}
+  .acc-q .qt{flex:1;font-family:'Space Grotesk';font-weight:600;font-size:15.5px;line-height:1.4;color:var(--text);letter-spacing:-.01em}
+  .acc-x{width:32px;height:32px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.4,0,.2,1),border-color .3s,background .3s}
+  .acc-x svg{width:13px;height:13px;stroke:var(--text-dim);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+  .acc-item.open .acc-x{transform:rotate(180deg);border-color:rgba(34,211,238,.45);background:var(--cyan-soft)}
+  .acc-item.open .acc-x svg{stroke:var(--cyan)}
+  .acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.4,0,.2,1)}
+  .acc-item.open .acc-body{grid-template-rows:1fr}
+  .acc-a{overflow:hidden}
+  .acc-a-in{padding:0 60px 22px 63px;font-size:14px;color:var(--text-dim);line-height:1.65;border-top:1px solid rgba(255,255,255,.08);margin:0 22px 0 26px;padding:14px 24px 22px 37px}
+  @media(max-width:640px){.acc-q{padding:17px 16px 17px 20px}.acc-a-in{margin:0 14px 0 18px;padding:12px 4px 18px 27px}}
+
+  /* ---- problem recognition wall ---- */
+  .pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+  .pw-chip{position:relative;display:flex;flex-direction:column;gap:8px;padding:18px 20px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.05);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+  .pw-chip::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px}
+  .pw-chip.fo::before{background:#FFB546}
+  .pw-chip.as::before{background:#22D3EE}
+  .pw-chip.rm::before{background:#9B8CFF}
+  .pw-chip .pw-q{font-family:'Space Grotesk';font-weight:600;font-size:15px;line-height:1.4;color:var(--text);letter-spacing:-.01em}
+  .pw-chip .pw-app{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint)}
+  .pw-chip.fo .pw-app{color:#FFB546}.pw-chip.as .pw-app{color:#22D3EE}.pw-chip.rm .pw-app{color:#9B8CFF}
+  .pw-bridge{display:flex;align-items:center;justify-content:center;text-align:center;padding:18px 20px;border:1px dashed rgba(255,255,255,.22);border-radius:14px;font-family:'Space Grotesk';font-weight:600;font-size:15px;color:var(--cyan);text-decoration:none;transition:background .2s,border-color .2s}
+  .pw-bridge:hover{background:rgba(34,211,238,.07);border-color:rgba(34,211,238,.45)}
+  @media(max-width:900px){.pwall{grid-template-columns:1fr}}
+
+  /* ---- problems tabs on light ---- */
+  .section-light .ptab-item{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.85);box-shadow:0 2px 6px rgba(16,24,64,.05),inset 0 1px 0 rgba(255,255,255,.95);color:var(--text-dim)}
+  .section-light .ptab-item::before{background:rgba(16,24,64,.12)}
+  .section-light .ptab-item:hover{background:rgba(255,255,255,.75)}
+  .section-light .ptab-item.active{background:rgba(255,255,255,.85);border-color:rgba(16,24,64,.14)}
+  .section-light .ptab-item.active[data-app="fo"] .pt-app{color:#A55C00}
+  .section-light .ptab-item.active[data-app="as"] .pt-app{color:#0C7B9E}
+  .section-light .ptab-item.active[data-app="rm"] .pt-app{color:#6E5CE0}
+  .section-light .ppanel{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.85);box-shadow:0 2px 6px rgba(16,24,64,.05),0 20px 44px -18px rgba(16,24,64,.16),inset 0 1px 0 rgba(255,255,255,.95)}
+  .section-light .ppanel-kick.fo{color:#A55C00}
+  .section-light .ppanel-kick.as{color:#0C7B9E}
+  .section-light .ppanel-kick.rm{color:#6E5CE0}
+  /* ---- finops amber elements on light ---- */
+  .section-light .app-eye.fo{color:#A55C00;border-color:rgba(165,92,0,.3);background:rgba(165,92,0,.08)}
+  /* ---- finops visual as dark screenshot inside light section ---- */
+  .section-light .finops-visual{background:linear-gradient(160deg,rgba(14,26,102,.92),rgba(7,11,46,.94));border-color:rgba(120,140,255,.3);box-shadow:var(--shadow-lg)}
+  .section-light .finops-visual .fv-stat{background:rgba(255,255,255,.03);border-color:rgba(120,140,255,.14)}
+  .section-light .finops-visual .fv-stat .l{color:#6B73A0}
+  .section-light .finops-visual .fv-stat .v{color:#F5F7FF}
+  .section-light .finops-visual .save-cap{color:#6B73A0}
+
+  /* ---- prominent dark tabs on light (overrides earlier light-tab rules) ---- */
+  .section-light .ptab-item{background:linear-gradient(160deg,rgba(16,26,92,.95),rgba(8,12,52,.97));border-color:rgba(120,140,255,.25);color:#A6AED6;box-shadow:0 10px 26px -12px rgba(8,12,52,.5);transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s,border-color .3s,color .3s}
+  .section-light .ptab-item::before{background:rgba(255,255,255,.16)}
+  .section-light .ptab-item .pt-app{color:#6B73A0}
+  .section-light .ptab-item:hover{background:linear-gradient(160deg,rgba(20,32,110,.97),rgba(10,16,64,.98));color:#F5F7FF;transform:translateX(4px)}
+  .section-light .ptab-item.active{color:#F5F7FF;transform:translateX(8px)}
+  .section-light .ptab-item.active[data-app="fo"]{border-color:rgba(255,181,70,.55);box-shadow:0 14px 34px -10px rgba(255,181,70,.45)}
+  .section-light .ptab-item.active[data-app="as"]{border-color:rgba(34,211,238,.55);box-shadow:0 14px 34px -10px rgba(34,211,238,.45)}
+  .section-light .ptab-item.active[data-app="rm"]{border-color:rgba(155,140,255,.55);box-shadow:0 14px 34px -10px rgba(155,140,255,.45)}
+  .section-light .ptab-item.active[data-app="fo"] .pt-app{color:#FFB546}
+  .section-light .ptab-item.active[data-app="as"] .pt-app{color:#22D3EE}
+  .section-light .ptab-item.active[data-app="rm"] .pt-app{color:#9B8CFF}
+
+  /* ---- fix: active tab must stay dark; descriptions more prominent ---- */
+  .section-light .ptab-item.active{background:linear-gradient(160deg,rgba(26,40,138,.97),rgba(13,20,80,.98))}
+  .section-light .ptab-item.active:hover{background:linear-gradient(160deg,rgba(26,40,138,.97),rgba(13,20,80,.98))}
+  .ptab-item .pt-app{font-size:11.5px;font-weight:600;letter-spacing:.06em;margin-top:8px}
+  .section-light .ptab-item .pt-app{color:#8E97C9}
+
+  /* ---- tab descriptions as color-coded status pills ---- */
+  .ptab-item .pt-app{display:inline-block;padding:4px 11px;border-radius:100px;font-size:10.5px;font-weight:700;letter-spacing:.07em;margin-top:10px}
+  .ptab-item[data-app="fo"] .pt-app{color:#FFB546!important;background:rgba(255,181,70,.13);border:1px solid rgba(255,181,70,.4)}
+  .ptab-item[data-app="as"] .pt-app{color:#22D3EE!important;background:rgba(34,211,238,.13);border:1px solid rgba(34,211,238,.4)}
+  .ptab-item[data-app="rm"] .pt-app{color:#9B8CFF!important;background:rgba(155,140,255,.13);border:1px solid rgba(155,140,255,.4)}
+  .ptab-item.active[data-app="fo"] .pt-app{background:rgba(255,181,70,.22);border-color:rgba(255,181,70,.65)}
+  .ptab-item.active[data-app="as"] .pt-app{background:rgba(34,211,238,.22);border-color:rgba(34,211,238,.65)}
+  .ptab-item.active[data-app="rm"] .pt-app{background:rgba(155,140,255,.22);border-color:rgba(155,140,255,.65)}
+
+  /* ---- rebalance: problems loud, tags whisper, panel prominent ---- */
+  /* tags: barely visible */
+  .ptab-item[data-app] .pt-app{color:#7E87B8!important;background:none!important;border:none!important;padding:0;border-radius:0;font-size:9.5px;font-weight:500;letter-spacing:.09em;margin-top:8px;opacity:.6}
+  .ptab-item.active[data-app] .pt-app{color:#9AA4D6!important;background:none!important;border:none!important;opacity:.75}
+  /* problem statements: immediately readable */
+  .section-light .ptab-item{color:#EDF0FF;font-size:16px;line-height:1.35}
+  .section-light .ptab-item:hover{color:#FFFFFF}
+  .section-light .ptab-item.active{color:#FFFFFF}
+  /* opened panel: more prominent */
+  .section-light .ppanel{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.95);padding:36px 40px}
+  .ppanel h3{font-size:clamp(22px,2.5vw,30px);margin-bottom:16px}
+  .ppanel .pp-sol{font-size:15.5px;line-height:1.7}
+  .section-light .ppanel .pp-sol{color:#3A4165}
+  .section-light .ppanel .pp-sol b{color:#141A3C}
+  .ppanel .pp-pts span{font-size:13.5px}
+  .section-light .ppanel .pp-pts span{color:#4A5178}
+  .ppanel-kick{font-size:11px;margin-bottom:16px}
+  @media(max-width:860px){.section-light .ppanel{padding:24px}}
+
+  /* ---- panel CTAs as solid buttons ---- */
+  .pp-cta{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:12px 22px;border-radius:12px;font-family:'Inter';font-weight:600;font-size:13.5px;text-decoration:none;margin-top:auto;transition:transform .2s,box-shadow .2s,filter .2s}
+  .pp-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .pp-cta-fo{background:#FFB546;color:#070B2E;box-shadow:0 6px 18px -6px rgba(255,181,70,.5)}
+  .pp-cta-fo:hover{box-shadow:0 12px 28px -8px rgba(255,181,70,.6)}
+  .pp-cta-as{background:#22D3EE;color:#070B2E;box-shadow:0 6px 18px -6px rgba(34,211,238,.5)}
+  .pp-cta-as:hover{box-shadow:0 12px 28px -8px rgba(34,211,238,.6)}
+  .pp-cta-rm{background:#6E5CE0;color:#fff;box-shadow:0 6px 18px -6px rgba(110,92,224,.55)}
+  .pp-cta-rm:hover{box-shadow:0 12px 28px -8px rgba(110,92,224,.65)}
+
+  /* ---- readable eyebrows: pill treatment everywhere ---- */
+  .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
+  .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
+  .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
+  .roadmap-zone .sec-eye{color:#6E5CE0;background:rgba(110,92,224,.09);border-color:rgba(110,92,224,.38)}
 </style>
 </head>
 <body>
@@ -737,157 +1018,51 @@
   </div>
 </nav>
 
-<!-- HERO CAROUSEL -->
+<!-- HERO -->
 <header class="hero">
-  <div class="wrap carousel" id="carousel">
-    <div class="slides">
-
-      <!-- SLIDE 1 — THE SUITE -->
-      <div class="slide active" data-slide="0">
-        <div class="hero-grid">
-          <div>
-            <span class="slide-tag t-suite">DynaLens by YourCompass</span>
-            <h1>Get more out of <span class="hl">Dynatrace.</span></h1>
-            <p class="hero-sub">A suite of focused apps — built by the practitioners who deploy Dynatrace for enterprises and governments across the GCC.</p>
-            <div class="hero-actions">
-              <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
-              <a href="#suite" class="btn btn-ghost btn-lg">Explore the suite</a>
-            </div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="slide-tag t-suite">DynaLens by YourCompass — the Dynatrace app suite</span>
+        <h1>Your Dynatrace estate, <span class="hl">at full value.</span></h1>
+        <p class="hero-lede">Everything Dynatrace sees. Everything you should be getting. DynaLens closes the gap.</p>
+        <p class="hero-sub" style="max-width:480px">Lower your DPS spend. Ask your estate anything in plain English. Automate the manual work. Read-only by design — SaaS to air-gapped, from a Dynatrace Premier Partner.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
+          <a href="#" class="btn btn-ghost btn-lg">Book a Demo</a>
+        </div>
+        
+      </div>
+      <div class="dash hero-visual" id="dash">
+        <div class="dash-bar">
+          <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
+          <span class="dash-url mono">dynalens.ai/app — cost overview</span>
+        </div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="label">DPS consumption</div>
+            <div class="val mono" data-count="2.4" data-suffix="M">0</div>
+            <div class="delta up">▼ 12% vs forecast</div>
           </div>
-          <div class="dash hero-visual" id="dash">
-            <div class="dash-bar">
-              <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-              <span class="dash-url mono">dynalens.ai/app — cost overview</span>
-            </div>
-            <div class="stat-row">
-              <div class="stat">
-                <div class="label">DPS consumption</div>
-                <div class="val mono" data-count="2.4" data-suffix="M">0</div>
-                <div class="delta up">▼ 12% vs forecast</div>
-              </div>
-              <div class="stat">
-                <div class="label">Forecast EOY</div>
-                <div class="val mono" data-count="1.1" data-prefix="$" data-suffix="M">0</div>
-                <div class="delta dim">Within commitment</div>
-              </div>
-              <div class="stat">
-                <div class="label">Savings found</div>
-                <div class="val mono amber" data-count="184" data-prefix="$" data-suffix="K">0</div>
-                <div class="delta dim">Across 3 tenants</div>
-              </div>
-            </div>
-            <div class="reco-head">
-              <span class="t">Top recommendations</span>
-              <span class="c">12 actionable</span>
-            </div>
-            <div class="reco" data-delay="0"><span class="name">Reduce log retention on prod-eu</span><span class="save mono">$42K/yr</span></div>
-            <div class="reco" data-delay="150"><span class="name">Disable DDU on legacy hosts</span><span class="save mono">$28K/yr</span></div>
-            <div class="reco" data-delay="300"><span class="name">Consolidate synthetic monitors</span><span class="save mono">$19K/yr</span></div>
-            <div class="tenants">
-              <div class="tenant"><span class="tn">prod-eu</span><span class="tbar"><i data-w="100"></i></span><span class="tval">1.7M</span></div>
-              <div class="tenant"><span class="tn">prod-gcc</span><span class="tbar"><i data-w="65"></i></span><span class="tval">1.1M</span></div>
-              <div class="tenant"><span class="tn">staging</span><span class="tbar"><i data-w="25"></i></span><span class="tval">420K</span></div>
-              <div class="tenant"><span class="tn">dev</span><span class="tbar"><i data-w="16"></i></span><span class="tval">280K</span></div>
-            </div>
+          <div class="stat">
+            <div class="label">Forecast EOY</div>
+            <div class="val mono" data-count="1.1" data-prefix="$" data-suffix="M">0</div>
+            <div class="delta dim">Within commitment</div>
+          </div>
+          <div class="stat">
+            <div class="label">Savings found</div>
+            <div class="val mono amber" data-count="184" data-prefix="$" data-suffix="K">0</div>
+            <div class="delta dim">Across 3 tenants</div>
           </div>
         </div>
-      </div>
-
-      <!-- SLIDE 2 — DPS FINOPS -->
-      <div class="slide" data-slide="1">
-        <div class="hero-grid">
-          <div>
-            <span class="slide-tag t-finops">Available now · FinOps</span>
-            <h1>Stop guessing what's driving your <span class="hl" style="color:var(--amber)">Dynatrace bill.</span></h1>
-            <p class="hero-sub">A FinOps control layer on top of Dynatrace. Attribute every DPS unit to an owner, apply optimisation actions in-platform, and forecast your annual commitment with confidence.</p>
-            <div class="hero-actions">
-              <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
-              <a href="dynalens-finops-page.html" class="btn btn-ghost btn-lg">Explore FinOps</a>
-            </div>
-          </div>
-          <div class="finops-visual hero-visual">
-            <div style="font-size:12px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em">Savings identified · YTD</div>
-            <div class="big-save">$184K</div>
-            <div class="save-cap">across 3 tenants — validated in-platform</div>
-            <div class="fv-row" style="margin-bottom:10px">
-              <div class="fv-stat"><div class="l">DPS tracked</div><div class="v">2.4M</div></div>
-              <div class="fv-stat"><div class="l">Forecast EOY</div><div class="v" style="color:var(--cyan)">$1.1M</div></div>
-            </div>
-            <div class="fv-row">
-              <div class="fv-stat"><div class="l">Actions ready</div><div class="v">12</div></div>
-              <div class="fv-stat"><div class="l">Vs forecast</div><div class="v" style="color:var(--green)">−12%</div></div>
-            </div>
-          </div>
+        <div class="reco-head">
+          <span class="t">Top recommendations</span>
+          <span class="c">12 actionable</span>
         </div>
-      </div>
-
-      <!-- SLIDE 3 — ASSIST -->
-      <div class="slide" data-slide="2">
-        <div class="hero-grid">
-          <div>
-            <span class="slide-tag t-suite">Available now · Assist</span>
-            <h1>Ask Dynatrace a question. <span class="hl">Get an answer.</span></h1>
-            <p class="hero-sub">An AI operations teammate that queries your Dynatrace environment in plain English — no DQL, no dashboard hunting. Grounded answers during incidents, reviews, or routine checks.</p>
-            <div class="hero-actions">
-              <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
-              <a href="dynalens-assist-page.html" class="btn btn-ghost btn-lg">Explore Assist</a>
-            </div>
-          </div>
-          <div class="assist-visual hero-visual">
-            <div class="dash-bar">
-              <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-              <span class="dash-url mono">dynalens.ai/assist — ask anything</span>
-            </div>
-            <div class="av-block">
-              <span class="av-label me">You asked</span>
-              <p class="av-text q">"Why did checkout latency spike in prod-eu last night?"</p>
-            </div>
-            <div class="av-block">
-              <span class="av-label ai">Assist</span>
-              <p class="av-text">Payment-service p95 latency rose 3.2× at 02:14 UTC after a dependent Redis node failed over. Traffic rerouted automatically within 40s — no customer-facing errors recorded.</p>
-            </div>
-            <div class="fv-row" style="margin-top:2px">
-              <div class="fv-stat"><div class="l">Answered in</div><div class="v" style="color:var(--cyan)">4.2s</div></div>
-              <div class="fv-stat"><div class="l">Sources queried</div><div class="v">3</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 4 — UPCOMING APPS -->
-      <div class="slide" data-slide="3">
-        <div class="hero-grid">
-          <div>
-            <span class="slide-tag t-soon">Coming soon · The roadmap</span>
-            <h1>Two apps live. <span class="hl">Three more coming.</span></h1>
-            <p class="hero-sub">FinOps and Assist are already part of the suite. Signal, Flow, and Map are next — closing the remaining gaps Dynatrace teams solve by hand today.</p>
-            <div class="hero-actions">
-              <a href="#suite" class="btn btn-primary btn-lg">See what's coming →</a>
-              <a href="#" class="btn btn-ghost btn-lg">Get notified</a>
-            </div>
-          </div>
-          <div class="soon-stack hero-visual">
-            <div class="soon-tile"><span class="st-glyph">SG</span><h4>Signal</h4><p>Plain-language incident briefs from your problem feed.</p></div>
-            <div class="soon-tile"><span class="st-glyph">FL</span><h4>Flow</h4><p>Bidirectional Dynatrace ↔ ITSM ticket automation.</p></div>
-            <div class="soon-tile"><span class="st-glyph">MP</span><h4>Map</h4><p>Business-service views on top of Smartscape.</p></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- carousel controls -->
-    <div class="carousel-ctl">
-      <div class="dots">
-        <button class="dot-btn active" data-go="0" aria-label="Slide 1"></button>
-        <button class="dot-btn" data-go="1" aria-label="Slide 2"></button>
-        <button class="dot-btn" data-go="2" aria-label="Slide 3"></button>
-        <button class="dot-btn" data-go="3" aria-label="Slide 4"></button>
-      </div>
-      <span class="slide-counter"><b id="sc-cur">01</b> / 04</span>
-      <div class="arrows">
-        <button class="arrow" id="prev" aria-label="Previous">‹</button>
-        <button class="arrow" id="next" aria-label="Next">›</button>
+        <div class="reco" data-delay="0"><span class="name">Reduce log retention on prod-eu</span><span class="save mono">$42K/yr</span></div>
+        <div class="reco" data-delay="150"><span class="name">Disable DDU on legacy hosts</span><span class="save mono">$28K/yr</span></div>
+        <div class="reco" data-delay="300"><span class="name">Consolidate synthetic monitors</span><span class="save mono">$19K/yr</span></div>
+                <div style="margin-top:10px;font-size:10.5px;color:var(--text-faint);text-align:right">Illustrative data</div>
       </div>
     </div>
   </div>
@@ -906,13 +1081,89 @@
   </div>
 </div>
 
+<!-- THE PROBLEMS -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:760px">
+      <span class="sec-eye">The problems</span>
+      <h2>The problems we built DynaLens for.</h2>
+      <p class="sec-sub">Dynatrace sees everything. But around it, the same problems repeat in every estate we run — a gap between what the platform captures and what the organisation gets. Pick a problem; see how it gets closed.</p>
+    </div>
+
+    <div class="ptabs reveal">
+      <div class="ptab-list" id="ptabList">
+        <div class="ptab-item active" data-app="fo" data-idx="0">Your DPS bill is a surprise.<span class="pt-app">FinOps · Live</span></div>
+        <div class="ptab-item" data-app="fo" data-idx="1">You know cost is high — not which change safely reduces it.<span class="pt-app">FinOps · Live</span></div>
+        <div class="ptab-item" data-app="as" data-idx="2">Only two people in the company can query the platform.<span class="pt-app">Assist · Live</span></div>
+        <div class="ptab-item" data-app="rm" data-idx="3">Incident updates are written by hand — mid-incident.<span class="pt-app">Signal · Coming soon</span></div>
+        <div class="ptab-item" data-app="rm" data-idx="4">Dynatrace and your ITSM don't talk to each other.<span class="pt-app">Flow · Coming soon</span></div>
+      </div>
+      <div class="ppanel" id="ppanel">
+        <div class="ppanel-item active">
+          <span class="ppanel-kick fo">FinOps · Available now</span>
+          <h3>See the overrun months before the invoice does.</h3>
+          <p class="pp-sol">DPS consumption is attributed <b>continuously</b> — by capability, account, and environment — so every line item has an owner. Monte Carlo forecasting projects spend against your annual commitment with confidence bands, and alerts fire the moment a forecast crosses 25, 50, 75, or 90% of budget.</p>
+          <div class="pp-pts" style="color:#FFB546">
+            <span>Cost broken down by Full-Stack, Kubernetes, RUM, Synthetic, Logs, and every other DPS capability</span>
+            <span>Predicted exhaustion date when you're on track to run out early</span>
+            <span>Weekly digest across every tenant you operate</span>
+          </div>
+          <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+        </div>
+        <div class="ppanel-item">
+          <span class="ppanel-kick fo">FinOps · Available now</span>
+          <h3>From "spend is high" to an applied fix — in one click.</h3>
+          <p class="pp-sol">A recommendation catalog evaluates each environment and proposes concrete actions — monitoring modes, namespace scoping, session sampling, synthetic frequency — each scored by <b>savings, impact, and effort</b>. Selected fixes are written back into your live tenant with one click, gated behind permissions and safety checks.</p>
+          <div class="pp-pts" style="color:#FFB546">
+            <span>Every recommendation priced in dollars and % of licence value</span>
+            <span>Safety checks before any change — e.g. confirming a host is offline first</span>
+            <span>Full audit trail: actor, action, before/after diff</span>
+          </div>
+          <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+        </div>
+        <div class="ppanel-item">
+          <span class="ppanel-kick as">Assist · Available now</span>
+          <h3>Everyone gets to ask. In plain English.</h3>
+          <p class="pp-sol">Assist plans and executes the right Dynatrace API calls from a natural-language question — in Microsoft Teams or a dedicated web UI — and answers with charts and evidence. Incident investigations start from ranked, cited hypotheses instead of a blank page. And the LLM runs <b>entirely on your own hardware</b>.</p>
+          <div class="pp-pts" style="color:#22D3EE">
+            <span>No DQL or dashboard fluency required</span>
+            <span>RCA co-pilot recalls similar past incidents automatically</span>
+            <span>On-prem or air-gapped — nothing sent to external AI services</span>
+          </div>
+          <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
+        </div>
+        <div class="ppanel-item">
+          <span class="ppanel-kick rm">Signal · Coming soon</span>
+          <h3>Incident briefs that write themselves.</h3>
+          <p class="pp-sol">While your team works the incident, Signal turns the Dynatrace problem feed into <b>plain-language updates</b> — what broke, who's affected, what's being done — ready for stakeholders, status pages, and post-incident review. No engineer pulled off the fix to write comms.</p>
+          <div class="pp-pts" style="color:#9B8CFF">
+            <span>Stakeholder-ready summaries from the live problem feed</span>
+            <span>Consistent comms across every incident and every team</span>
+          </div>
+          <a href="#suite" class="pp-cta pp-cta-rm">Join early access →</a>
+        </div>
+        <div class="ppanel-item">
+          <span class="ppanel-kick rm">Flow · Coming soon</span>
+          <h3>Close the loop between Dynatrace and your ITSM.</h3>
+          <p class="pp-sol">Flow keeps Dynatrace problems and ServiceNow/Jira tickets in sync <b>automatically</b> — created, enriched with context, updated, and resolved without copy-paste. The audit trail your process requires, without the manual glue that slows it down.</p>
+          <div class="pp-pts" style="color:#9B8CFF">
+            <span>Tickets created and enriched from Dynatrace problems automatically</span>
+            <span>Status flows both ways — resolve once, closed everywhere</span>
+          </div>
+          <a href="#suite" class="pp-cta pp-cta-rm">Join early access →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SUITE OVERVIEW -->
-<section class="blk section-light" id="suite">
+<section class="blk" id="suite">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-eye">The Suite</span>
-      <h2>Five tools. One Dynatrace estate.</h2>
-      <p class="sec-sub">Each app solves a specific gap that Dynatrace customers work around today with scripts, spreadsheets, and runbooks.</p>
+      <span class="sec-eye">The Suite — the answer</span>
+      <h2>One app suite. Every problem covered.</h2>
+      <p class="sec-sub"><b>FinOps</b> owns the cost problems — attribution, forecasting, one-click optimisation. <b>Assist</b> owns the knowledge problems — plain-English answers, RCA, automated briefings. <b>Signal</b>, <b>Flow</b>, and <b>Map</b> will own the remaining manual work — incident comms, ITSM sync, business-service views. Every app works for a single estate or across many customer tenants.</p>
     </div>
     <div class="suite reveal">
       <a href="dynalens-finops-page.html" class="scard live">
@@ -945,13 +1196,13 @@
 </section>
 
 <!-- FINOPS — LIVE PRODUCT SECTION -->
-<section class="blk app-sec" id="finops">
+<section class="blk section-light app-sec" id="finops">
   <div class="wrap">
     <div class="app reveal">
       <div class="app-copy">
         <span class="app-eye fo">● Available now · FinOps</span>
         <h3>Stop guessing what's driving your Dynatrace bill.</h3>
-        <p class="app-intro">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly back into your live tenant — so you find out about overruns before the invoice, not after.</p>
+        <p class="app-intro">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly back into your live tenant — so you find out about overruns before the invoice, not after. Built for platform teams running one estate — and partners managing many.</p>
         <ul class="app-list">
           <li class="fo">Real-time cost &amp; usage attribution across every DPS capability and tenant</li>
           <li class="fo">Forecasting with proactive alerts at 25/50/75/90% of budget</li>
@@ -964,7 +1215,7 @@
       </div>
       <div>
         <div class="finops-visual">
-          <div style="font-size:12px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em">Savings identified · YTD</div>
+          <div style="font-size:12px;color:#6B73A0;text-transform:uppercase;letter-spacing:.08em">Savings identified · YTD</div>
           <div class="big-save">$184K</div>
           <div class="save-cap">across 3 tenants — validated in-platform</div>
           <div class="fv-row" style="margin-bottom:10px">
@@ -975,6 +1226,7 @@
             <div class="fv-stat"><div class="l">Actions ready</div><div class="v">12</div></div>
             <div class="fv-stat"><div class="l">Vs forecast</div><div class="v" style="color:var(--green)">−12%</div></div>
           </div>
+          <div style="margin-top:10px;font-size:10.5px;color:#6B73A0;text-align:right">Illustrative data</div>
         </div>
       </div>
     </div>
@@ -982,7 +1234,7 @@
 </section>
 
 <!-- ASSIST — LIVE PRODUCT SECTION -->
-<section class="blk section-light app-sec" id="assist">
+<section class="blk app-sec" id="assist">
   <div class="wrap">
     <div class="app flip reveal">
       <div class="app-copy">
@@ -1026,148 +1278,106 @@
 <!-- COMING SOON -->
 <section class="blk section-light roadmap-zone">
   <div class="wrap">
-
-    <div class="sec-head reveal" style="margin-bottom:30px;max-width:720px">
+    <div class="sec-head reveal" style="margin-bottom:26px;max-width:640px">
       <span class="sec-eye">The roadmap · Coming soon</span>
-      <h2 style="font-size:clamp(24px,2.8vw,34px)">Two lenses live. Three more on the way.</h2>
-      <p class="sec-sub">FinOps and Assist are already part of the suite. Every remaining app starts the same way — a real, recurring problem we watched Dynatrace teams solve by hand. Here's what's next, and how it'll help.</p>
+      <h2 style="font-size:clamp(24px,2.8vw,34px)">Three more lenses on the way.</h2>
     </div>
-    <div class="rm-carousel reveal" id="rmCarousel">
-     <div class="rm-viewport">
-      <div class="rm-track" id="rmTrack">
-
-       <!-- SLIDE 1 — Signal + Flow -->
-       <div class="rm-slide">
-        <div class="rm-pair">
-
-      <!-- SIGNAL -->
-      <div class="soonapp" id="signal">
-        <div class="sa-hd">
+    <div class="rmv reveal">
+      <div class="rmv-card">
+        <div class="rmv-hd">
           <span class="sa-glyph">SG</span>
-          <span class="sa-title">
-            <div class="top"><span class="nm">Signal</span><span class="sa-pill">Coming soon</span></div>
-            <span class="sa-cat">Incident intelligence</span>
-          </span>
+          <span class="nm">Signal</span>
+          <span class="sa-pill">Coming soon</span>
         </div>
-        <div class="sa-body">
-          <div class="sa-problem">
-            <span class="pl">The problem</span>
-            <p>A Davis problem fires at 3am. The on-call engineer opens a wall of metrics, entities, and events — and burns the first ten minutes of the incident just working out what's actually broken and who needs to know.</p>
-          </div>
-          <p class="sa-sol">Signal reads the problem the moment it opens and writes the brief for you: <b>a plain-language summary of what happened, what it affects, and the most likely cause</b> — routed to the right people before anyone has to ask.</p>
-          <div class="sa-caps">
-            <div class="ch">What you get</div>
-            <ul>
-              <li>Incident summaries generated from Davis problem cards</li>
-              <li>Audience-aware views: on-call detail, lead summary, exec rollup</li>
-              <li>Delivered to email, Teams, Slack, or your ITSM</li>
-            </ul>
-          </div>
+        <div class="rmv-frame">
+          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="rl">Concept preview</span>
         </div>
-        <div class="sa-foot">
-          <span class="waitnote">Join the early-access list</span>
-          <a href="#" class="btn-notify">Notify me →</a>
-        </div>
+        <p class="rmv-cap">Incident briefs that write themselves — stakeholder-ready updates from your live problem feed.</p>
+        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
       </div>
-
-      <!-- FLOW -->
-      <div class="soonapp" id="flow">
-        <div class="sa-hd">
+      <div class="rmv-card">
+        <div class="rmv-hd">
           <span class="sa-glyph">FL</span>
-          <span class="sa-title">
-            <div class="top"><span class="nm">Flow</span><span class="sa-pill">Coming soon</span></div>
-            <span class="sa-cat">ITSM automation</span>
-          </span>
+          <span class="nm">Flow</span>
+          <span class="sa-pill">Coming soon</span>
         </div>
-        <div class="sa-body">
-          <div class="sa-problem">
-            <span class="pl">The problem</span>
-            <p>Dynatrace sees the problem first — but the ticket still gets raised by hand. Someone copies the details into ServiceNow, someone else forgets to close it, and the audit trail between monitoring and resolution quietly falls apart.</p>
-          </div>
-          <p class="sa-sol">Flow makes the link automatic and two-way: <b>a problem opens a ticket, a resolution closes it</b>, and every ticket carries the full Dynatrace context, timeline, and root cause with it.</p>
-          <div class="sa-caps">
-            <div class="ch">What you get</div>
-            <ul>
-              <li>Auto-created tickets in ServiceNow, Jira, or any ITSM</li>
-              <li>Auto-close on resolution, with timeline and root cause attached</li>
-              <li>Routing rules by severity, team ownership, and environment</li>
-            </ul>
-          </div>
+        <div class="rmv-frame">
+          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="rl">Concept preview</span>
         </div>
-        <div class="sa-foot">
-          <span class="waitnote">Join the early-access list</span>
-          <a href="#" class="btn-notify">Notify me →</a>
-        </div>
+        <p class="rmv-cap">Dynatrace ↔ ITSM, closed loop — tickets created, enriched, and resolved without copy-paste.</p>
+        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
       </div>
-
-       </div><!-- /rm-pair -->
-       </div><!-- /SLIDE 1 -->
-
-       <!-- SLIDE 2 — Map -->
-       <div class="rm-slide">
-        <div class="rm-pair single">
-
-      <!-- MAP -->
-      <div class="soonapp" id="map">
-        <div class="sa-hd">
+      <div class="rmv-card">
+        <div class="rmv-hd">
           <span class="sa-glyph">MP</span>
-          <span class="sa-title">
-            <div class="top"><span class="nm">Map</span><span class="sa-pill">Coming soon</span></div>
-            <span class="sa-cat">Business-service mapping</span>
-          </span>
+          <span class="nm">Map</span>
+          <span class="sa-pill">Coming soon</span>
         </div>
-        <div class="sa-body">
-          <div class="sa-problem">
-            <span class="pl">The problem</span>
-            <p>Smartscape knows every host, process, and service — but the business asks "is payments healthy?", not "how is prod-eu-k8s-node-07?". Translating infrastructure topology into something a stakeholder understands is still a manual, out-of-date slide deck.</p>
-          </div>
-          <p class="sa-sol">Map sits on top of Smartscape and lets you name reality: <b>group the underlying entities into the business services people actually care about</b>, then watch health, SLOs, and problems through that lens.</p>
-          <div class="sa-caps">
-            <div class="ch">What you get</div>
-            <ul>
-              <li>Business services composed from live Smartscape entities</li>
-              <li>Health, SLO status, and active problems in business terms</li>
-              <li>Shareable views for stakeholders without a Dynatrace seat</li>
-            </ul>
-          </div>
+        <div class="rmv-frame">
+          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="rl">Concept preview</span>
         </div>
-        <div class="sa-foot">
-          <span class="waitnote">Join the early-access list</span>
-          <a href="#" class="btn-notify">Notify me →</a>
-        </div>
+        <p class="rmv-cap">Business-service views on Smartscape — what the estate means, not just what it monitors.</p>
+        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
       </div>
-
-       </div><!-- /rm-pair -->
-       </div><!-- /SLIDE 2 -->
-
-      </div><!-- /rm-track -->
-     </div><!-- /rm-viewport -->
-
-     <div class="rm-ctl">
-       <button class="rm-arrow" id="rmPrev" aria-label="Previous">‹</button>
-       <div class="rm-dots">
-         <button class="rm-dot active" data-rm="0" aria-label="Apps 1–2"></button>
-         <button class="rm-dot" data-rm="1" aria-label="Apps 3–4"></button>
-       </div>
-       <span class="rm-counter"><b id="rmCur">1</b> / 2</span>
-       <button class="rm-arrow" id="rmNext" aria-label="Next">›</button>
-     </div>
-    </div><!-- /rm-carousel -->
-
+    </div>
   </div>
 </section>
 
 <!-- DEPLOY -->
-<section class="blk">
+
+
+
+
+<!-- SECURITY -->
+<section class="blk" id="security">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-eye">Deployment</span>
-      <h2>Deploy where your data lives.</h2>
+      <span class="sec-eye">Security &amp; Sovereignty</span>
+      <h2>Your data stays yours.</h2>
+      <p class="sec-sub">Designed for GCC enterprise and public-sector buyers from day one — and deployable wherever your data has to live.</p>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="seccard">
+        <div class="ico">
+          <!-- lock: read-only -->
+          <svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h4>Read-only access</h4>
+        <p>We never write to your Dynatrace environment. You provide an API token — and you can revoke it at any time.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <!-- shield: isolation -->
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg>
+        </div>
+        <h4>Isolated by design</h4>
+        <p>One Keycloak realm per customer. Schema-level data separation in PostgreSQL. Your data never touches another tenant's.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <!-- globe + pin: sovereignty -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9z"/></svg>
+        </div>
+        <h4>Sovereignty options</h4>
+        <p>GCC data residency in UAE and KSA. On-premises deployment available for air-gapped and regulated environments.</p>
+      </div>
+    </div>
+    <div class="sec-head reveal" style="margin-top:44px;margin-bottom:18px">
+      <h3 style="font-family:'Space Grotesk';font-size:clamp(18px,2vw,23px)">Deploy where your data lives.</h3>
     </div>
     <div class="deploy reveal">
       <div class="dcard"><div class="dt">SaaS</div><p>Fully managed. Sign up, connect your Dynatrace tenant, start optimising. No infrastructure to manage.</p></div>
       <div class="dcard"><div class="dt">On-premises</div><p>Air-gapped deployment for regulated workloads and sovereign environments. Full feature parity.</p></div>
       <div class="dcard"><div class="dt">GCC Data Residency</div><p>UAE and KSA regions available for Enterprise. Built for public-sector and financial-services customers.</p></div>
+    </div>
+    <div class="sec-foot reveal">
+      <div class="sec-foot-note">
+        <span class="cl">Aligned with</span> UAE PDPL &amp; KSA PDPPL · SOC 2 Type II in progress (bridge letter on request) · encryption in transit and at rest.
+      </div>
+      <a href="#" class="link-cta">See the full security architecture →</a>
     </div>
   </div>
 </section>
@@ -1232,58 +1442,99 @@
   </div>
 </section>
 
-<!-- SECURITY -->
-<section class="blk" id="security">
+<!-- FAQ -->
+<section class="blk">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="sec-eye">Security &amp; Sovereignty</span>
-      <h2>Your data stays yours.</h2>
-      <p class="sec-sub">Designed for GCC enterprise and public-sector buyers from day one.</p>
-    </div>
-    <div class="sec-grid reveal">
-      <div class="seccard">
-        <div class="ico">
-          <!-- lock: read-only -->
-          <svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+    <div class="faqx">
+      <div class="faqx-left reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="sec-eye">FAQ</span>
+          <h2>Questions, answered.</h2>
+          <p class="sec-sub">The ones every evaluation asks — from platform teams and partners alike.</p>
         </div>
-        <h4>Read-only access</h4>
-        <p>We never write to your Dynatrace environment. You provide an API token — and you can revoke it at any time.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <!-- shield: isolation -->
-          <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg>
+        <div class="faqx-cta">
+          <b>Still have questions?</b>
+          <p>Talk directly to the engineers who build and run DynaLens — no sales script.</p>
+          <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px">Book a Demo →</a>
         </div>
-        <h4>Isolated by design</h4>
-        <p>One Keycloak realm per customer. Schema-level data separation in PostgreSQL. Your data never touches another tenant's.</p>
       </div>
-      <div class="seccard">
-        <div class="ico">
-          <!-- globe + pin: sovereignty -->
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9z"/></svg>
+      <div class="faq reveal" id="faqAcc">
+        <div class="acc-item open">
+          <button class="acc-q" aria-expanded="true">
+            <span class="qn">01</span>
+            <span class="qt">What is DynaLens?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner.</div></div></div>
         </div>
-        <h4>Sovereignty options</h4>
-        <p>GCC data residency in UAE and KSA. On-premises deployment available for air-gapped and regulated environments.</p>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">02</span>
+            <span class="qt">How does DynaLens reduce Dynatrace costs?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it.</div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">03</span>
+            <span class="qt">Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM.</div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">04</span>
+            <span class="qt">We're a Dynatrace partner — can we manage multiple customers?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate.</div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">05</span>
+            <span class="qt">Does our data leave our environment?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA.</div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">06</span>
+            <span class="qt">How is DynaLens licensed?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team.</div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false">
+            <span class="qn">07</span>
+            <span class="qt">How do we get started?</span>
+            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates.</div></div></div>
+        </div>
       </div>
-    </div>
-    <div class="sec-foot reveal">
-      <div class="sec-foot-note">
-        <span class="cl">Aligned with</span> UAE PDPL &amp; KSA PDPPL · SOC 2 Type II in progress (bridge letter on request) · encryption in transit and at rest.
-      </div>
-      <a href="#" class="link-cta">See the full security architecture →</a>
     </div>
   </div>
 </section>
+
+
 
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
     <div class="final-box reveal">
-      <h2>Ready to take control of your Dynatrace DPS spend?</h2>
-      <p>Start a free trial in minutes, or talk to our FinOps team.</p>
+      <h2>Get more out of Dynatrace — starting today.</h2>
+      <p>Start a free trial in minutes, or book a demo with the team that builds and runs it.</p>
       <div class="hero-actions">
         <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
         <a href="#" class="btn btn-ghost btn-lg">Book a Demo</a>
+      </div>
+      <div style="display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px">
+        <a href="dynalens-finops-page.html" class="link-cta">Cut my DPS costs → FinOps</a>
+        <a href="dynalens-assist-page.html" class="link-cta">Give my team answers → Assist</a>
       </div>
     </div>
   </div>
@@ -1345,58 +1596,34 @@
     }));
   })();
 
-  // ---------- HERO CAROUSEL ----------
-  const slides=[...document.querySelectorAll('.slide')];
-  const dotBtns=[...document.querySelectorAll('.dot-btn')];
-  const scCur=document.getElementById('sc-cur');
-  let idx=0, timer=null, dashDone=false;
-  const DURATION=6000;
-
-  function go(n){
-    idx=(n+slides.length)%slides.length;
-    slides.forEach((s,i)=>s.classList.toggle('active',i===idx));
-    dotBtns.forEach((d,i)=>d.classList.toggle('active',i===idx));
-    scCur.textContent=String(idx+1).padStart(2,'0');
-    if(idx===0 && !dashDone){ animateDash(); dashDone=true; }
-    restart();
-  }
-  function next(){ go(idx+1); }
-  function prev(){ go(idx-1); }
-  function restart(){
-    clearInterval(timer);
-    // re-trigger the dot fill animation
-    const active=dotBtns[idx];
-    active.classList.remove('active'); void active.offsetWidth; active.classList.add('active');
-    timer=setInterval(next,DURATION);
-  }
-  document.getElementById('next').onclick=next;
-  document.getElementById('prev').onclick=prev;
-  dotBtns.forEach(d=>d.onclick=()=>go(parseInt(d.dataset.go)));
-
-  const car=document.getElementById('carousel');
-  car.addEventListener('mouseenter',()=>clearInterval(timer));
-  car.addEventListener('mouseleave',()=>{timer=setInterval(next,DURATION);});
-
-  // start
-  timer=setInterval(next,DURATION);
-  // fire dash counters on load (slide 1 is visible)
+  // fire dash counters on load
+  let dashDone=false;
   window.addEventListener('load',()=>{ if(!dashDone){animateDash();dashDone=true;} });
 
-  // ---------- ROADMAP CAROUSEL (2 slides) ----------
+
+
+  // ---------- FAQ ACCORDION ----------
   (function(){
-    const track=document.getElementById('rmTrack');
-    const dots=[...document.querySelectorAll('.rm-dot')];
-    const cur=document.getElementById('rmCur');
-    let i=0;
-    function set(n){
-      i=(n+2)%2;
-      track.style.transform='translateX(-'+(i*100)+'%)';
-      dots.forEach((d,k)=>d.classList.toggle('active',k===i));
-      cur.textContent=i+1;
-    }
-    document.getElementById('rmNext').onclick=()=>set(i+1);
-    document.getElementById('rmPrev').onclick=()=>set(i-1);
-    dots.forEach(d=>d.onclick=()=>set(parseInt(d.dataset.rm)));
+    const items=document.querySelectorAll('#faqAcc .acc-item');
+    items.forEach(it=>{
+      it.querySelector('.acc-q').addEventListener('click',()=>{
+        const isOpen=it.classList.contains('open');
+        items.forEach(x=>{x.classList.remove('open');x.querySelector('.acc-q').setAttribute('aria-expanded','false');});
+        if(!isOpen){it.classList.add('open');it.querySelector('.acc-q').setAttribute('aria-expanded','true');}
+      });
+    });
+  })();
+  // ---------- PROBLEM TABS ----------
+  (function(){
+    const tabs=document.querySelectorAll('#ptabList .ptab-item');
+    const panels=document.querySelectorAll('#ppanel .ppanel-item');
+    if(!tabs.length) return;
+    tabs.forEach(t=>t.addEventListener('click',()=>{
+      tabs.forEach(x=>x.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      t.classList.add('active');
+      panels[parseInt(t.dataset.idx)].classList.add('active');
+    }));
   })();
 </script>
 

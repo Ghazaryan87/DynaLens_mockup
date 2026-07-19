@@ -768,6 +768,90 @@
   .suite.compact h3{font-size:16.5px}
   .suite.compact p{font-size:12.5px}
 
+
+  /* ═══════════════ GLASSMORPHISM LAYER ═══════════════ */
+  /* ambient color fields — the glass needs color behind it to refract */
+  section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(34,211,238,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.10), transparent 62%)}
+  .theme-finops section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(255,181,70,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.09), transparent 62%)}
+  .section-light{background:
+    radial-gradient(640px 400px at 10% 12%, rgba(12,123,158,.10), transparent 60%),
+    radial-gradient(720px 480px at 90% 88%, rgba(110,92,224,.10), transparent 62%),
+    radial-gradient(900px 480px at 88% -8%, rgba(12,123,158,.05), transparent 60%),
+    linear-gradient(180deg, #F2F4FA, var(--surface-0) 18%, #EAEEF6)}
+
+  /* ---- dark glass surfaces ---- */
+  .soonapp,.scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
+  .video-frame,.clip,.shot,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
+  .integ-row span,.drop-in,.nav-mobile{
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.13);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09)}
+  .final-box{
+    background:linear-gradient(160deg, rgba(34,211,238,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.1)}
+  .theme-finops .final-box{
+    background:linear-gradient(160deg, rgba(255,181,70,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14)}
+  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
+  .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+  .btn-ghost{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.18)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .fv-stat,.av-block,.reco{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
+  .clip .cframe,.shot .ss-frame,.video-frame .vt~*{background:transparent}
+  .clip .cframe,.shot .ss-frame{background:rgba(255,255,255,.02)}
+
+  /* ---- light glass surfaces (frosted white) ---- */
+  .section-light .soonapp,.section-light .scard,.section-light .seccard,.section-light .step,
+  .section-light .faq details,.section-light .shot,.section-light .integ-row span,
+  .section-light .dps-table-wrap,.section-light .hiw-cta,.section-light .video-frame,
+  .section-light .pbadge,.section-light .clip{
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(16px) saturate(170%);
+    -webkit-backdrop-filter:blur(16px) saturate(170%);
+    border-color:rgba(255,255,255,.85);
+    box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
+  .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .shot:hover{background:rgba(255,255,255,.72)}
+  .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
+  .section-light .btn-ghost{
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.9);color:var(--text)}
+  .section-light .btn-ghost:hover{background:rgba(255,255,255,.75)}
+  /* the dark Assist Q&A screenshot panel stays dark — re-assert over generic glass */
+  .section-light .assist-visual{
+    background:linear-gradient(160deg, rgba(14,26,102,.92), rgba(7,11,46,.94));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(120,140,255,.3)}
+
+  /* partner strip as a glass band */
+  .partner-strip{
+    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(16px) saturate(150%);
+    -webkit-backdrop-filter:blur(16px) saturate(150%)}
+
+
+  /* ---- readable eyebrows: pill treatment everywhere ---- */
+  .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
+  .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
+  .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
+  .theme-finops .sec-eye{border-color:rgba(255,181,70,.32)}
+  .theme-finops .section-light .sec-eye{background:rgba(165,92,0,.08);border-color:rgba(165,92,0,.35)}
 </style>
 </head>
 <body>

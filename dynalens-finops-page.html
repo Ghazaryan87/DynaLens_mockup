@@ -768,6 +768,118 @@
   .suite.compact h3{font-size:16.5px}
   .suite.compact p{font-size:12.5px}
 
+
+  /* ═══════════════ GLASSMORPHISM LAYER ═══════════════ */
+  /* ambient color fields — the glass needs color behind it to refract */
+  section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(34,211,238,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.10), transparent 62%)}
+  .theme-finops section.blk:not(.section-light){background-image:
+    radial-gradient(640px 420px at 10% 15%, rgba(255,181,70,.06), transparent 62%),
+    radial-gradient(760px 520px at 90% 85%, rgba(110,92,224,.09), transparent 62%)}
+  .section-light{background:
+    radial-gradient(640px 400px at 10% 12%, rgba(12,123,158,.10), transparent 60%),
+    radial-gradient(720px 480px at 90% 88%, rgba(110,92,224,.10), transparent 62%),
+    radial-gradient(900px 480px at 88% -8%, rgba(12,123,158,.05), transparent 60%),
+    linear-gradient(180deg, #F2F4FA, var(--surface-0) 18%, #EAEEF6)}
+
+  /* ---- dark glass surfaces ---- */
+  .soonapp,.scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
+  .video-frame,.clip,.shot,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
+  .integ-row span,.drop-in,.nav-mobile{
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.13);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09)}
+  .final-box{
+    background:linear-gradient(160deg, rgba(34,211,238,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14);
+    box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.1)}
+  .theme-finops .final-box{
+    background:linear-gradient(160deg, rgba(255,181,70,.10), rgba(255,255,255,.04));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(255,255,255,.14)}
+  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
+  .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+  .btn-ghost{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.18)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .fv-stat,.av-block,.reco{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
+  .clip .cframe,.shot .ss-frame,.video-frame .vt~*{background:transparent}
+  .clip .cframe,.shot .ss-frame{background:rgba(255,255,255,.02)}
+
+  /* ---- light glass surfaces (frosted white) ---- */
+  .section-light .soonapp,.section-light .scard,.section-light .seccard,.section-light .step,
+  .section-light .faq details,.section-light .shot,.section-light .integ-row span,
+  .section-light .dps-table-wrap,.section-light .hiw-cta,.section-light .video-frame,
+  .section-light .pbadge,.section-light .clip{
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(16px) saturate(170%);
+    -webkit-backdrop-filter:blur(16px) saturate(170%);
+    border-color:rgba(255,255,255,.85);
+    box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
+  .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .shot:hover{background:rgba(255,255,255,.72)}
+  .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
+  .section-light .btn-ghost{
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,.9);color:var(--text)}
+  .section-light .btn-ghost:hover{background:rgba(255,255,255,.75)}
+  /* the dark Assist Q&A screenshot panel stays dark — re-assert over generic glass */
+  .section-light .assist-visual{
+    background:linear-gradient(160deg, rgba(14,26,102,.92), rgba(7,11,46,.94));
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    border-color:rgba(120,140,255,.3)}
+
+  /* partner strip as a glass band */
+  .partner-strip{
+    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(16px) saturate(150%);
+    -webkit-backdrop-filter:blur(16px) saturate(150%)}
+
+
+  /* ---- readable eyebrows: pill treatment everywhere ---- */
+  .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
+  .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
+  .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
+  .theme-finops .sec-eye{border-color:rgba(255,181,70,.32)}
+  .theme-finops .section-light .sec-eye{background:rgba(165,92,0,.08);border-color:rgba(165,92,0,.35)}
+
+  /* ---- condensed Why FinOps: copy + illustration ---- */
+  .why-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+  .why-prob{background:rgba(255,181,70,.09);border:1px solid rgba(255,181,70,.3);border-radius:14px;padding:16px 20px;margin-bottom:18px}
+  .why-prob .pl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A55C00;margin-bottom:7px}
+  .why-prob p{font-size:14.5px;color:var(--text-dim);line-height:1.6}
+  .why-sol{font-size:16px;color:var(--text);line-height:1.55;margin-bottom:18px}
+  .why-pts{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+  .why-pts span{font-size:14px;color:var(--text-dim);line-height:1.5;padding-left:24px;position:relative}
+  .why-pts span::before{content:"✓";position:absolute;left:0;top:0;color:#A55C00;font-weight:700}
+  /* illustration: capability cost breakdown */
+  .cost-viz{background:linear-gradient(160deg,rgba(14,26,102,.94),rgba(7,11,46,.96));border:1px solid rgba(120,140,255,.3);border-radius:20px;padding:24px 26px;box-shadow:var(--shadow-lg)}
+  .cv-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+  .cv-head .t{font-size:12px;color:#6B73A0;text-transform:uppercase;letter-spacing:.08em}
+  .cv-head .b{font-family:'JetBrains Mono';font-size:11px;color:#F87171;background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.4);border-radius:100px;padding:4px 11px}
+  .cv-row{display:grid;grid-template-columns:96px 1fr 58px;gap:12px;align-items:center;margin-bottom:13px}
+  .cv-row .l{font-size:12px;color:#A6AED6}
+  .cv-row .track{height:9px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+  .cv-row .track i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,rgba(255,181,70,.55),#FFB546)}
+  .cv-row .v{font-family:'JetBrains Mono';font-size:11.5px;color:#F5F7FF;text-align:right}
+  .cv-row.hot .l{color:#F5F7FF;font-weight:600}
+  .cv-row.hot .track i{background:linear-gradient(90deg,rgba(248,113,113,.6),#F87171)}
+  .cv-row.hot .v{color:#F87171}
+  .cv-foot{margin-top:18px;padding-top:14px;border-top:1px solid rgba(120,140,255,.16);display:flex;justify-content:space-between;align-items:center}
+  .cv-foot .fl{font-size:12px;color:#6B73A0}
+  .cv-foot .fv{font-family:'JetBrains Mono';font-size:12px;color:#FFB546}
+  .cv-cap{margin-top:10px;font-size:10.5px;color:#6B73A0;text-align:right}
+  @media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body class="theme-finops">
@@ -901,79 +1013,84 @@
       <span class="sec-eye">Why FinOps</span>
       <h2 style="font-size:clamp(24px,3vw,34px)">The observability bill nobody was watching.</h2>
     </div>
-    <div class="soonapp full reveal">
-      <div class="sa-hd">
-        <span class="sa-glyph">FO</span>
-        <span class="sa-title">
-          <div class="top"><span class="nm">FinOps</span><span class="sa-pill now">Available now</span></div>
-          <span class="sa-cat">DPS cost intelligence, forecasting &amp; automated optimisation</span>
-        </span>
-      </div>
-      <div class="sa-body">
-        <div class="sa-problem">
+    <div class="why-grid reveal">
+      <div>
+        <div class="why-prob">
           <span class="pl">The problem</span>
-          <p>Dynatrace's consumption-based licensing spreads cost across many independent capabilities — host monitoring mode, Kubernetes coverage, metric ingestion, RUM sampling, session replay, synthetic frequency, runtime vulnerability analytics — each priced differently. Without dedicated tooling, teams find out about budget overruns only when the invoice arrives, can't forecast where consumption is heading, and don't know which configuration changes would cut cost without losing coverage where it matters.</p>
+          <p>DPS spreads cost across a dozen independently priced capabilities. Most teams discover the overrun when the invoice lands — with no idea which change would safely fix it.</p>
         </div>
-        <p class="sa-sol">FinOps closes that gap: it <b>continuously ingests subscription, cost, and usage data</b>, visualises consumption against budget in real time, <b>forecasts future spend with confidence bands</b>, generates prioritised, capability-specific optimisation recommendations — and can <b>apply several of them directly back into your live Dynatrace tenant</b> with a single click.</p>
-        <div class="sa-caps">
-          <div class="ch">What you get</div>
-          <ul>
-            <li>Real-time cost &amp; usage attribution by capability, account, and environment</li>
-            <li>AI-assisted forecasting with confidence bands and budget-threshold alerts</li>
-            <li>A prioritised, scored recommendation catalog — savings, impact, and effort per action</li>
-            <li>One-click "Fix" actions that write configuration changes back into Dynatrace</li>
-            <li>Rate verification against Dynatrace's official rate card</li>
-            <li>Multi-tenant customer, environment, and account management</li>
-          </ul>
+        <p class="why-sol">FinOps attributes every dollar in real time, forecasts where it's heading, and applies the fix back into your tenant — <b>in one click</b>.</p>
+        <div class="why-pts">
+          <span>Cost attribution and confidence-banded forecasting, with alerts before the budget breaks</span>
+          <span>Recommendations scored by savings, impact, and effort — one-click "Fix" actions included</span>
+          <span>Rate verification and multi-tenant management for teams running many estates</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px">Start Free Trial →</a>
+          <a href="#" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px">Book a Demo</a>
         </div>
       </div>
-      <div class="sa-foot">
-        <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px">Start Free Trial →</a>
-        <a href="#" class="link-cta">Book a Demo →</a>
+      <div class="cost-viz">
+        <div class="cv-head">
+          <span class="t">DPS consumption · by capability</span>
+          <span class="b">▲ 38% vs forecast</span>
+        </div>
+        <div class="cv-row"><span class="l">Full-Stack</span><span class="track"><i style="width:78%"></i></span><span class="v">$412K</span></div>
+        <div class="cv-row hot"><span class="l">Log Mgmt</span><span class="track"><i style="width:96%"></i></span><span class="v">$517K</span></div>
+        <div class="cv-row"><span class="l">Kubernetes</span><span class="track"><i style="width:52%"></i></span><span class="v">$274K</span></div>
+        <div class="cv-row"><span class="l">RUM</span><span class="track"><i style="width:34%"></i></span><span class="v">$181K</span></div>
+        <div class="cv-row"><span class="l">Synthetic</span><span class="track"><i style="width:21%"></i></span><span class="v">$112K</span></div>
+        <div class="cv-foot">
+          <span class="fl">Top recommendation: trim log retention on prod-eu</span>
+          <span class="fv">saves $42K/yr</span>
+        </div>
+        <div class="cv-cap">Illustrative data</div>
       </div>
     </div>
   </div>
 </section>
-<!-- 3. VIDEOS -->
+
+<!-- 6. HOW IT WORKS -->
 <section class="blk">
   <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:30px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
-      <span class="sec-eye">See it in action</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">Watch FinOps at work.</h2>
-      <p class="sec-sub">A full walkthrough, plus short focused clips of each key workflow.</p>
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">How it works</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">From reactive reporting to a proactive FinOps model.</h2>
     </div>
-    <div class="video-wrap reveal">
-      <div class="video-frame">
-        <div class="play">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="ghost">1</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 L19 6"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
         </div>
-        <div class="vt">
-          <b>Full product walkthrough</b>
-          <span>Coming soon — Accounts, forecasting, recommendations, and one-click Fix, end to end</span>
+        <div class="slabel"><span class="snum">STEP 01</span><span class="sline"></span></div>
+        <h4>Inform</h4>
+        <p>Centralised visibility across every tenant. Workload-level attribution across hosts, applications, and environments — so you know exactly what drives spend.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">2</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2.4" fill="var(--surface-1,#0A1247)"/><circle cx="15" cy="17" r="2.4" fill="var(--surface-1,#0A1247)"/></svg>
         </div>
+        <div class="slabel"><span class="snum">STEP 02</span><span class="sline"></span></div>
+        <h4>Optimise</h4>
+        <p>Identify high-cost drivers, apply optimisation actions, and see the projected financial impact the moment you act — before and after, in one place.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">3</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.6"/><path d="M20 5v6h-6"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 03</span><span class="sline"></span></div>
+        <h4>Operate</h4>
+        <p>Budget tracking, forecasting, threshold alerts, and automated workflows. Cost control that runs continuously — not a quarterly reporting exercise.</p>
       </div>
     </div>
-    <div class="clip-row reveal">
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:45</span>
-        </div>
-        <div class="ccap">Attribution in action — cost by capability, account, and environment</div>
-      </div>
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:60</span>
-        </div>
-        <div class="ccap">Forecasting — confidence bands and budget-threshold alerts</div>
-      </div>
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:30</span>
-        </div>
-        <div class="ccap">One-click Fix — from recommendation to applied change</div>
+    <div class="hiw-cta reveal">
+      <div class="txt">See your own DPS spend mapped this way — <span>in minutes.</span></div>
+      <div class="acts">
+        <a href="#" class="btn btn-primary">Start Free Trial →</a>
+        <a href="#" class="btn btn-ghost">Book a Demo</a>
       </div>
     </div>
   </div>
@@ -1006,6 +1123,7 @@
     </div>
   </div>
 </section>
+
 <!-- 5. FEATURES -->
 <section class="blk">
   <div class="wrap">
@@ -1059,6 +1177,7 @@
     </div>
   </div>
 </section>
+
 <!-- 5b. DPS COVERAGE TABLE (app-specific addition) -->
 <section class="blk section-light">
   <div class="wrap">
@@ -1096,51 +1215,52 @@
     </div>
   </div>
 </section>
-<!-- 6. HOW IT WORKS -->
+
+<!-- 3. VIDEOS -->
 <section class="blk">
   <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:26px">
-      <span class="sec-eye">How it works</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">From reactive reporting to a proactive FinOps model.</h2>
+    <div class="sec-head reveal" style="margin-bottom:30px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
+      <span class="sec-eye">See it in action</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Watch FinOps at work.</h2>
+      <p class="sec-sub">A full walkthrough, plus short focused clips of each key workflow.</p>
     </div>
-    <div class="steps reveal">
-      <div class="step">
-        <span class="ghost">1</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 L19 6"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+    <div class="video-wrap reveal">
+      <div class="video-frame">
+        <div class="play">
+          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
         </div>
-        <div class="slabel"><span class="snum">STEP 01</span><span class="sline"></span></div>
-        <h4>Inform</h4>
-        <p>Centralised visibility across every tenant. Workload-level attribution across hosts, applications, and environments — so you know exactly what drives spend.</p>
-      </div>
-      <div class="step">
-        <span class="ghost">2</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2.4" fill="var(--surface-1,#0A1247)"/><circle cx="15" cy="17" r="2.4" fill="var(--surface-1,#0A1247)"/></svg>
+        <div class="vt">
+          <b>Full product walkthrough</b>
+          <span>Coming soon — Accounts, forecasting, recommendations, and one-click Fix, end to end</span>
         </div>
-        <div class="slabel"><span class="snum">STEP 02</span><span class="sline"></span></div>
-        <h4>Optimise</h4>
-        <p>Identify high-cost drivers, apply optimisation actions, and see the projected financial impact the moment you act — before and after, in one place.</p>
-      </div>
-      <div class="step">
-        <span class="ghost">3</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.6"/><path d="M20 5v6h-6"/></svg>
-        </div>
-        <div class="slabel"><span class="snum">STEP 03</span><span class="sline"></span></div>
-        <h4>Operate</h4>
-        <p>Budget tracking, forecasting, threshold alerts, and automated workflows. Cost control that runs continuously — not a quarterly reporting exercise.</p>
       </div>
     </div>
-    <div class="hiw-cta reveal">
-      <div class="txt">See your own DPS spend mapped this way — <span>in minutes.</span></div>
-      <div class="acts">
-        <a href="#" class="btn btn-primary">Start Free Trial →</a>
-        <a href="#" class="btn btn-ghost">Book a Demo</a>
+    <div class="clip-row reveal">
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:45</span>
+        </div>
+        <div class="ccap">Attribution in action — cost by capability, account, and environment</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:60</span>
+        </div>
+        <div class="ccap">Forecasting — confidence bands and budget-threshold alerts</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:30</span>
+        </div>
+        <div class="ccap">One-click Fix — from recommendation to applied change</div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- 7. INTEGRATIONS -->
 <section class="blk section-light">
   <div class="wrap">
@@ -1157,6 +1277,7 @@
     </div>
   </div>
 </section>
+
 <!-- 8. SECURITY NOTE -->
 <section class="blk">
   <div class="wrap">
@@ -1182,6 +1303,7 @@
     <a href="index.html#security" class="link-cta reveal">See the full security architecture →</a>
   </div>
 </section>
+
 <!-- 9. FAQ -->
 <section class="blk section-light">
   <div class="wrap">
@@ -1213,6 +1335,7 @@
     </div>
   </div>
 </section>
+
 <!-- 10. CTA FOOTER -->
 <section class="final">
   <div class="wrap">
