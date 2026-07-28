@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DynaLens Assist — AI Operations Teammate for Dynatrace</title>
+<title>FAQ — DynaLens | Dynatrace Apps for Cost Optimization & AI-Assisted Operations</title>
 <link rel="icon" type="image/svg+xml" href="assets/icon-maskable.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
+<meta name="description" content="Answers to common questions about DynaLens: the FinOps and Assist apps for Dynatrace, pricing, deployment, security, data residency, and licensing.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is DynaLens?","acceptedAnswer":{"@type":"Answer","text":"A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner."}},{"@type":"Question","name":"How does DynaLens reduce Dynatrace costs?","acceptedAnswer":{"@type":"Answer","text":"FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it."}},{"@type":"Question","name":"Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?","acceptedAnswer":{"@type":"Answer","text":"Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM."}},{"@type":"Question","name":"We're a Dynatrace partner — can we manage multiple customers?","acceptedAnswer":{"@type":"Answer","text":"That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate."}},{"@type":"Question","name":"Does our data leave our environment?","acceptedAnswer":{"@type":"Answer","text":"Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA."}},{"@type":"Question","name":"How is DynaLens licensed?","acceptedAnswer":{"@type":"Answer","text":"Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team."}},{"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates."}},{"@type":"Question","name":"How is FinOps priced?","acceptedAnswer":{"@type":"Answer","text":"Free trial and demo tiers are available so you can evaluate the product before committing. Beyond that, pricing is arranged per engagement — talk to us for a quote based on your tenant count and DPS spend."}},{"@type":"Question","name":"How long does FinOps setup take?","acceptedAnswer":{"@type":"Answer","text":"FinOps installs as a native Dynatrace Platform App. A guided onboarding flow authenticates your Dynatrace connection, validates it, and automatically queues the initial data sync — most customers are seeing data within the same day."}},{"@type":"Question","name":"What data access does FinOps need?","acceptedAnswer":{"@type":"Answer","text":"Authentication is OAuth2 client-credentials, scoped per account. FinOps reads subscription, cost, and usage data by default; write-back is limited to the specific configuration changes behind an applied \"Fix\" action, and is gated by permission and safety checks (e.g. confirming a host is offline before switching its monitoring mode)."}},{"@type":"Question","name":"Can FinOps manage multiple Dynatrace tenants?","acceptedAnswer":{"@type":"Answer","text":"Yes. FinOps is built for teams and partners managing many customers at once — full CRUD customer management, per-account OAuth credentials, and role-based access so each user only sees what they're permitted to."}},{"@type":"Question","name":"What deployment options are available for FinOps?","acceptedAnswer":{"@type":"Answer","text":"FinOps ships as a native Dynatrace Platform App on the frontend, backed by a service you can run via Docker Compose or deploy to Kubernetes — including on-premises and air-gapped environments for regulated customers."}},{"@type":"Question","name":"Does any of our data leave our environment when using Assist?","acceptedAnswer":{"@type":"Answer","text":"No. Assist is designed for on-prem deployment: the LLM runs locally on your infrastructure, all persistence is in your own PostgreSQL, and Dynatrace access is read-only. Air-gapped environments are fully supported."}},{"@type":"Question","name":"Do we need Dynatrace to start using Assist?","acceptedAnswer":{"@type":"Answer","text":"Dynatrace connectivity is optional for bring-up — without it, Assist still works as a knowledge-base chat assistant. Connect Dynatrace Managed and the live-data features (NL Query, RCA, topology) light up."}},{"@type":"Question","name":"Does Assist work in Teams, web, or both?","acceptedAnswer":{"@type":"Answer","text":"Three modes: Microsoft Teams (Entra ID identity), an on-prem web UI (LDAP identity), or hybrid running both at once. Same capabilities behind every surface."}},{"@type":"Question","name":"How is access controlled in Assist?","acceptedAnswer":{"@type":"Answer","text":"Three roles — viewer, SRE, and admin — assigned from your directory groups (Entra ID or LDAP). Sensitive capabilities like RCA, model switching, and administration are gated per role, and every action is rate-limited and audit-logged."}},{"@type":"Question","name":"How does Assist deploy?","acceptedAnswer":{"@type":"Answer","text":"Docker Compose for a fast on-prem start, with a Helm chart for Kubernetes. Secrets live in HashiCorp Vault, and health, metrics, and OpenTelemetry endpoints are built in for your own monitoring."}}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -233,9 +237,7 @@
   .hero{padding:60px 0 48px;position:relative}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.25);padding:6px 13px;border-radius:100px;margin-bottom:26px}
   .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"intro visual" "cta visual";column-gap:54px;row-gap:0;align-items:center}
-  .hero-intro{grid-area:intro}
-  .hero-cta{grid-area:cta}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
   h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;margin-bottom:22px}
   h1 .hl{color:var(--cyan)}
   .hero-sub{font-size:18.5px;color:var(--text-dim);max-width:540px;margin-bottom:32px}
@@ -243,7 +245,7 @@
   .btn-lg{padding:14px 26px;font-size:15.5px;border-radius:12px}
   .trust{display:flex;gap:10px;flex-wrap:wrap}
   .trust span{font-size:12px;font-weight:500;color:var(--text-faint);border:1px solid var(--line);border-radius:8px;padding:6px 11px;background:var(--card)}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"intro" "visual" "cta";gap:40px}}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
 
   /* Equalize the three hero-carousel visuals so the slide doesn't jump height on rotation */
   .hero-visual{min-height:582px;box-sizing:border-box}
@@ -306,13 +308,9 @@
 
   /* ---------- PARTNER STRIP ---------- */
   .partner-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(14,26,102,.25),transparent);margin-top:20px}
-  .ps-in{max-width:var(--maxw);margin:0 auto;padding:36px 28px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
-  .ps-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
-  .ps-track{position:relative;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:28px;width:100%;min-height:118px}
-  .ps-dots{display:none;gap:9px;align-items:center}
-  .ps-dot{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.22);border:none;padding:0;cursor:pointer;transition:all .25s ease}
-  .ps-dot:hover{background:rgba(255,255,255,.4)}
-  .ps-dot.active{background:var(--cyan);width:22px}
+  .ps-in{max-width:var(--maxw);margin:0 auto;padding:24px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between}
+  .ps-label{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap}
+  .ps-badges{display:flex;gap:14px;flex-wrap:wrap;flex:1;justify-content:flex-end}
   .pbadge{display:flex;align-items:center;gap:10px;padding:11px 18px;border:1px solid var(--line-strong);border-radius:12px;background:var(--card);transition:all .25s ease;cursor:default}
   .pbadge:hover{border-color:var(--cyan);background:var(--cyan-soft);transform:translateY(-2px)}
   .pbadge .pb-ico{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:13px;flex-shrink:0}
@@ -323,39 +321,7 @@
   .pbadge .pb-txt{display:flex;flex-direction:column;line-height:1.2}
   .pbadge .pb-txt b{font-family:'Space Grotesk';font-weight:600;font-size:13.5px;color:var(--text)}
   .pbadge .pb-txt span{font-size:10.5px;color:var(--text-faint)}
-  .pbadge.pbadge-img{padding:10px 14px}
-  .pbadge-img img{height:118px;width:auto;max-width:392px;max-height:100%;object-fit:contain;border-radius:8px;display:block}
-  @media(max-width:640px){
-    .ps-track{min-height:73px;flex-wrap:nowrap}
-    .pbadge.ps-slide{display:none}
-    .pbadge.ps-slide.active{display:flex}
-    .pbadge-img img{height:73px;max-width:247px}
-    .ps-dots{display:flex}
-  }
-
-  /* ---------- SURFACE/REASONING SLIDER ---------- */
-  .ba-slider{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line-strong);aspect-ratio:1.59;min-height:255px;max-width:70%;margin:0 auto;background:var(--card);user-select:none;touch-action:none;box-shadow:0 30px 70px -34px rgba(0,0,0,.5)}
-  .ba-pane{position:absolute;inset:0;padding:30px 34px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(160deg,rgba(14,26,102,.94),rgba(7,11,46,.98))}
-  .ba-before{clip-path:inset(0 50% 0 0)}
-  .ba-kicker{font-family:'JetBrains Mono';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:16px;display:block}
-  .ba-kicker.cy{color:var(--cyan)}
-  .ba-kicker.am{color:#FFB546}
-  .ba-chat{display:flex;flex-direction:column;gap:10px;max-width:420px}
-  .ba-chat span{display:block;padding:12px 16px;border-radius:10px;font-size:13.5px;line-height:1.5}
-  .ba-chat .q{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text-dim);font-style:italic}
-  .ba-chat .a{background:var(--cyan-soft);border:1px solid rgba(34,211,238,.3);color:var(--text)}
-  .ba-reason{display:flex;flex-direction:column;gap:9px;max-width:460px}
-  .ba-reason .rline{position:relative;padding-left:18px;font-size:12.5px;color:var(--text-dim);line-height:1.5}
-  .ba-reason .rline::before{content:"↳";position:absolute;left:0;top:0;color:var(--text-faint);font-size:12px}
-  .ba-reason .rline b{color:var(--text);font-weight:600}
-  .ba-reason .conf{margin-top:2px;font-family:'JetBrains Mono';font-size:11px;color:var(--cyan);letter-spacing:.02em}
-  .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:0;transform:translateX(-50%);cursor:ew-resize;z-index:3;display:flex;align-items:center;justify-content:center}
-  .ba-handle::before{content:"";position:absolute;top:0;bottom:0;left:0;width:2px;background:rgba(255,255,255,.55);transform:translateX(-50%)}
-  .ba-grip{width:42px;height:42px;border-radius:50%;background:var(--cyan);color:var(--navy-900);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;box-shadow:0 8px 20px rgba(34,211,238,.4);border:3px solid rgba(255,255,255,.9)}
-  .ba-tag{position:absolute;top:16px;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:100px;z-index:2;pointer-events:none}
-  .ba-tag-before{left:16px;background:rgba(0,0,0,.4);color:#fff;border:1px solid rgba(255,255,255,.25)}
-  .ba-tag-after{right:16px;background:var(--cyan-soft);color:var(--cyan);border:1px solid rgba(34,211,238,.4)}
-  @media(max-width:640px){.ba-slider{aspect-ratio:.62;min-height:357px;max-width:100%}.ba-pane{padding:22px 20px}}
+  @media(max-width:900px){.ps-in{flex-direction:column;align-items:flex-start}.ps-badges{justify-content:flex-start}}
 
   /* ---------- HERO DASHBOARD (signature) ---------- */
   .dash{
@@ -411,10 +377,6 @@
   .scard:hover{transform:translateY(-4px);border-color:var(--line-strong);background:var(--card-hover)}
   .scard.live{border-color:rgba(34,211,238,.4);background:linear-gradient(160deg,rgba(34,211,238,.07),var(--card))}
   .scard.live::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
-  .scard-ico{width:44px;height:44px;border-radius:12px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--line)}
-  .scard-ico img{width:100%;height:100%;object-fit:cover}
-  .scard-ico.placeholder{font-family:'Space Grotesk';font-weight:700;font-size:17px;color:var(--text-dim)}
-  .section-light .scard-ico{background:var(--surface-2);border-color:var(--line)}
   .badge{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;display:inline-block;margin-bottom:14px}
   .badge.now{background:var(--cyan);color:var(--navy-900)}
   .badge.soon{background:rgba(255,255,255,.06);color:var(--text-faint);border:1px solid var(--line)}
@@ -435,8 +397,10 @@
   .app-list li{position:relative;padding-left:26px;margin-bottom:13px;font-size:14.5px;color:var(--text-dim);max-width:470px}
   .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--cyan-soft);border:1px solid var(--cyan)}
   .app-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-  .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s}
+  .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s;cursor:pointer}
   .link-cta:hover{gap:11px}
+  .link-cta .lc-chev{width:14px;height:14px;flex-shrink:0;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+  .link-cta:hover .lc-chev{transform:translateX(4px)}
   .notify{display:flex;gap:8px;align-items:center}
   .notify input{background:var(--card);border:1px solid var(--line-strong);border-radius:10px;padding:10px 14px;color:var(--text);font-size:14px;font-family:'Inter';width:200px}
   .notify input:focus{outline:none;border-color:var(--cyan)}
@@ -739,6 +703,18 @@
   .clip .ccap{padding:12px 14px;font-size:12.5px;color:var(--text-dim);border-top:1px solid var(--line);line-height:1.4}
   @media(max-width:760px){.clip-row{grid-template-columns:1fr}}
 
+  /* ---------- SCREENSHOTS ---------- */
+  .shot-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .shot{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);transition:transform .25s,border-color .25s}
+  .shot:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+  .shot .ss-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+  .shot .ss-bar .d{width:8px;height:8px;border-radius:50%}
+  .shot .ss-frame{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,rgba(14,26,102,.5),rgba(7,11,46,.6))}
+  .shot .ss-glyph{font-family:'JetBrains Mono';font-size:11.5px;color:var(--text-faint);letter-spacing:.05em;text-transform:uppercase;border:1px dashed var(--line-strong);border-radius:10px;padding:9px 14px}
+  .shot .ss-cap{padding:13px 16px;font-size:12.5px;color:var(--text-dim);border-top:1px solid var(--line)}
+  @media(max-width:900px){.shot-gallery{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.shot-gallery{grid-template-columns:1fr}}
+  .section-light .shot{background:var(--surface-1);box-shadow:var(--shadow-sm)}
 
   /* ---------- DPS TABLE FOOT LINK (page variant) ---------- */
   .dps-foot-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px}
@@ -791,7 +767,7 @@
 
   /* ---- dark glass surfaces ---- */
   .soonapp,.scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
-  .video-frame,.clip,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
+  .video-frame,.clip,.shot,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
   .integ-row span,.drop-in,.nav-mobile{
     background:rgba(255,255,255,.055);
     backdrop-filter:blur(18px) saturate(150%);
@@ -809,7 +785,7 @@
     backdrop-filter:blur(18px) saturate(150%);
     -webkit-backdrop-filter:blur(18px) saturate(150%);
     border-color:rgba(255,255,255,.14)}
-  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover{background:rgba(255,255,255,.09)}
+  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
   .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
   .btn-ghost{
     background:rgba(255,255,255,.06);
@@ -817,12 +793,12 @@
     border-color:rgba(255,255,255,.18)}
   .btn-ghost:hover{background:rgba(255,255,255,.12)}
   .fv-stat,.av-block,.reco{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
-  .clip .cframe,.video-frame .vt~*{background:transparent}
-  .clip .cframe{background:rgba(255,255,255,.02)}
+  .clip .cframe,.shot .ss-frame,.video-frame .vt~*{background:transparent}
+  .clip .cframe,.shot .ss-frame{background:rgba(255,255,255,.02)}
 
   /* ---- light glass surfaces (frosted white) ---- */
   .section-light .soonapp,.section-light .scard,.section-light .seccard,.section-light .step,
-  .section-light .faq details,.section-light .integ-row span,
+  .section-light .faq details,.section-light .shot,.section-light .integ-row span,
   .section-light .dps-table-wrap,.section-light .hiw-cta,.section-light .video-frame,
   .section-light .pbadge,.section-light .clip{
     background:rgba(255,255,255,.55);
@@ -831,6 +807,7 @@
     border-color:rgba(255,255,255,.85);
     box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
   .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .shot:hover{background:rgba(255,255,255,.72)}
   .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
   .section-light .btn-ghost{
     background:rgba(255,255,255,.5);
@@ -857,18 +834,52 @@
   .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
   .theme-finops .sec-eye{border-color:rgba(255,181,70,.32)}
   .theme-finops .section-light .sec-eye{background:rgba(165,92,0,.08);border-color:rgba(165,92,0,.35)}
+
+  /* ---- FAQ page layout ---- */
+  .faqx{display:grid;grid-template-columns:minmax(280px,0.9fr) 1.6fr;gap:44px;align-items:start}
+  .faqx-left{position:sticky;top:96px}
+  .faqx-cta{margin-top:26px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.3),inset 0 1px 0 rgba(255,255,255,.09);padding:22px}
+  .faqx-cta b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:16px;color:var(--text);margin-bottom:6px}
+  .faqx-cta p{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:16px}
+  .faqx .faq{max-width:none}
+  .faqx .faq summary{gap:16px;justify-content:flex-start}
+  .faqx .faq summary .qn{font-family:'JetBrains Mono';font-weight:400;font-size:11.5px;color:var(--text-faint);flex-shrink:0;padding-top:3px}
+  .faqx .faq summary .qt{flex:1}
+  .faqx .faq .faq-a{padding-left:52px}
+  .acc-item{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.25),inset 0 1px 0 rgba(255,255,255,.08);margin-bottom:12px;overflow:hidden;transition:border-color .3s,background .3s}
+  .acc-item::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:rgba(255,255,255,.1);transition:background .3s}
+  .acc-item:hover{background:rgba(255,255,255,.075)}
+  .acc-item.open{background:rgba(255,255,255,.085);border-color:rgba(34,211,238,.32)}
+  .acc-item.open::before{background:var(--cyan)}
+  .acc-q{width:100%;background:none;border:0;display:flex;align-items:center;gap:16px;padding:20px 22px 20px 26px;cursor:pointer;text-align:left}
+  .acc-q .qn{font-family:'JetBrains Mono';font-size:11.5px;color:var(--text-faint);flex-shrink:0;transition:color .3s}
+  .acc-item.open .acc-q .qn{color:var(--cyan)}
+  .acc-q .qt{flex:1;font-family:'Space Grotesk';font-weight:600;font-size:15.5px;line-height:1.4;color:var(--text);letter-spacing:-.01em}
+  .acc-x{width:32px;height:32px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.4,0,.2,1),border-color .3s,background .3s}
+  .acc-x svg{width:13px;height:13px;stroke:var(--text-dim);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+  .acc-item.open .acc-x{transform:rotate(180deg);border-color:rgba(34,211,238,.45);background:var(--cyan-soft)}
+  .acc-item.open .acc-x svg{stroke:var(--cyan)}
+  .acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.4,0,.2,1)}
+  .acc-item.open .acc-body{grid-template-rows:1fr}
+  .acc-a{overflow:hidden}
+  .acc-a-in{padding:0 60px 22px 63px;font-size:14px;color:var(--text-dim);line-height:1.65;border-top:1px solid rgba(255,255,255,.08);margin:0 22px 0 26px;padding:14px 24px 22px 37px}
+  .faq-group{margin-bottom:44px}
+  .faq-group:last-child{margin-bottom:0}
+  .faq-group-eye{margin-bottom:16px}
+  @media(max-width:900px){.faqx{grid-template-columns:1fr;gap:28px}.faqx-left{position:static}.faqx .faq .faq-a{padding-left:22px}}
+  @media(max-width:640px){.acc-q{padding:17px 16px 17px 20px}.acc-a-in{margin:0 14px 0 18px;padding:12px 4px 18px 27px}}
 </style>
 </head>
 <body>
-<!-- NAV -->
+
 <nav>
   <div class="nav-in">
     <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
-      <a href="dynalens-assist-page.html" class="nav-status nav-status--as nav-current--as">Assist</a>
-      <a href="dynalens-faq-page.html">FAQ</a>
+      <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+      <a href="dynalens-faq-page.html" style="color:var(--cyan)">FAQ</a>
     </div>
     <div class="nav-cta">
       <a href="#" class="btn btn-primary">Book a Demo</a>
@@ -881,8 +892,8 @@
   <div class="nav-mobile" id="navMobile">
     <a href="index.html">Home</a>
     <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
-    <a href="dynalens-assist-page.html" class="nav-status nav-status--as nav-current--as">Assist</a>
-    <a href="dynalens-faq-page.html">FAQ</a>
+    <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+    <a href="dynalens-faq-page.html" style="color:var(--cyan)">FAQ</a>
     <div class="nav-mobile-cta">
       <a href="#" class="btn btn-primary">Book a Demo</a>
       <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
@@ -890,342 +901,198 @@
   </div>
 </nav>
 
-<!-- 1. HERO -->
-<header class="hero phero">
+<header class="hero" style="padding-bottom:8px">
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-intro reveal">
-        <span class="eyebrow">Available now · AI operations teammate</span>
-        <h1>Ask Dynatrace a question. <span class="hl">Get an answer.</span></h1>
-        <p class="hero-sub">Assist answers observability questions in plain English, grounded in your live Dynatrace environment — in Microsoft Teams or a dedicated web UI, with the LLM running entirely on your premises.</p>
-      </div>
-      <div class="assist-visual hero-visual reveal">
-        <div class="dash-bar">
-          <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-          <span class="dash-url mono">dynalens.ai/assist — ask anything</span>
-        </div>
-        <div class="av-block">
-          <span class="av-label me">You asked</span>
-          <p class="av-text q">"Why did checkout latency spike in prod-eu last night?"</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label ai">Assist</span>
-          <p class="av-text">Payment-service p95 latency rose 3.2× at 02:14 UTC after a dependent Redis node failed over. Traffic rerouted automatically within 40s — no customer-facing errors recorded.</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label me">You asked</span>
-          <p class="av-text q">"/rca PROBLEM-4821"</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label ai">Assist</span>
-          <p class="av-text">RCA report ready — top hypothesis (HIGH confidence): Redis failover triggered by node memory exhaustion. Evidence: DEP-1, LOG-2. Two similar past incidents found.</p>
-        </div>
-        <div class="fv-row" style="margin-top:12px">
-          <div class="fv-stat"><div class="l">Answered in</div><div class="v" style="color:var(--cyan)">4.2s</div></div>
-          <div class="fv-stat"><div class="l">Sources queried</div><div class="v">3</div></div>
-        </div>
-      </div>
-      <div class="hero-cta reveal">
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
-          <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
-        </div>
-        <div class="trust">
-          <span>Runs fully on-prem</span>
-          <span>Read-only Dynatrace access</span>
-          <span>Teams + Web UI</span>
-        </div>
-      </div>
+    <a href="index.html" class="phero-back reveal">← Back to home</a>
+    <div class="reveal" style="max-width:720px">
+      <span class="eyebrow">FAQ</span>
+      <h1>Questions, answered.</h1>
+      <p class="hero-sub">Everything platform teams and partners ask when evaluating DynaLens — general, FinOps, and Assist — in one place.</p>
     </div>
   </div>
 </header>
 
-<!-- PARTNER STRIP -->
-<div class="partner-strip">
-  <div class="ps-in">
-    <span class="ps-label">Recognised by Dynatrace</span>
-    <div class="ps-track" data-carousel>
-      <div class="pbadge pbadge-img ps-slide active"><img src="assets/endorsment/Premier_Sales_Partner-1.png" alt="Dynatrace Premier Sales Partner" loading="lazy"></div>
-      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsment/EMEA_YourCompass_Amplify25-Partner-Awards_Social_1080x1080_FINAL.png" alt="Dynatrace EMEA 2025 Services Excellence Award — YourCompass" loading="lazy"></div>
-      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsment/EMEA_YourCompass.jpg" alt="Dynatrace Rising Star Award, EMEA 2024–2025 — YourCompass" loading="lazy"></div>
-    </div>
-    <div class="ps-dots">
-      <button class="ps-dot active" data-idx="0" aria-label="Show badge 1 of 3"></button>
-      <button class="ps-dot" data-idx="1" aria-label="Show badge 2 of 3"></button>
-      <button class="ps-dot" data-idx="2" aria-label="Show badge 3 of 3"></button>
-    </div>
-  </div>
-</div>
-
-<!-- BEFORE / AFTER -->
-<section class="blk" style="padding-bottom:0;display:none">
+<section class="blk" style="padding-top:24px">
   <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:26px">
-      <span class="sec-eye">Under the hood</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">What you ask. What Assist actually does.</h2>
-      <p class="sec-sub">Drag to reveal the reasoning behind every answer.</p>
-    </div>
-    <div class="ba-slider reveal" data-ba>
-      <div class="ba-pane ba-after">
-        <span class="ba-kicker cy">What you see</span>
-        <div class="ba-chat">
-          <span class="q">"Why did checkout latency spike in prod-eu last night?"</span>
-          <span class="a">Redis failover triggered at 02:14 UTC — traffic rerouted in 40s, no customer impact.</span>
+    <div class="faqx">
+      <div class="faqx-left reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="sec-eye">All questions</span>
+          <h2 style="font-size:clamp(22px,2.6vw,30px)">Browse by topic.</h2>
+          <p class="sec-sub">General questions about DynaLens, plus everything specific to FinOps and Assist.</p>
+        </div>
+        <div class="faqx-cta">
+          <b>Still have questions?</b>
+          <p>Talk directly to the engineers who build and run DynaLens — no sales script.</p>
+          <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px">Book a Demo →</a>
         </div>
       </div>
-      <div class="ba-pane ba-before">
-        <span class="ba-kicker">Reasoning</span>
-        <div class="ba-reason">
-          <div class="rline">Classifying intent: <b>performance investigation</b></div>
-          <div class="rline">Query: p95 latency, payment-service, last 2h</div>
-          <div class="rline">Correlating: Redis dependency health, deployment events</div>
-          <div class="rline">Key finding: <b>Redis failover at 02:14 UTC</b> — memory exhaustion trigger</div>
-          <div class="conf">Confidence: HIGH · 2 similar past incidents matched</div>
-        </div>
-      </div>
-      <span class="ba-tag ba-tag-before">Reasoning</span>
-      <span class="ba-tag ba-tag-after">What you see</span>
-      <div class="ba-handle"><div class="ba-grip">↔</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- 2. PROBLEM → SOLUTION -->
-<section class="blk section-light">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:26px">
-      <span class="sec-eye">Why Assist</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">The answers are in Dynatrace. Getting them out is the job.</h2>
-    </div>
-    <div class="soonapp full reveal">
-      <div class="sa-hd">
-        <span class="sa-glyph">AS</span>
-        <span class="sa-title">
-          <div class="top"><span class="nm">Assist</span><span class="sa-pill now">Available now</span></div>
-          <span class="sa-cat">AI operations teammate for SREs &amp; operations teams</span>
-        </span>
-      </div>
-      <div class="sa-body">
-        <div class="sa-problem">
-          <span class="pl">The problem</span>
-          <p>The answers are all in Dynatrace — but they're locked behind DQL and dashboard fluency. So the same two people field every "what's going on with X?" question, incident investigations start from a blank page every time, and the knowledge from past incidents lives in people's heads, not in the tooling.</p>
+      <div>
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">General</span>
+          <div class="faq reveal" id="faqAcc-general">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">01</span>
+                <span class="qt">What is DynaLens?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">02</span>
+                <span class="qt">How does DynaLens reduce Dynatrace costs?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">03</span>
+                <span class="qt">Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">04</span>
+                <span class="qt">We're a Dynatrace partner — can we manage multiple customers?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">05</span>
+                <span class="qt">Does our data leave our environment?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">06</span>
+                <span class="qt">How is DynaLens licensed?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">07</span>
+                <span class="qt">How do we get started?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates.</div></div></div>
+            </div>
+          </div>
         </div>
-        <p class="sa-sol">Assist opens that knowledge to everyone: <b>ask your environment a question in plain English and get a grounded answer</b> — in Teams or the web UI. It classifies the question, plans and executes the right Dynatrace API calls, recalls similar past incidents and your own runbooks, and answers with evidence — <b>while the LLM runs entirely on your premises</b>.</p>
-        <div class="sa-caps">
-          <div class="ch">What you get</div>
-          <ul>
-            <li>Natural-language questions answered from live Dynatrace data — metrics, problems, logs, traces, topology</li>
-            <li>Guided root-cause analysis with ranked hypotheses, confidence levels, and evidence citations</li>
-            <li>A 3D Smartscape-style service topology map of your environment</li>
-            <li>LLM-generated operational briefings with PDF export and scheduled email reports</li>
-            <li>Knowledge-base RAG — upload runbooks and SOPs, get answers grounded in them</li>
-            <li>ServiceNow incident search straight from chat</li>
-          </ul>
-        </div>
-      </div>
-      <div class="sa-foot">
-        <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px;display:none">Start Free Trial →</a>
-        <a href="#" class="link-cta">Book a Demo →</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- 3. VIDEOS -->
-<section class="blk">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:30px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
-      <span class="sec-eye">See it in action</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">Watch Assist at work.</h2>
-      <p class="sec-sub">A full walkthrough, plus short focused clips of each key workflow.</p>
-    </div>
-    <div class="video-wrap reveal">
-      <div class="video-frame">
-        <div class="play">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">FinOps</span>
+          <div class="faq reveal" id="faqAcc-finops">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">08</span>
+                <span class="qt">How is FinOps priced?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Free trial and demo tiers are available so you can evaluate the product before committing. Beyond that, pricing is arranged per engagement — talk to us for a quote based on your tenant count and DPS spend.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">09</span>
+                <span class="qt">How long does setup take?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps installs as a native Dynatrace Platform App. A guided onboarding flow authenticates your Dynatrace connection, validates it, and automatically queues the initial data sync — most customers are seeing data within the same day.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">10</span>
+                <span class="qt">What data access does FinOps need?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Authentication is OAuth2 client-credentials, scoped per account. FinOps reads subscription, cost, and usage data by default; write-back is limited to the specific configuration changes behind an applied "Fix" action, and is gated by permission and safety checks (e.g. confirming a host is offline before switching its monitoring mode).</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">11</span>
+                <span class="qt">Can FinOps manage multiple Dynatrace tenants?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes. FinOps is built for teams and partners managing many customers at once — full CRUD customer management, per-account OAuth credentials, and role-based access so each user only sees what they're permitted to.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">12</span>
+                <span class="qt">What deployment options are available?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps ships as a native Dynatrace Platform App on the frontend, backed by a service you can run via Docker Compose or deploy to Kubernetes — including on-premises and air-gapped environments for regulated customers.</div></div></div>
+            </div>
+          </div>
         </div>
-        <div class="vt">
-          <b>Full product walkthrough</b>
-          <span>Coming soon — NL Query, RCA co-pilot, topology, and briefings, end to end</span>
-        </div>
-      </div>
-    </div>
-    <div class="clip-row reveal">
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:45</span>
-        </div>
-        <div class="ccap">NL Query — from plain-English question to a grounded, charted answer</div>
-      </div>
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:60</span>
-        </div>
-        <div class="ccap">RCA co-pilot — ranked hypotheses with evidence in under a minute</div>
-      </div>
-      <div class="clip">
-        <div class="cframe">
-          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="cdur">0:30</span>
-        </div>
-        <div class="ccap">Topology — flying through the 3D service map</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- 5. FEATURES -->
-<section class="blk">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:30px">
-      <span class="sec-eye">Capabilities</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">One teammate, six jobs.</h2>
-    </div>
-    <div class="sec-grid reveal">
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 1 1-3.1-6.3"/><path d="M9 11l2.5 2.5L17 8"/></svg>
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">Assist</span>
+          <div class="faq reveal" id="faqAcc-assist">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">13</span>
+                <span class="qt">Does any of our data leave our environment?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">No. Assist is designed for on-prem deployment: the LLM runs locally on your infrastructure, all persistence is in your own PostgreSQL, and Dynatrace access is read-only. Air-gapped environments are fully supported.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">14</span>
+                <span class="qt">Do we need Dynatrace to start?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace connectivity is optional for bring-up — without it, Assist still works as a knowledge-base chat assistant. Connect Dynatrace Managed and the live-data features (NL Query, RCA, topology) light up.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">15</span>
+                <span class="qt">Teams, web, or both?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Three modes: Microsoft Teams (Entra ID identity), an on-prem web UI (LDAP identity), or hybrid running both at once. Same capabilities behind every surface.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">16</span>
+                <span class="qt">How is access controlled?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Three roles — viewer, SRE, and admin — assigned from your directory groups (Entra ID or LDAP). Sensitive capabilities like RCA, model switching, and administration are gated per role, and every action is rate-limited and audit-logged.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">17</span>
+                <span class="qt">How does it deploy?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Docker Compose for a fast on-prem start, with a Helm chart for Kubernetes. Secrets live in HashiCorp Vault, and health, metrics, and OpenTelemetry endpoints are built in for your own monitoring.</div></div></div>
+            </div>
+          </div>
         </div>
-        <h4>Natural-language query</h4>
-        <p>"Show open problems." "Error rate last hour." Assist classifies the question, plans the Dynatrace API calls, executes them, and formats the answer — with interactive charts in the web UI.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
-        </div>
-        <h4>RCA co-pilot</h4>
-        <p>Enriches a Dynatrace problem with topology, deployments, logs, and traces in parallel, recalls the most similar past incidents, and produces an executive-style report with ranked, evidence-cited hypotheses.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.2l7.5.6M7.2 8.2l3.6 7.6M16.8 10.2l-3.4 5.8"/></svg>
-        </div>
-        <h4>3D service topology</h4>
-        <p>A live, Smartscape-style 3D map of your Dynatrace entities — explore services, hosts, and dependencies visually instead of through query results.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-        </div>
-        <h4>Briefings &amp; scheduled reports</h4>
-        <p>LLM-generated operational summaries over any time window, exportable to PDF and deliverable on a schedule by email — your weekly ops review, written for you.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M19 17H6a2 2 0 0 0-2 2"/></svg>
-        </div>
-        <h4>Knowledge-base RAG</h4>
-        <p>Upload runbooks, SOPs, and postmortems — answers get grounded in your own documentation, and every RCA builds an incident memory the next one learns from.</p>
-      </div>
-      <div class="seccard">
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M8 10a4 4 0 1 1 8 0c0 2-1 3-2 4l-2 2-2-2c-1-1-2-2-2-4z" transform="translate(0,-1)"/><path d="M4 20c1.5-2.5 4.5-4 8-4s6.5 1.5 8 4"/></svg>
-        </div>
-        <h4>Works where your team works</h4>
-        <p>A Microsoft Teams bot with slash commands, plus a dedicated web UI for on-prem deployments — with viewer, SRE, and admin roles mapped from your directory.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6. HOW IT WORKS -->
-<section class="blk section-light">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:26px">
-      <span class="sec-eye">How it works</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">Ask. Ground. Answer.</h2>
-    </div>
-    <div class="steps reveal">
-      <div class="step">
-        <span class="ghost">1</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H5l-2 2V11a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg>
-        </div>
-        <div class="slabel"><span class="snum">STEP 01</span><span class="sline"></span></div>
-        <h4>Ask</h4>
-        <p>A plain-English question in Teams or the web UI. Intent classification routes it to the right pipeline — live query, root-cause analysis, or knowledge-base chat.</p>
-      </div>
-      <div class="step">
-        <span class="ghost">2</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-        </div>
-        <div class="slabel"><span class="snum">STEP 02</span><span class="sline"></span></div>
-        <h4>Ground</h4>
-        <p>Assist plans and executes the right Dynatrace API calls, and pulls in your runbooks and similar past incidents — so the answer comes from your environment, not the model's imagination.</p>
-      </div>
-      <div class="step">
-        <span class="ghost">3</span>
-        <div class="ico">
-          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
-        <div class="slabel"><span class="snum">STEP 03</span><span class="sline"></span></div>
-        <h4>Answer</h4>
-        <p>A formatted, evidence-backed reply — charted metrics, an RCA report, or a briefing — with every LLM call passing through an audited security gateway.</p>
-      </div>
-    </div>
-    <div class="hiw-cta reveal">
-      <div class="txt">Put your environment's answers within everyone's reach — <span>today.</span></div>
-      <div class="acts">
-        <a href="#" class="btn btn-primary" style="display:none">Start Free Trial →</a>
-        <a href="#" class="btn btn-primary">Book a Demo</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. INTEGRATIONS -->
-<section class="blk">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:22px">
-      <span class="sec-eye">Integrations</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">Plugs into the stack you already run.</h2>
-    </div>
-    <div class="integ-row reveal">
-      <span>Dynatrace Managed — read-only API access</span>
-      <span>Microsoft Teams — native bot</span>
-      <span>ServiceNow — ITSM incident search</span>
-      <span>LDAP / Entra ID — identity &amp; SSO</span>
-      <span>Ollama — local LLM runtime</span>
-      <span>HashiCorp Vault — secrets management</span>
-    </div>
-  </div>
-</section>
-
-<!-- 8. SECURITY NOTE -->
-<section class="blk section-light">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:24px">
-      <span class="sec-eye">Security</span>
-      <h2 style="font-size:clamp(24px,3vw,34px)">Your data never leaves the building.</h2>
-      <p class="sec-sub">Assist is built for on-prem and air-gapped deployments — the LLM runs locally, Dynatrace access is read-only by design, and every LLM call passes through a single audited gateway.</p>
-    </div>
-    <div class="sec-mini-row reveal">
-      <div class="sec-mini">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
-        <p><b>On-prem by design.</b> LLM inference runs locally — no observability data or prompts sent to external AI services.</p>
-      </div>
-      <div class="sec-mini">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg></div>
-        <p><b>Gated &amp; audited.</b> Injection scanning, PII redaction, and audit logging on every LLM call — to file and database.</p>
-      </div>
-      <div class="sec-mini">
-        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c.8-3 2.9-5 5.5-5s4.7 2 5.5 5"/><path d="M16 8h5M16 12h5M16 16h3"/></svg></div>
-        <p><b>Role-based access.</b> Viewer, SRE, and admin roles mapped from your directory — sensitive actions gated per role.</p>
-      </div>
-    </div>
-    <a href="index.html#security" class="link-cta reveal">See the full security architecture →</a>
-  </div>
-</section>
-
-<!-- 10. CTA FOOTER -->
+<!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
     <div class="final-box reveal">
-      <h2>Start using Assist today.</h2>
-      <p>Free trial in minutes, or talk to us about a pilot in your environment.</p>
+      <h2>Didn't find your answer?</h2>
+      <p>Talk to the team that builds and runs DynaLens, or start a free trial and see for yourself.</p>
       <div class="hero-actions">
         <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
         <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
@@ -1234,43 +1101,6 @@
   </div>
 </section>
 
-<!-- 11. RELATED APPS -->
-<section class="blk" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:22px">
-      <span class="sec-eye">Also in the suite</span>
-      <h2 style="font-size:clamp(22px,2.6vw,30px)">Assist is one of five.</h2>
-    </div>
-    <div class="suite compact reveal">
-      <a href="dynalens-finops-page.html" class="scard live">
-        <div class="scard-ico"><img src="assets/images/finops/icon.svg" alt=""></div>
-        <span class="badge now">Available now</span>
-        <h3>FinOps</h3>
-        <p>Attribute, optimise, and control your Dynatrace DPS spend.</p>
-      </a>
-      <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">S</div>
-        <span class="badge soon">Coming soon</span>
-        <h3>Signal</h3>
-        <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
-      </a>
-      <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">F</div>
-        <span class="badge soon">Coming soon</span>
-        <h3>Flow</h3>
-        <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
-      </a>
-      <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">M</div>
-        <span class="badge soon">Coming soon</span>
-        <h3>Map</h3>
-        <p>Business-service views built on top of Smartscape topology.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-in">
@@ -1311,65 +1141,19 @@
     }));
   })();
 
-  // ---------- PARTNER BADGE CAROUSEL ----------
-  document.querySelectorAll("[data-carousel]").forEach(track=>{
-    const wrap = track.parentElement;
-    const slides = Array.from(track.querySelectorAll(".ps-slide"));
-    const dots = Array.from(wrap.querySelectorAll(".ps-dot"));
-    if(!slides.length) return;
-    let idx = 0, timer = null;
-    function show(i){
-      slides[idx].classList.remove("active");
-      dots[idx] && dots[idx].classList.remove("active");
-      idx = (i + slides.length) % slides.length;
-      slides[idx].classList.add("active");
-      dots[idx] && dots[idx].classList.add("active");
-    }
-    function next(){ show(idx + 1); }
-    function startAutoplay(){ stopAutoplay(); timer = setInterval(next, 4000); }
-    function stopAutoplay(){ if(timer) clearInterval(timer); }
-    dots.forEach(d=>d.addEventListener("click", ()=>{
-      show(parseInt(d.dataset.idx, 10));
-      startAutoplay();
-    }));
-    startAutoplay();
-  });
-
-  // ---------- BEFORE/AFTER SLIDER ----------
-  document.querySelectorAll('[data-ba]').forEach(slider=>{
-    const before = slider.querySelector('.ba-before');
-    const handle = slider.querySelector('.ba-handle');
-    let dragging = false;
-    function setPct(pct){
-      pct = Math.max(2, Math.min(98, pct));
-      before.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
-      handle.style.left = pct + '%';
-      handle.setAttribute('aria-valuenow', Math.round(pct));
-    }
-    function pctFromClientX(clientX){
-      const rect = slider.getBoundingClientRect();
-      return ((clientX - rect.left) / rect.width) * 100;
-    }
-    handle.addEventListener('pointerdown', e=>{ dragging = true; handle.setPointerCapture(e.pointerId); });
-    window.addEventListener('pointermove', e=>{ if(dragging) setPct(pctFromClientX(e.clientX)); });
-    window.addEventListener('pointerup', ()=>{ dragging = false; });
-    slider.addEventListener('click', e=>{
-      if(e.target.closest('.ba-handle')) return;
-      setPct(pctFromClientX(e.clientX));
+  // ---------- FAQ ACCORDIONS (independent per group) ----------
+  (function(){
+    document.querySelectorAll('.faq').forEach(group=>{
+      const items = group.querySelectorAll('.acc-item');
+      items.forEach(it=>{
+        it.querySelector('.acc-q').addEventListener('click',()=>{
+          const isOpen = it.classList.contains('open');
+          items.forEach(x=>{x.classList.remove('open');x.querySelector('.acc-q').setAttribute('aria-expanded','false');});
+          if(!isOpen){it.classList.add('open');it.querySelector('.acc-q').setAttribute('aria-expanded','true');}
+        });
+      });
     });
-    handle.setAttribute('tabindex', '0');
-    handle.setAttribute('role', 'slider');
-    handle.setAttribute('aria-label', 'Before and after comparison');
-    handle.setAttribute('aria-valuemin', '0');
-    handle.setAttribute('aria-valuemax', '100');
-    handle.addEventListener('keydown', e=>{
-      const cur = parseFloat(handle.style.left) || 50;
-      if(e.key === 'ArrowLeft'){ setPct(cur - 4); e.preventDefault(); }
-      if(e.key === 'ArrowRight'){ setPct(cur + 4); e.preventDefault(); }
-    });
-    setPct(50);
-  });
+  })();
 </script>
-
 </body>
 </html>

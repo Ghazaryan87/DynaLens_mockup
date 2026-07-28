@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DynaLens — Dynatrace Apps for Cost Optimization & AI-Assisted Operations | YourCompass</title>
+<link rel="icon" type="image/svg+xml" href="assets/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
 <meta name="description" content="DynaLens is a suite of Dynatrace apps by YourCompass: FinOps for DPS cost optimization and forecasting, Assist for AI-assisted operations in plain English — SaaS or fully on-prem, with GCC data residency. Built by a Dynatrace Premier Partner.">
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is DynaLens?", "acceptedAnswer": {"@type": "Answer", "text": "DynaLens is a suite of apps that extends Dynatrace: FinOps for DPS cost attribution, forecasting, and optimization; Assist for plain-English operations backed by an on-prem LLM; and upcoming apps for incident communications, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner."}}, {"@type": "Question", "name": "How does DynaLens reduce Dynatrace costs?", "acceptedAnswer": {"@type": "Answer", "text": "FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimization actions scored by savings, impact, and effort \u2014 several applicable back into your Dynatrace tenant with one click."}}, {"@type": "Question", "name": "Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and on-prem environments, including air-gapped deployments with a locally hosted LLM."}}, {"@type": "Question", "name": "Can Dynatrace partners manage multiple customers with DynaLens?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FinOps is multi-tenant by design: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer a partner operates."}}, {"@type": "Question", "name": "Does our data leave our environment?", "acceptedAnswer": {"@type": "Answer", "text": "Dynatrace access is read-only by default and isolated per customer. On-premises deployment offers full feature parity, Assist runs its LLM locally, and GCC data residency is available in the UAE and KSA."}}, {"@type": "Question", "name": "How is DynaLens licensed?", "acceptedAnswer": {"@type": "Answer", "text": "Each app is licensed as a subscription with free trial and demo tiers. Enterprise and partner arrangements, including multi-tenant and bespoke terms, are handled directly."}}]}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -85,25 +84,6 @@
   .section-light .scard.soon-card{opacity:1}
   .section-light .scard p{color:var(--text-dim)}
 
-  /* Soon-app cards: white card, inset light panel for the list */
-  .section-light .soonapp{background:var(--surface-1);box-shadow:var(--shadow-sm);border-color:var(--line)}
-  .section-light .soonapp:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px)}
-  .section-light .sa-foot{background:var(--surface-2);border-top:1px solid var(--line)}
-  .section-light .sa-glyph{background:linear-gradient(150deg,#fff,var(--cyan-soft));border:1px solid rgba(12,123,158,.22);box-shadow:var(--shadow-sm);color:var(--cyan)}
-  .section-light .sa-cat{color:var(--cyan)}
-  .section-light .sa-problem{background:rgba(165,92,0,.06);border-color:rgba(165,92,0,.18)}
-  .section-light .sa-problem .pl{color:var(--amber)}
-  .section-light .sa-problem::before{background:var(--amber)}
-  .section-light .sa-caps li::before{background:var(--cyan-soft);border-color:var(--cyan)}
-  .section-light .btn-notify{border-color:var(--cyan);background:var(--cyan-soft);color:var(--cyan)}
-
-  /* Carousel controls on light */
-  .section-light .rm-dot{background:rgba(16,24,64,.12)}
-  .section-light .rm-dot.active{background:var(--cyan)}
-  .section-light .rm-arrow{background:var(--surface-1);border-color:var(--line);color:var(--text-dim);box-shadow:var(--shadow-sm)}
-  .section-light .rm-arrow:hover{border-color:var(--cyan);color:var(--cyan);background:#fff}
-  .section-light .rm-counter b{color:var(--text)}
-
   /* Steps on light: white cards with elevation */
   .section-light .step{background:var(--surface-1);box-shadow:var(--shadow-sm);border-color:var(--line)}
   .section-light .step:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
@@ -115,8 +95,6 @@
   .section-light .seccard:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
   .section-light .seccard .ico{background:linear-gradient(150deg,#fff,var(--cyan-soft));border-color:rgba(12,123,158,.22);box-shadow:var(--shadow-sm)}
 
-  /* Partner badges + built-by chips on light */
-  .section-light .partner-row span{background:var(--surface-1);border-color:var(--line);box-shadow:var(--shadow-sm);color:var(--text-dim)}
   .section-light .built p{color:var(--text-dim)}
 
   /* Primary button on light keeps cyan fill but with shadow */
@@ -166,8 +144,7 @@
   }
   .nav-in{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
   .logo{font-family:'Space Grotesk';font-weight:700;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
-  .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan);animation:pulse 2.4s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.78)}}
+  .logo .logo-icon{width:31px;height:31px;border-radius:9px;flex-shrink:0;display:block;border:1px solid rgba(255,255,255,.35);box-sizing:border-box}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:var(--text-dim);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--text)}
@@ -192,35 +169,6 @@
   .nav-status--sg:hover{color:#9B8CFF}
   .nav-status--fl:hover{color:#34D399}
   .nav-status--mp:hover{color:#F472B6}
-  /* ---------- PRODUCTS DROPDOWN (live apps) ---------- */
-  .nav-drop{position:relative}
-  .nav-drop>a::after{content:"\25BE";font-size:9px;margin-left:6px;opacity:.6;vertical-align:1px}
-  .drop-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60}
-  .nav-drop:hover .drop-panel,.nav-drop:focus-within .drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-  .drop-in{width:600px;background:rgba(10,18,71,.97);backdrop-filter:blur(18px);border:1px solid var(--line-strong);border-radius:18px;padding:14px;box-shadow:0 30px 70px -20px rgba(0,0,0,.7);display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .drop-item{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
-  .drop-item:hover{background:rgba(255,255,255,.05);transform:translateY(-2px)}
-  .drop-item.fo:hover{border-color:rgba(255,181,70,.45)}
-  .drop-item.as:hover{border-color:rgba(34,211,238,.45)}
-  .drop-hd{display:flex;align-items:center;gap:10px}
-  .drop-glyph{width:36px;height:36px;flex-shrink:0;border-radius:10px;font-family:'Space Grotesk';font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:center}
-  .drop-glyph.fo{background:rgba(255,181,70,.12);border:1px solid rgba(255,181,70,.35);color:#FFB546}
-  .drop-glyph.as{background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);color:#22D3EE}
-  .drop-hd b{font-family:'Space Grotesk';font-weight:600;font-size:15.5px;color:#F5F7FF;flex:1}
-  .drop-pill{font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:100px;padding:3px 9px;white-space:nowrap}
-  .drop-pill.fo{color:#FFB546;border:1px solid rgba(255,181,70,.4);background:rgba(255,181,70,.1)}
-  .drop-pill.as{color:#22D3EE;border:1px solid rgba(34,211,238,.4);background:rgba(34,211,238,.1)}
-  .drop-item p{font-size:12.5px;color:#A6AED6;line-height:1.5;flex:1;margin:0}
-  .drop-cta{align-self:flex-start;font-family:'Inter';font-weight:600;font-size:12.5px;border-radius:9px;padding:8px 14px;transition:all .2s ease;white-space:nowrap}
-  .drop-cta.fo{border:1px solid #FFB546;color:#FFB546;background:rgba(255,181,70,.1)}
-  .drop-item.fo:hover .drop-cta.fo{background:#FFB546;color:#070B2E}
-  .drop-cta.as{border:1px solid #22D3EE;color:#22D3EE;background:rgba(34,211,238,.1)}
-  .drop-item.as:hover .drop-cta.as{background:#22D3EE;color:#070B2E}
-  .drop-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 6px 0;flex-wrap:wrap}
-  .drop-foot .dfl{font-size:11.5px;color:#6B73A0}
-  .drop-foot a{font-size:12px;font-weight:600;color:#A6AED6;text-decoration:none;transition:color .2s}
-  .drop-foot a:hover{color:#F5F7FF}
-  @media(max-width:820px){.drop-panel{display:none}}
 
   .nav-cta{display:flex;gap:12px;align-items:center}
   .btn{font-family:'Inter';font-weight:600;font-size:14.5px;border-radius:10px;padding:10px 18px;cursor:pointer;border:1px solid transparent;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .22s ease;white-space:nowrap}
@@ -228,7 +176,7 @@
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(34,211,238,.55)}
   .btn-ghost{background:transparent;color:var(--text);border-color:var(--line-strong)}
   .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
-  @media(max-width:820px){.nav-links{display:none}}
+  @media(max-width:900px){.nav-links{display:none}}
 
   /* ---------- MOBILE NAV ---------- */
   .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:1px solid var(--line-strong);border-radius:9px;cursor:pointer;padding:0;flex-shrink:0}
@@ -237,12 +185,12 @@
   .nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
   .nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
   .nav-mobile{display:none;flex-direction:column;gap:2px;padding:10px 20px 22px;border-top:1px solid var(--line);background:rgba(7,11,46,.98);backdrop-filter:blur(14px)}
-  .nav-mobile a{color:var(--text-dim);text-decoration:none;font-size:15.5px;font-weight:500;padding:13px 4px;border-bottom:1px solid var(--line)}
+  .nav-mobile a:not(.btn){color:var(--text-dim);text-decoration:none;font-size:15.5px;font-weight:500;padding:13px 4px;border-bottom:1px solid var(--line)}
   .nav-mobile a:last-of-type{border-bottom:none}
   .nav-mobile-cta{display:flex;flex-direction:column;gap:10px;margin-top:16px}
   .nav-mobile-cta .btn{width:100%;justify-content:center}
   .nav-mobile.open{display:flex}
-  @media(max-width:820px){
+  @media(max-width:900px){
     .nav-cta{display:none}
     .nav-burger{display:flex}
   }
@@ -251,7 +199,9 @@
   .hero{padding:60px 0 48px;position:relative}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.25);padding:6px 13px;border-radius:100px;margin-bottom:26px}
   .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"intro visual" "cta visual";column-gap:54px;row-gap:0;align-items:center}
+  .hero-intro{grid-area:intro}
+  .hero-cta{grid-area:cta}
   h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;margin-bottom:22px}
   h1 .hl{color:var(--cyan)}
   .hero-sub{font-size:18.5px;color:var(--text-dim);max-width:540px;margin-bottom:32px}
@@ -259,7 +209,7 @@
   .btn-lg{padding:14px 26px;font-size:15.5px;border-radius:12px}
   .trust{display:flex;gap:10px;flex-wrap:wrap}
   .trust span{font-size:12px;font-weight:500;color:var(--text-faint);border:1px solid var(--line);border-radius:8px;padding:6px 11px;background:var(--card)}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"intro" "visual" "cta";gap:40px}.hero-intro{margin-bottom:0}}
 
   /* Equalize the three hero-carousel visuals so the slide doesn't jump height on rotation */
   .hero-visual{min-height:582px;box-sizing:border-box}
@@ -322,9 +272,13 @@
 
   /* ---------- PARTNER STRIP ---------- */
   .partner-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(14,26,102,.25),transparent);margin-top:20px}
-  .ps-in{max-width:var(--maxw);margin:0 auto;padding:24px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between}
-  .ps-label{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap}
-  .ps-badges{display:flex;gap:14px;flex-wrap:wrap;flex:1;justify-content:flex-end}
+  .ps-in{max-width:var(--maxw);margin:0 auto;padding:36px 28px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+  .ps-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
+  .ps-track{position:relative;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:28px;width:100%;min-height:118px}
+  .ps-dots{display:none;gap:9px;align-items:center}
+  .ps-dot{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.22);border:none;padding:0;cursor:pointer;transition:all .25s ease}
+  .ps-dot:hover{background:rgba(255,255,255,.4)}
+  .ps-dot.active{background:var(--cyan);width:22px}
   .pbadge{display:flex;align-items:center;gap:10px;padding:11px 18px;border:1px solid var(--line-strong);border-radius:12px;background:var(--card);transition:all .25s ease;cursor:default}
   .pbadge:hover{border-color:var(--cyan);background:var(--cyan-soft);transform:translateY(-2px)}
   .pbadge .pb-ico{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:13px;flex-shrink:0}
@@ -335,7 +289,15 @@
   .pbadge .pb-txt{display:flex;flex-direction:column;line-height:1.2}
   .pbadge .pb-txt b{font-family:'Space Grotesk';font-weight:600;font-size:13.5px;color:var(--text)}
   .pbadge .pb-txt span{font-size:10.5px;color:var(--text-faint)}
-  @media(max-width:900px){.ps-in{flex-direction:column;align-items:flex-start}.ps-badges{justify-content:flex-start}}
+  .pbadge.pbadge-img{padding:10px 14px}
+  .pbadge-img img{height:118px;width:auto;max-width:392px;max-height:100%;object-fit:contain;border-radius:8px;display:block}
+  @media(max-width:640px){
+    .ps-track{min-height:73px;flex-wrap:nowrap}
+    .pbadge.ps-slide{display:none}
+    .pbadge.ps-slide.active{display:flex}
+    .pbadge-img img{height:73px;max-width:247px}
+    .ps-dots{display:flex}
+  }
 
   /* ---------- HERO DASHBOARD (signature) ---------- */
   .dash{
@@ -391,12 +353,16 @@
   .scard:hover{transform:translateY(-4px);border-color:var(--line-strong);background:var(--card-hover)}
   .scard.live{border-color:rgba(34,211,238,.4);background:linear-gradient(160deg,rgba(34,211,238,.07),var(--card))}
   .scard.live::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
+  .scard-ico{width:44px;height:44px;border-radius:12px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+  .scard-ico img{width:100%;height:100%;object-fit:cover}
+  .scard-ico.placeholder{font-family:'Space Grotesk';font-weight:700;font-size:17px;color:var(--text-dim)}
+  .section-light .scard-ico{background:var(--surface-2);border-color:var(--line)}
   .badge{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;display:inline-block;margin-bottom:14px}
   .badge.now{background:var(--cyan);color:var(--navy-900)}
   .badge.soon{background:rgba(255,255,255,.06);color:var(--text-faint);border:1px solid var(--line)}
   .scard h3{font-size:19px;font-weight:600;margin-bottom:8px}
   .scard p{font-size:13.5px;color:var(--text-dim);line-height:1.5}
-  .scard.soon-card{opacity:.78}
+  .scard.soon-card{opacity:.78;cursor:default}
   .scard.soon-card:hover{opacity:1}
 
   /* ---------- APP MINI SECTIONS ---------- */
@@ -411,8 +377,10 @@
   .app-list li{position:relative;padding-left:26px;margin-bottom:13px;font-size:14.5px;color:var(--text-dim);max-width:470px}
   .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--cyan-soft);border:1px solid var(--cyan)}
   .app-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-  .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s}
+  .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s;cursor:pointer}
   .link-cta:hover{gap:11px}
+  .link-cta .lc-chev{width:14px;height:14px;flex-shrink:0;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+  .link-cta:hover .lc-chev{transform:translateX(4px)}
   .notify{display:flex;gap:8px;align-items:center}
   .notify input{background:var(--card);border:1px solid var(--line-strong);border-radius:10px;padding:10px 14px;color:var(--text);font-size:14px;font-family:'Inter';width:200px}
   .notify input:focus{outline:none;border-color:var(--cyan)}
@@ -480,42 +448,7 @@
   .section-light .bstat{background:var(--surface-1);box-shadow:var(--shadow-sm);border-color:var(--line)}
   @media(max-width:860px){.built{grid-template-columns:1fr;gap:32px}}
 
-  /* ---------- TEAM ROW ---------- */
-  .team{margin-top:44px;padding-top:36px;border-top:1px solid var(--line)}
-  .team-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
-  .team-head .tt{font-family:'Space Grotesk';font-weight:600;font-size:20px;color:var(--text)}
-  .team-head .ts{font-size:14px;color:var(--text-dim);max-width:440px}
-  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .tmember{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .3s,box-shadow .3s,border-color .3s}
-  .tmember:hover{transform:translateY(-4px);border-color:var(--line-strong)}
-  .tavatar{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#fff;margin-bottom:16px;position:relative;overflow:hidden}
-  .tavatar.a1{background:linear-gradient(150deg,#22D3EE,#0C7B9E)}
-  .tavatar.a2{background:linear-gradient(150deg,#6E5CE0,#3D2EA8)}
-  .tavatar.a3{background:linear-gradient(150deg,#FFB546,#B26A00)}
-  .tavatar.a4{background:linear-gradient(150deg,#34D399,#0C8F61)}
-  .tmember .tn{font-family:'Space Grotesk';font-weight:600;font-size:16px;color:var(--text);margin-bottom:3px}
-  .tmember .tr{font-size:12.5px;color:var(--cyan);font-weight:600;letter-spacing:.02em;margin-bottom:11px}
-  .tmember .tx{font-size:13px;color:var(--text-dim);line-height:1.5}
-  .section-light .tmember{background:var(--surface-1);box-shadow:var(--shadow-sm);border-color:var(--line)}
-  .section-light .tmember:hover{box-shadow:var(--shadow-md)}
-  .section-light .tmember .tr{color:var(--cyan)}
-  @media(max-width:860px){.team-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.team-grid{grid-template-columns:1fr}}
-
   /* ---------- ROADMAP BAND (now themed via section-light) ---------- */
-  .roadmap-band{position:relative}
-  .roadmap-band .wrap{position:relative;z-index:1}
-
-  /* ---------- ROADMAP CAROUSEL (2 slides x 2 apps) ---------- */
-  .rm-carousel{position:relative}
-  .rm-viewport{position:relative;overflow:hidden}
-  .rm-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
-  .rm-slide{min-width:100%}
-  .rm-slide .rm-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
-  .rm-slide .rm-pair .soonapp{height:100%}
-  .rm-pair.single{grid-template-columns:minmax(0,560px);justify-content:center}
-  @media(max-width:760px){.rm-slide .rm-pair{grid-template-columns:1fr}.rm-pair.single{grid-template-columns:1fr}}
-  .live-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
   /* ---------- LIVE PRODUCT SECTIONS ---------- */
   .app-eye.fo{background:rgba(255,181,70,.12);color:#FFB546;border:1px solid rgba(255,181,70,.3)}
   .btn-fo{background:#FFB546;color:#070B2E;box-shadow:0 0 0 0 rgba(255,181,70,.5)}
@@ -535,75 +468,6 @@
   .section-light .assist-visual .fv-stat .v{color:#F5F7FF}
   .app-sec .app{border-top:none;padding:0}
 
-  @media(max-width:760px){.live-pair{grid-template-columns:1fr}}
-  .rm-ctl{display:flex;align-items:center;gap:18px;margin-top:30px;justify-content:center}
-  .rm-dots{display:flex;gap:9px}
-  .rm-dot{width:34px;height:5px;border-radius:100px;background:rgba(255,255,255,.14);border:none;cursor:pointer;padding:0;transition:all .3s ease}
-  .rm-dot.active{background:var(--cyan)}
-  .rm-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-strong);background:var(--card);color:var(--text-dim);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s}
-  .rm-arrow:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-soft)}
-  .rm-counter{font-family:'JetBrains Mono';font-size:13px;color:var(--text-faint)}
-  .rm-counter b{color:var(--text)}
-  .soon-rows{margin-top:14px;display:flex;flex-direction:column;gap:0}
-
-  /* editorial app card: header / problem / solution / capabilities / cta */
-  .soonapp{display:flex;flex-direction:column;align-items:stretch;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card);transition:transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s, border-color .3s;position:relative}
-  .soonapp::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
-  .soonapp:hover{border-color:var(--line-strong);transform:translateY(-4px);box-shadow:0 30px 70px -34px rgba(0,0,0,.5)}
-  .soonapp:hover::before{opacity:.7}
-
-  /* header zone */
-  .sa-hd{padding:26px 28px 0;display:flex;align-items:flex-start;gap:15px}
-  .sa-glyph{width:52px;height:52px;flex-shrink:0;border-radius:14px;background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);color:var(--cyan);font-family:'Space Grotesk';font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center}
-  .sa-title{flex:1;min-width:0}
-  .sa-title .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
-  .sa-title .nm{font-family:'Space Grotesk';font-weight:700;font-size:24px;line-height:1.05}
-  .sa-cat{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-top:5px;display:block}
-  .sa-pill{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-faint);border:1px solid var(--line-strong);border-radius:100px;padding:4px 10px;white-space:nowrap;flex-shrink:0}
-  .sa-pill.now{color:var(--cyan);border-color:rgba(34,211,238,.4);background:var(--cyan-soft)}
-
-  /* body */
-  .sa-body{padding:20px 28px 0;flex:1;display:flex;flex-direction:column}
-
-  /* problem callout — the focal point */
-  .sa-problem{position:relative;padding:15px 16px 15px 18px;border-radius:12px;background:rgba(255,181,70,.06);border:1px solid rgba(255,181,70,.18);margin-bottom:18px}
-  .sa-problem::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:3px;background:var(--amber);opacity:.7}
-  .sa-problem .pl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:6px;display:block}
-  .sa-problem p{font-size:14px;color:var(--text);line-height:1.5;font-weight:450}
-
-  /* solution line */
-  .sa-sol{font-size:15px;color:var(--text-dim);line-height:1.55;margin-bottom:20px}
-  .sa-sol b{color:var(--text);font-weight:600}
-
-  /* capabilities */
-  .sa-caps{margin-top:auto}
-  .sa-caps .ch{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:12px;display:flex;align-items:center;gap:8px}
-  .sa-caps .ch::after{content:"";flex:1;height:1px;background:var(--line)}
-  .sa-caps ul{list-style:none}
-  .sa-caps li{position:relative;padding-left:24px;margin-bottom:10px;font-size:13.5px;color:var(--text-dim);line-height:1.45}
-  .sa-caps li:last-child{margin-bottom:0}
-  .sa-caps li::before{content:"";position:absolute;left:2px;top:6px;width:9px;height:9px;border-radius:2px;background:var(--cyan-soft);border:1.5px solid var(--cyan)}
-
-  /* unified prominent CTA footer */
-  .sa-foot{margin-top:22px;padding:18px 28px;border-top:1px solid var(--line);background:var(--card-hover);display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .sa-foot .waitnote{font-size:12px;color:var(--text-faint)}
-  .btn-notify{font-family:'Inter';font-weight:600;font-size:13.5px;border-radius:10px;padding:10px 18px;cursor:pointer;border:1px solid var(--cyan);background:var(--cyan-soft);color:var(--cyan);display:inline-flex;align-items:center;gap:7px;transition:all .22s ease;white-space:nowrap;text-decoration:none}
-  .btn-notify:hover{background:var(--cyan);color:var(--navy-900);transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(34,211,238,.5)}
-  .section-light .btn-notify:hover{color:#fff;box-shadow:0 10px 24px -8px rgba(12,123,158,.5)}
-
-  /* ---------- ROADMAP ZONE: violet accent (future products) ---------- */
-  .roadmap-zone{--cyan:#6E5CE0;--cyan-soft:rgba(110,92,224,.10)}
-  .roadmap-zone .sa-glyph{background:linear-gradient(150deg,#fff,rgba(110,92,224,.10));border-color:rgba(110,92,224,.25);color:#6E5CE0}
-  .roadmap-zone .sa-cat{color:#6E5CE0}
-  .roadmap-zone .sa-caps li::before{background:rgba(110,92,224,.12);border-color:#6E5CE0}
-  .roadmap-zone .sec-eye{color:#6E5CE0}
-  .roadmap-zone .soonapp::before{background:linear-gradient(90deg,#6E5CE0,transparent)}
-  .roadmap-zone .rm-dot.active{background:#6E5CE0}
-  .roadmap-zone .rm-arrow:hover{border-color:#6E5CE0;color:#6E5CE0;background:rgba(110,92,224,.08)}
-  .roadmap-zone .btn-notify{border-color:#6E5CE0;background:rgba(110,92,224,.10);color:#6E5CE0}
-  .roadmap-zone .btn-notify:hover{background:#6E5CE0;color:#fff;box-shadow:0 10px 24px -8px rgba(110,92,224,.5)}
-  /* keep amber problem callout — it's a meaningful signal, not theme */
-
   /* ---------- DEPLOY ---------- */
   .deploy{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .dcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:all .25s}
@@ -617,8 +481,6 @@
   .built p{font-size:16.5px;color:var(--text-dim);line-height:1.6}
   .built h2{max-width:560px}
   .built p{font-size:16.5px;color:var(--text-dim);max-width:680px;margin-bottom:24px}
-  .partner-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-  .partner-row span{font-size:12.5px;font-weight:500;color:var(--text-dim);border:1px solid var(--line-strong);border-radius:9px;padding:8px 14px;background:var(--card)}
 
   /* ---------- SECURITY ---------- */
   .sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -645,12 +507,17 @@
   .final .hero-actions{justify-content:center;position:relative}
 
   /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--line);padding:40px 0;margin-top:40px}
+  footer{border-top:1px solid var(--line);padding:28px 0;margin-top:40px;background:rgba(7,11,46,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
-  .foot-in .copy{font-size:13px;color:var(--text-faint)}
+  .foot-in .copy{font-size:13px;color:var(--text)}
+  .foot-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);text-align:center}
+  .foot-yc-logo{height:60px;width:auto}
+  .foot-brand .copy{font-size:13px;color:var(--text)}
+  @media(max-width:900px){.foot-yc-logo{height:53px}}
+  @media(max-width:640px){.foot-yc-logo{height:45px}}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap}
-  .foot-links a{color:var(--text-faint);text-decoration:none;font-size:13px;transition:color .2s}
-  .foot-links a:hover{color:var(--text)}
+  .foot-links a{color:var(--text);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+  .foot-links a:hover{color:var(--cyan)}
 
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
@@ -668,7 +535,6 @@
     .fv-row{flex-direction:column}
     .mini-dash .stat-row{grid-template-columns:1fr}
     .carousel-ctl{flex-wrap:wrap;justify-content:center;gap:12px}
-    .rm-ctl{flex-wrap:wrap}
     .suite{grid-template-columns:1fr}
     .soon-stack{grid-template-columns:1fr}
     .dps-table-wrap{overflow-x:auto}
@@ -676,10 +542,7 @@
     .hiw-cta{flex-direction:column;align-items:stretch;text-align:center}
     .hiw-cta .acts{justify-content:center}
     .final-box{padding:40px 22px}
-    .sa-hd{flex-wrap:wrap}
-    .sa-foot{flex-direction:column;align-items:stretch;gap:12px;text-align:center}
     .foot-in{flex-direction:column;align-items:flex-start}
-    .team-head{flex-direction:column;align-items:flex-start}
     .built-stats{grid-template-columns:1fr 1fr}
   }
   @media(max-width:380px){
@@ -701,7 +564,7 @@
     linear-gradient(180deg, #F2F4FA, var(--surface-0) 18%, #EAEEF6)}
 
   /* ---- dark glass surfaces ---- */
-  .soonapp,.scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
+  .scard,.seccard,.step,.stat,.dash,.mini-dash,.finops-visual,.assist-visual,
   .video-frame,.clip,.shot,.faq details,.pbadge,.dps-table-wrap,.hiw-cta,.dep-card,
   .integ-row span,.drop-in,.nav-mobile{
     background:rgba(255,255,255,.055);
@@ -720,7 +583,7 @@
     backdrop-filter:blur(18px) saturate(150%);
     -webkit-backdrop-filter:blur(18px) saturate(150%);
     border-color:rgba(255,255,255,.14)}
-  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
+  .scard:hover,.seccard:hover,.clip:hover,.shot:hover{background:rgba(255,255,255,.09)}
   .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
   .btn-ghost{
     background:rgba(255,255,255,.06);
@@ -732,7 +595,7 @@
   .clip .cframe,.shot .ss-frame{background:rgba(255,255,255,.02)}
 
   /* ---- light glass surfaces (frosted white) ---- */
-  .section-light .soonapp,.section-light .scard,.section-light .seccard,.section-light .step,
+  .section-light .scard,.section-light .seccard,.section-light .step,
   .section-light .faq details,.section-light .shot,.section-light .integ-row span,
   .section-light .dps-table-wrap,.section-light .hiw-cta,.section-light .video-frame,
   .section-light .pbadge,.section-light .clip{
@@ -741,7 +604,7 @@
     -webkit-backdrop-filter:blur(16px) saturate(170%);
     border-color:rgba(255,255,255,.85);
     box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
-  .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .scard:hover,.section-light .seccard:hover,
   .section-light .shot:hover{background:rgba(255,255,255,.72)}
   .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
   .section-light .btn-ghost{
@@ -790,9 +653,8 @@
 
   /* ---- problems: vertical two-column tabs ---- */
   .pver-label{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9B8CFF;border:1px dashed rgba(155,140,255,.5);border-radius:8px;padding:6px 12px;display:inline-block;margin-bottom:20px}
-  .ptabs{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:22px;align-items:stretch}
-  .ptab-list{display:flex;flex-direction:column;gap:10px}
-  .ptab-item{position:relative;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
+  .ptabs{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:22px;align-items:start}
+  .ptab-item{grid-column:1;position:relative;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
   .ptab-item::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background .2s}
   .ptab-item:hover{background:rgba(255,255,255,.07);color:var(--text)}
   .ptab-item.active{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);color:var(--text)}
@@ -803,67 +665,25 @@
   .ptab-item.active[data-app="fo"] .pt-app{color:#FFB546}
   .ptab-item.active[data-app="as"] .pt-app{color:#22D3EE}
   .ptab-item.active[data-app="rm"] .pt-app{color:#9B8CFF}
-  .ppanel{border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09);padding:30px 34px;display:flex;flex-direction:column}
-  .ppanel-item{display:none;flex-direction:column;flex:1}
+  .ppanel-item{grid-column:2;grid-row:1/span 5;align-self:start;display:none;flex-direction:column;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.35), inset 0 1px 0 rgba(255,255,255,.09);padding:30px 34px}
   .ppanel-item.active{display:flex}
   .ppanel-kick{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
   .ppanel-kick.fo{color:#FFB546}.ppanel-kick.as{color:#22D3EE}.ppanel-kick.rm{color:#9B8CFF}
-  .ppanel h3{font-family:'Space Grotesk';font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.02em;margin-bottom:14px;color:var(--text)}
-  .ppanel .pp-sol{font-size:14.5px;color:var(--text-dim);line-height:1.65;margin-bottom:18px}
-  .ppanel .pp-sol b{color:var(--text);font-weight:600}
-  .ppanel .pp-pts{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
-  .ppanel .pp-pts span{font-size:13px;color:var(--text-dim);padding-left:16px;position:relative;line-height:1.5}
-  .ppanel .pp-pts span::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:2px;background:currentColor;opacity:.5}
-  .ppanel .pp-cta{margin-top:auto}
-  @media(max-width:860px){.ptabs{grid-template-columns:1fr}.ppanel{padding:22px}}
-
-  /* ---- visual roadmap cards ---- */
-  .rmv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .rmv-card{border:1px solid rgba(255,255,255,.85);border-radius:18px;background:rgba(255,255,255,.55);backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);box-shadow:0 2px 6px rgba(16,24,64,.05),0 20px 44px -18px rgba(16,24,64,.16),inset 0 1px 0 rgba(255,255,255,.95);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,background .25s}
-  .rmv-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.72)}
-  .rmv-hd{display:flex;align-items:center;gap:12px;padding:18px 20px 14px}
-  .rmv-hd .sa-glyph{width:42px;height:42px;font-size:15px;border-radius:12px}
-  .rmv-hd .nm{font-family:'Space Grotesk';font-weight:600;font-size:18px;color:var(--text);flex:1}
-  .rmv-frame{position:relative;margin:0 20px;border-radius:12px;overflow:hidden;border:1px solid rgba(110,92,224,.3);aspect-ratio:16/10;background:linear-gradient(160deg,#151F6E,#0A1140);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
-  .rmv-frame .rp{width:46px;height:46px;border-radius:50%;background:rgba(155,140,255,.14);border:1.5px solid rgba(155,140,255,.5);display:flex;align-items:center;justify-content:center}
-  .rmv-frame .rp svg{width:16px;height:16px;fill:#9B8CFF;margin-left:2px}
-  .rmv-frame .rl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#9B8CFF}
-  .rmv-cap{padding:14px 20px 20px;font-size:13.5px;color:var(--text-dim);line-height:1.5}
-  .rmv-foot{padding:0 20px 20px;margin-top:auto}
-  @media(max-width:860px){.rmv{grid-template-columns:1fr}}
-
-  /* ---- FAQ redesign ---- */
-  .faqx{display:grid;grid-template-columns:minmax(280px,0.9fr) 1.6fr;gap:44px;align-items:start}
-  .faqx-left{position:sticky;top:96px}
-  .faqx-cta{margin-top:26px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.055);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.3),inset 0 1px 0 rgba(255,255,255,.09);padding:22px}
-  .faqx-cta b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:16px;color:var(--text);margin-bottom:6px}
-  .faqx-cta p{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:16px}
-  .faqx .faq{max-width:none}
-  .faqx .faq summary{gap:16px;justify-content:flex-start}
-  .faqx .faq summary .qn{font-family:'JetBrains Mono';font-weight:400;font-size:11.5px;color:var(--text-faint);flex-shrink:0;padding-top:3px}
-  .faqx .faq summary .qt{flex:1}
-  .faqx .faq .faq-a{padding-left:52px}
-  @media(max-width:900px){.faqx{grid-template-columns:1fr;gap:28px}.faqx-left{position:static}.faqx .faq .faq-a{padding-left:22px}}
-
-  /* ---- accordion v2 ---- */
-  .acc-item{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 32px rgba(2,6,32,.25),inset 0 1px 0 rgba(255,255,255,.08);margin-bottom:12px;overflow:hidden;transition:border-color .3s,background .3s}
-  .acc-item::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:rgba(255,255,255,.1);transition:background .3s}
-  .acc-item:hover{background:rgba(255,255,255,.075)}
-  .acc-item.open{background:rgba(255,255,255,.085);border-color:rgba(34,211,238,.32)}
-  .acc-item.open::before{background:var(--cyan)}
-  .acc-q{width:100%;background:none;border:0;display:flex;align-items:center;gap:16px;padding:20px 22px 20px 26px;cursor:pointer;text-align:left}
-  .acc-q .qn{font-family:'JetBrains Mono';font-size:11.5px;color:var(--text-faint);flex-shrink:0;transition:color .3s}
-  .acc-item.open .acc-q .qn{color:var(--cyan)}
-  .acc-q .qt{flex:1;font-family:'Space Grotesk';font-weight:600;font-size:15.5px;line-height:1.4;color:var(--text);letter-spacing:-.01em}
-  .acc-x{width:32px;height:32px;flex-shrink:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.4,0,.2,1),border-color .3s,background .3s}
-  .acc-x svg{width:13px;height:13px;stroke:var(--text-dim);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
-  .acc-item.open .acc-x{transform:rotate(180deg);border-color:rgba(34,211,238,.45);background:var(--cyan-soft)}
-  .acc-item.open .acc-x svg{stroke:var(--cyan)}
-  .acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.4,0,.2,1)}
-  .acc-item.open .acc-body{grid-template-rows:1fr}
-  .acc-a{overflow:hidden}
-  .acc-a-in{padding:0 60px 22px 63px;font-size:14px;color:var(--text-dim);line-height:1.65;border-top:1px solid rgba(255,255,255,.08);margin:0 22px 0 26px;padding:14px 24px 22px 37px}
-  @media(max-width:640px){.acc-q{padding:17px 16px 17px 20px}.acc-a-in{margin:0 14px 0 18px;padding:12px 4px 18px 27px}}
+  .ppanel-item h3{font-family:'Space Grotesk';font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.02em;margin-bottom:14px;color:var(--text)}
+  .ppanel-item .pp-sol{font-size:14.5px;color:var(--text-dim);line-height:1.65;margin-bottom:18px}
+  .ppanel-item .pp-sol b{color:var(--text);font-weight:600}
+  .ppanel-item .pp-pts{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+  .ppanel-item .pp-pts span{font-size:13px;color:var(--text-dim);padding-left:16px;position:relative;line-height:1.5}
+  .ppanel-item .pp-pts span::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:2px;background:currentColor;opacity:.5}
+  .ppanel-item .pp-cta{margin-top:auto}
+  /* ---- accordion mode: tablet and smaller ---- */
+  @media(max-width:860px){
+    .ptabs{display:flex;flex-direction:column;gap:10px}
+    .ptab-item{width:100%;box-sizing:border-box;display:flex;align-items:center;min-height:64px;padding-right:56px}
+    .ptab-item::after{content:"+";position:absolute;right:12px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;line-height:1;color:rgba(255,255,255,.92);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);transition:all .25s ease}
+    .ptab-item.active::after{transform:translateY(-50%) rotate(45deg);color:var(--navy-900);background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px rgba(34,211,238,.5)}
+    .ppanel-item{width:100%;box-sizing:border-box;border-radius:14px;padding:22px 20px;margin:-4px 0 2px}
+  }
 
   /* ---- problem recognition wall ---- */
   .pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
@@ -887,7 +707,7 @@
   .section-light .ptab-item.active[data-app="fo"] .pt-app{color:#A55C00}
   .section-light .ptab-item.active[data-app="as"] .pt-app{color:#0C7B9E}
   .section-light .ptab-item.active[data-app="rm"] .pt-app{color:#6E5CE0}
-  .section-light .ppanel{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.85);box-shadow:0 2px 6px rgba(16,24,64,.05),0 20px 44px -18px rgba(16,24,64,.16),inset 0 1px 0 rgba(255,255,255,.95)}
+  .section-light .ppanel-item{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.85);box-shadow:0 2px 6px rgba(16,24,64,.05),0 20px 44px -18px rgba(16,24,64,.16),inset 0 1px 0 rgba(255,255,255,.95)}
   .section-light .ppanel-kick.fo{color:#A55C00}
   .section-light .ppanel-kick.as{color:#0C7B9E}
   .section-light .ppanel-kick.rm{color:#6E5CE0}
@@ -937,15 +757,15 @@
   .section-light .ptab-item:hover{color:#FFFFFF}
   .section-light .ptab-item.active{color:#FFFFFF}
   /* opened panel: more prominent */
-  .section-light .ppanel{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.95);padding:36px 40px}
-  .ppanel h3{font-size:clamp(22px,2.5vw,30px);margin-bottom:16px}
-  .ppanel .pp-sol{font-size:15.5px;line-height:1.7}
-  .section-light .ppanel .pp-sol{color:#3A4165}
-  .section-light .ppanel .pp-sol b{color:#141A3C}
-  .ppanel .pp-pts span{font-size:13.5px}
-  .section-light .ppanel .pp-pts span{color:#4A5178}
+  .section-light .ppanel-item{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.95);padding:36px 40px}
+  .ppanel-item h3{font-size:clamp(22px,2.5vw,30px);margin-bottom:16px}
+  .ppanel-item .pp-sol{font-size:15.5px;line-height:1.7}
+  .section-light .ppanel-item .pp-sol{color:#3A4165}
+  .section-light .ppanel-item .pp-sol b{color:#141A3C}
+  .ppanel-item .pp-pts span{font-size:13.5px}
+  .section-light .ppanel-item .pp-pts span{color:#4A5178}
   .ppanel-kick{font-size:11px;margin-bottom:16px}
-  @media(max-width:860px){.section-light .ppanel{padding:24px}}
+  @media(max-width:860px){.section-light .ppanel-item{padding:24px}}
 
   /* ---- panel CTAs as solid buttons ---- */
   .pp-cta{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:12px 22px;border-radius:12px;font-family:'Inter';font-weight:600;font-size:13.5px;text-decoration:none;margin-top:auto;transition:transform .2s,box-shadow .2s,filter .2s}
@@ -961,7 +781,6 @@
   .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
   .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
   .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
-  .roadmap-zone .sec-eye{color:#6E5CE0;background:rgba(110,92,224,.09);border-color:rgba(110,92,224,.38)}
 </style>
 </head>
 <body>
@@ -969,51 +788,29 @@
 <!-- NAV -->
 <nav>
   <div class="nav-in">
-    <div class="logo"><span class="dot"></span>DynaLens</div>
+    <div class="logo"><img src="assets/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</div>
     <div class="nav-links">
-      <div class="nav-drop">
-        <a href="#suite">Products</a>
-        <div class="drop-panel">
-          <div class="drop-in">
-            <a class="drop-item fo" href="dynalens-finops-page.html">
-              <span class="drop-hd"><span class="drop-glyph fo">FO</span><b>FinOps</b><span class="drop-pill fo">Live</span></span>
-              <p>See exactly what drives your Dynatrace DPS bill, forecast where it's heading, and fix cost drivers in one click — before the invoice surprises you.</p>
-              <span class="drop-cta fo">Open FinOps →</span>
-            </a>
-            <a class="drop-item as" href="dynalens-assist-page.html">
-              <span class="drop-hd"><span class="drop-glyph as">AS</span><b>Assist</b><span class="drop-pill as">Live</span></span>
-              <p>Ask your Dynatrace environment questions in plain English — grounded answers, RCA reports, and briefings for the whole team, with the LLM on your premises.</p>
-              <span class="drop-cta as">Open Assist →</span>
-            </a>
-            <div class="drop-foot">
-              <span class="dfl">Signal · Flow · Map — coming soon</span>
-              <a href="#suite">See the full suite →</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="index.html">Home</a>
       <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
       <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
-      <a href="#security">Security</a>
-      <a href="#built">About</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
     </div>
     <div class="nav-cta">
-      <a href="#" class="btn btn-ghost">Book a Demo</a>
-      <a href="#" class="btn btn-primary">Start Free Trial</a>
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="navMobile">
-    <a href="#suite">Products</a>
+    <a href="index.html">Home</a>
     <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
     <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
-    <a href="#security">Security</a>
-    <a href="#built">About</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
     <div class="nav-mobile-cta">
-      <a href="#" class="btn btn-ghost">Book a Demo</a>
-      <a href="#" class="btn btn-primary">Start Free Trial</a>
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
     </div>
   </div>
 </nav>
@@ -1022,16 +819,11 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div class="reveal">
+      <div class="hero-intro reveal">
         <span class="slide-tag t-suite">DynaLens by YourCompass — the Dynatrace app suite</span>
         <h1>Your Dynatrace estate, <span class="hl">at full value.</span></h1>
-        <p class="hero-lede">Everything Dynatrace sees. Everything you should be getting. DynaLens closes the gap.</p>
-        <p class="hero-sub" style="max-width:480px">Lower your DPS spend. Ask your estate anything in plain English. Automate the manual work. Read-only by design — SaaS to air-gapped, from a Dynatrace Premier Partner.</p>
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
-          <a href="#" class="btn btn-ghost btn-lg">Book a Demo</a>
-        </div>
-        
+        <p class="hero-lede">DynaLens extends the platform you already trust — plain-English answers, automated workflows, deeper insight, all from your existing estate.</p>
+        <p class="hero-sub" style="max-width:480px">Optimize DPS consumption. Ask your estate anything in plain English. Automate the manual work. Read-only by design — SaaS to air-gapped, from a Dynatrace Premier Partner.</p>
       </div>
       <div class="dash hero-visual" id="dash">
         <div class="dash-bar">
@@ -1064,6 +856,12 @@
         <div class="reco" data-delay="300"><span class="name">Consolidate synthetic monitors</span><span class="save mono">$19K/yr</span></div>
                 <div style="margin-top:10px;font-size:10.5px;color:var(--text-faint);text-align:right">Illustrative data</div>
       </div>
+      <div class="hero-cta reveal">
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+          <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -1071,12 +869,16 @@
 <!-- PARTNER STRIP -->
 <div class="partner-strip">
   <div class="ps-in">
-    <span class="ps-label">Trusted &amp; recognised by</span>
-    <div class="ps-badges">
-      <div class="pbadge"><span class="pb-ico dt">DT</span><span class="pb-txt"><b>Premier Partner</b><span>Dynatrace</span></span></div>
-      <div class="pbadge"><span class="pb-ico dt2">✓</span><span class="pb-txt"><b>Services Endorsed</b><span>Dynatrace</span></span></div>
-      <div class="pbadge"><span class="pb-ico ms">▦</span><span class="pb-txt"><b>Microsoft Partner</b><span>Cloud Solutions</span></span></div>
-      <div class="pbadge"><span class="pb-ico uae">★</span><span class="pb-txt"><b>ICV Certified</b><span>United Arab Emirates</span></span></div>
+    <span class="ps-label">Recognised by Dynatrace</span>
+    <div class="ps-track" data-carousel>
+      <div class="pbadge pbadge-img ps-slide active"><img src="assets/endorsment/Premier_Sales_Partner-1.png" alt="Dynatrace Premier Sales Partner" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsment/EMEA_YourCompass_Amplify25-Partner-Awards_Social_1080x1080_FINAL.png" alt="Dynatrace EMEA 2025 Services Excellence Award — YourCompass" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsment/EMEA_YourCompass.jpg" alt="Dynatrace Rising Star Award, EMEA 2024–2025 — YourCompass" loading="lazy"></div>
+    </div>
+    <div class="ps-dots">
+      <button class="ps-dot active" data-idx="0" aria-label="Show badge 1 of 3"></button>
+      <button class="ps-dot" data-idx="1" aria-label="Show badge 2 of 3"></button>
+      <button class="ps-dot" data-idx="2" aria-label="Show badge 3 of 3"></button>
     </div>
   </div>
 </div>
@@ -1085,73 +887,69 @@
 <section class="blk section-light">
   <div class="wrap">
     <div class="sec-head reveal" style="max-width:760px">
-      <span class="sec-eye">The problems</span>
-      <h2>The problems we built DynaLens for.</h2>
-      <p class="sec-sub">Dynatrace sees everything. But around it, the same problems repeat in every estate we run — a gap between what the platform captures and what the organisation gets. Pick a problem; see how it gets closed.</p>
+      <span class="sec-eye">Why DynaLens</span>
+      <h2>Opportunities we've seen. Tools we've built.</h2>
+      <p class="sec-sub">Every estate we've managed revealed the same opportunities to take Dynatrace further — deeper insight, faster answers, less manual work. DynaLens turns each one into a capability. Pick an opportunity; see how it works.</p>
     </div>
 
-    <div class="ptabs reveal">
-      <div class="ptab-list" id="ptabList">
-        <div class="ptab-item active" data-app="fo" data-idx="0">Your DPS bill is a surprise.<span class="pt-app">FinOps · Live</span></div>
-        <div class="ptab-item" data-app="fo" data-idx="1">You know cost is high — not which change safely reduces it.<span class="pt-app">FinOps · Live</span></div>
-        <div class="ptab-item" data-app="as" data-idx="2">Only two people in the company can query the platform.<span class="pt-app">Assist · Live</span></div>
-        <div class="ptab-item" data-app="rm" data-idx="3">Incident updates are written by hand — mid-incident.<span class="pt-app">Signal · Coming soon</span></div>
-        <div class="ptab-item" data-app="rm" data-idx="4">Dynatrace and your ITSM don't talk to each other.<span class="pt-app">Flow · Coming soon</span></div>
+    <div class="ptabs reveal" id="ptabs">
+      <div class="ptab-item active" data-app="fo" data-idx="0">Know your DPS position months ahead.<span class="pt-app">FinOps · Live</span></div>
+      <div class="ppanel-item active">
+        <span class="ppanel-kick fo">FinOps · Available now</span>
+        <h3>See where consumption is heading — long before the invoice.</h3>
+        <p class="pp-sol">DPS consumption is attributed <b>continuously</b> — by capability, account, and environment — so every line item has an owner. Monte Carlo forecasting projects spend against your annual commitment with confidence bands, and alerts fire the moment a forecast crosses 25, 50, 75, or 90% of budget.</p>
+        <div class="pp-pts" style="color:#FFB546">
+          <span>Cost broken down by Full-Stack, Kubernetes, RUM, Synthetic, Logs, and every other DPS capability</span>
+          <span>Predicted exhaustion date when you're on track to run out early</span>
+          <span>Weekly digest across every tenant you operate</span>
+        </div>
+        <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
       </div>
-      <div class="ppanel" id="ppanel">
-        <div class="ppanel-item active">
-          <span class="ppanel-kick fo">FinOps · Available now</span>
-          <h3>See the overrun months before the invoice does.</h3>
-          <p class="pp-sol">DPS consumption is attributed <b>continuously</b> — by capability, account, and environment — so every line item has an owner. Monte Carlo forecasting projects spend against your annual commitment with confidence bands, and alerts fire the moment a forecast crosses 25, 50, 75, or 90% of budget.</p>
-          <div class="pp-pts" style="color:#FFB546">
-            <span>Cost broken down by Full-Stack, Kubernetes, RUM, Synthetic, Logs, and every other DPS capability</span>
-            <span>Predicted exhaustion date when you're on track to run out early</span>
-            <span>Weekly digest across every tenant you operate</span>
-          </div>
-          <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+      <div class="ptab-item" data-app="fo" data-idx="1">Turn consumption insight into applied optimization.<span class="pt-app">FinOps · Live</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick fo">FinOps · Available now</span>
+        <h3>From insight to an applied optimization — in one click.</h3>
+        <p class="pp-sol">A recommendation catalog evaluates each environment and proposes concrete actions — monitoring modes, namespace scoping, session sampling, synthetic frequency — each scored by <b>savings, impact, and effort</b>. Selected optimizations are written back into your live tenant with one click, gated behind permissions and safety checks.</p>
+        <div class="pp-pts" style="color:#FFB546">
+          <span>Every recommendation priced in dollars and % of licence value</span>
+          <span>Safety checks before any change — e.g. confirming a host is offline first</span>
+          <span>Full audit trail: actor, action, before/after diff</span>
         </div>
-        <div class="ppanel-item">
-          <span class="ppanel-kick fo">FinOps · Available now</span>
-          <h3>From "spend is high" to an applied fix — in one click.</h3>
-          <p class="pp-sol">A recommendation catalog evaluates each environment and proposes concrete actions — monitoring modes, namespace scoping, session sampling, synthetic frequency — each scored by <b>savings, impact, and effort</b>. Selected fixes are written back into your live tenant with one click, gated behind permissions and safety checks.</p>
-          <div class="pp-pts" style="color:#FFB546">
-            <span>Every recommendation priced in dollars and % of licence value</span>
-            <span>Safety checks before any change — e.g. confirming a host is offline first</span>
-            <span>Full audit trail: actor, action, before/after diff</span>
-          </div>
-          <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+        <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+      </div>
+      <div class="ptab-item" data-app="as" data-idx="2">Put Dynatrace answers in everyone's hands.<span class="pt-app">Assist · Live</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick as">Assist · Available now</span>
+        <h3>Everyone gets to ask. In plain English.</h3>
+        <p class="pp-sol">Assist plans and executes the right Dynatrace API calls from a natural-language question — in Microsoft Teams or a dedicated web UI — and answers with charts and evidence. Incident investigations start from ranked, cited hypotheses instead of a blank page. And the LLM runs <b>entirely on your own hardware</b>.</p>
+        <div class="pp-pts" style="color:#22D3EE">
+          <span>No DQL or dashboard fluency required</span>
+          <span>RCA co-pilot recalls similar past incidents automatically</span>
+          <span>On-prem or air-gapped — nothing sent to external AI services</span>
         </div>
-        <div class="ppanel-item">
-          <span class="ppanel-kick as">Assist · Available now</span>
-          <h3>Everyone gets to ask. In plain English.</h3>
-          <p class="pp-sol">Assist plans and executes the right Dynatrace API calls from a natural-language question — in Microsoft Teams or a dedicated web UI — and answers with charts and evidence. Incident investigations start from ranked, cited hypotheses instead of a blank page. And the LLM runs <b>entirely on your own hardware</b>.</p>
-          <div class="pp-pts" style="color:#22D3EE">
-            <span>No DQL or dashboard fluency required</span>
-            <span>RCA co-pilot recalls similar past incidents automatically</span>
-            <span>On-prem or air-gapped — nothing sent to external AI services</span>
-          </div>
-          <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
+        <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
+      </div>
+      <div class="ptab-item" data-app="rm" data-idx="3">Keep every stakeholder informed — automatically.<span class="pt-app">Signal · Coming soon</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick rm">Signal · Coming soon</span>
+        <h3>Incident briefs that write themselves.</h3>
+        <p class="pp-sol">While your team works the incident, Signal turns the Dynatrace problem feed into <b>plain-language updates</b> — what broke, who's affected, what's being done — ready for stakeholders, status pages, and post-incident review. Your engineers stay on the fix; the comms take care of themselves.</p>
+        <div class="pp-pts" style="color:#9B8CFF">
+          <span>Stakeholder-ready summaries from the live problem feed</span>
+          <span>Consistent comms across every incident and every team</span>
         </div>
-        <div class="ppanel-item">
-          <span class="ppanel-kick rm">Signal · Coming soon</span>
-          <h3>Incident briefs that write themselves.</h3>
-          <p class="pp-sol">While your team works the incident, Signal turns the Dynatrace problem feed into <b>plain-language updates</b> — what broke, who's affected, what's being done — ready for stakeholders, status pages, and post-incident review. No engineer pulled off the fix to write comms.</p>
-          <div class="pp-pts" style="color:#9B8CFF">
-            <span>Stakeholder-ready summaries from the live problem feed</span>
-            <span>Consistent comms across every incident and every team</span>
-          </div>
-          <a href="#suite" class="pp-cta pp-cta-rm">Join early access →</a>
+        <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
+      </div>
+      <div class="ptab-item" data-app="rm" data-idx="4">Connect Dynatrace and your ITSM into one flow.<span class="pt-app">Flow · Coming soon</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick rm">Flow · Coming soon</span>
+        <h3>One loop from Dynatrace problem to closed ticket.</h3>
+        <p class="pp-sol">Flow keeps Dynatrace problems and ServiceNow/Jira tickets in sync <b>automatically</b> — created, enriched with context, updated, and resolved without copy-paste. The audit trail your process requires, with none of the manual glue.</p>
+        <div class="pp-pts" style="color:#9B8CFF">
+          <span>Tickets created and enriched from Dynatrace problems automatically</span>
+          <span>Status flows both ways — resolve once, closed everywhere</span>
         </div>
-        <div class="ppanel-item">
-          <span class="ppanel-kick rm">Flow · Coming soon</span>
-          <h3>Close the loop between Dynatrace and your ITSM.</h3>
-          <p class="pp-sol">Flow keeps Dynatrace problems and ServiceNow/Jira tickets in sync <b>automatically</b> — created, enriched with context, updated, and resolved without copy-paste. The audit trail your process requires, without the manual glue that slows it down.</p>
-          <div class="pp-pts" style="color:#9B8CFF">
-            <span>Tickets created and enriched from Dynatrace problems automatically</span>
-            <span>Status flows both ways — resolve once, closed everywhere</span>
-          </div>
-          <a href="#suite" class="pp-cta pp-cta-rm">Join early access →</a>
-        </div>
+        <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
       </div>
     </div>
   </div>
@@ -1167,29 +965,34 @@
     </div>
     <div class="suite reveal">
       <a href="dynalens-finops-page.html" class="scard live">
+        <div class="scard-ico"><img src="assets/images/finops/icon.svg" alt=""></div>
         <span class="badge now">Available now</span>
         <h3>FinOps</h3>
         <p>Attribute, optimise, and control your Dynatrace DPS spend.</p>
       </a>
+      <a href="dynalens-assist-page.html" class="scard live">
+        <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
+        <span class="badge now">Available now</span>
+        <h3>Assist</h3>
+        <p>An AI teammate for your day-to-day Dynatrace operations.</p>
+      </a>
       <a href="#" class="scard soon-card">
+        <div class="scard-ico placeholder">S</div>
         <span class="badge soon">Coming soon</span>
         <h3>Signal</h3>
         <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
       </a>
       <a href="#" class="scard soon-card">
+        <div class="scard-ico placeholder">F</div>
         <span class="badge soon">Coming soon</span>
         <h3>Flow</h3>
         <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
       </a>
       <a href="#" class="scard soon-card">
+        <div class="scard-ico placeholder">M</div>
         <span class="badge soon">Coming soon</span>
         <h3>Map</h3>
         <p>Business-service views built on top of Smartscape topology.</p>
-      </a>
-      <a href="dynalens-assist-page.html" class="scard live">
-        <span class="badge now">Available now</span>
-        <h3>Assist</h3>
-        <p>An AI teammate for your day-to-day Dynatrace operations.</p>
       </a>
     </div>
   </div>
@@ -1210,7 +1013,7 @@
         </ul>
         <div class="app-actions">
           <a href="dynalens-finops-page.html" class="btn btn-fo">Explore FinOps →</a>
-          <a href="#" class="btn btn-ghost">Start Free Trial</a>
+          <a href="#" class="btn btn-ghost" style="display:none">Start Free Trial</a>
         </div>
       </div>
       <div>
@@ -1248,7 +1051,7 @@
         </ul>
         <div class="app-actions">
           <a href="dynalens-assist-page.html" class="btn btn-primary">Explore Assist →</a>
-          <a href="#" class="btn btn-ghost">Start Free Trial</a>
+          <a href="#" class="btn btn-ghost" style="display:none">Start Free Trial</a>
         </div>
       </div>
       <div>
@@ -1270,57 +1073,6 @@
             <div class="fv-stat"><div class="l">Sources queried</div><div class="v">3</div></div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMING SOON -->
-<section class="blk section-light roadmap-zone">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:26px;max-width:640px">
-      <span class="sec-eye">The roadmap · Coming soon</span>
-      <h2 style="font-size:clamp(24px,2.8vw,34px)">Three more lenses on the way.</h2>
-    </div>
-    <div class="rmv reveal">
-      <div class="rmv-card">
-        <div class="rmv-hd">
-          <span class="sa-glyph">SG</span>
-          <span class="nm">Signal</span>
-          <span class="sa-pill">Coming soon</span>
-        </div>
-        <div class="rmv-frame">
-          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="rl">Concept preview</span>
-        </div>
-        <p class="rmv-cap">Incident briefs that write themselves — stakeholder-ready updates from your live problem feed.</p>
-        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
-      </div>
-      <div class="rmv-card">
-        <div class="rmv-hd">
-          <span class="sa-glyph">FL</span>
-          <span class="nm">Flow</span>
-          <span class="sa-pill">Coming soon</span>
-        </div>
-        <div class="rmv-frame">
-          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="rl">Concept preview</span>
-        </div>
-        <p class="rmv-cap">Dynatrace ↔ ITSM, closed loop — tickets created, enriched, and resolved without copy-paste.</p>
-        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
-      </div>
-      <div class="rmv-card">
-        <div class="rmv-hd">
-          <span class="sa-glyph">MP</span>
-          <span class="nm">Map</span>
-          <span class="sa-pill">Coming soon</span>
-        </div>
-        <div class="rmv-frame">
-          <span class="rp"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
-          <span class="rl">Concept preview</span>
-        </div>
-        <p class="rmv-cap">Business-service views on Smartscape — what the estate means, not just what it monitors.</p>
-        <div class="rmv-foot"><a href="#" class="btn btn-notify">Notify me</a></div>
       </div>
     </div>
   </div>
@@ -1373,7 +1125,7 @@
       <div class="dcard"><div class="dt">On-premises</div><p>Air-gapped deployment for regulated workloads and sovereign environments. Full feature parity.</p></div>
       <div class="dcard"><div class="dt">GCC Data Residency</div><p>UAE and KSA regions available for Enterprise. Built for public-sector and financial-services customers.</p></div>
     </div>
-    <div class="sec-foot reveal">
+    <div class="sec-foot reveal" style="display:none">
       <div class="sec-foot-note">
         <span class="cl">Aligned with</span> UAE PDPL &amp; KSA PDPPL · SOC 2 Type II in progress (bridge letter on request) · encryption in transit and at rest.
       </div>
@@ -1390,13 +1142,6 @@
         <span class="sec-eye">Built by YourCompass</span>
         <h2>Built by the people who run Dynatrace for a living.</h2>
         <p>DynaLens is the product line from YourCompass — a Dynatrace Premier Partner and Services Endorsed Partner operating across the GCC. We've spent years deploying, tuning, and running Dynatrace for enterprises and governments across the UAE and KSA. We've seen, up close, the gaps that customers paper over with scripts, spreadsheets, and runbooks — and built the software to close them.</p>
-        <div class="partner-row">
-          <span>Dynatrace Premier Partner</span>
-          <span>Dynatrace Services Endorsed</span>
-          <span>Microsoft Partner</span>
-          <span>UAE ICV Certified</span>
-        </div>
-        <a href="#" class="link-cta">Meet the team →</a>
       </div>
       <div class="built-stats">
         <div class="bstat"><div class="bn">10<span class="u">+</span></div><div class="bl">Years deploying Dynatrace across the region</div></div>
@@ -1405,122 +1150,8 @@
         <div class="bstat"><div class="bn">100<span class="u">%</span></div><div class="bl">Read-only — we never write to your environment</div></div>
       </div>
     </div>
-
-    <!-- TEAM -->
-    <div class="team reveal">
-      <div class="team-head">
-        <span class="tt">The team behind DynaLens</span>
-        <span class="ts">A small, senior team of Dynatrace practitioners — not a generic SaaS shop. The people building the product are the people who've run it in production.</span>
-      </div>
-      <div class="team-grid">
-        <div class="tmember">
-          <div class="tavatar a1">MH</div>
-          <div class="tn">Mohamed Haroun</div>
-          <div class="tr">Founder &amp; CEO</div>
-          <div class="tx">15+ years in enterprise observability. Led Dynatrace rollouts for banks and federal entities across the GCC.</div>
-        </div>
-        <div class="tmember">
-          <div class="tavatar a2">MH</div>
-          <div class="tn">Mher Hakobyan</div>
-          <div class="tr">Head of AI Practice</div>
-          <div class="tx">Builds the AI and analytics layer. Background in ML systems and large-scale data platforms.</div>
-        </div>
-        <div class="tmember">
-          <div class="tavatar a3">PK</div>
-          <div class="tn">Paweł Kowalski</div>
-          <div class="tr">Head of Engineering</div>
-          <div class="tx">Owns the platform architecture. A decade shipping production SaaS on cloud and on-prem.</div>
-        </div>
-        <div class="tmember">
-          <div class="tavatar a4">+8</div>
-          <div class="tn">Delivery &amp; Support</div>
-          <div class="tr">Certified consultants</div>
-          <div class="tx">A bench of Dynatrace-certified engineers handling deployment, onboarding, and GCC-based support.</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
-
-<!-- FAQ -->
-<section class="blk">
-  <div class="wrap">
-    <div class="faqx">
-      <div class="faqx-left reveal">
-        <div class="sec-head" style="margin-bottom:0">
-          <span class="sec-eye">FAQ</span>
-          <h2>Questions, answered.</h2>
-          <p class="sec-sub">The ones every evaluation asks — from platform teams and partners alike.</p>
-        </div>
-        <div class="faqx-cta">
-          <b>Still have questions?</b>
-          <p>Talk directly to the engineers who build and run DynaLens — no sales script.</p>
-          <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px">Book a Demo →</a>
-        </div>
-      </div>
-      <div class="faq reveal" id="faqAcc">
-        <div class="acc-item open">
-          <button class="acc-q" aria-expanded="true">
-            <span class="qn">01</span>
-            <span class="qt">What is DynaLens?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">02</span>
-            <span class="qt">How does DynaLens reduce Dynatrace costs?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">03</span>
-            <span class="qt">Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">04</span>
-            <span class="qt">We're a Dynatrace partner — can we manage multiple customers?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">05</span>
-            <span class="qt">Does our data leave our environment?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">06</span>
-            <span class="qt">How is DynaLens licensed?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team.</div></div></div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-q" aria-expanded="false">
-            <span class="qn">07</span>
-            <span class="qt">How do we get started?</span>
-            <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
-          </button>
-          <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates.</div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 <!-- FINAL CTA -->
 <section class="final">
@@ -1529,12 +1160,8 @@
       <h2>Get more out of Dynatrace — starting today.</h2>
       <p>Start a free trial in minutes, or book a demo with the team that builds and runs it.</p>
       <div class="hero-actions">
-        <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
-        <a href="#" class="btn btn-ghost btn-lg">Book a Demo</a>
-      </div>
-      <div style="display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px">
-        <a href="dynalens-finops-page.html" class="link-cta">Cut my DPS costs → FinOps</a>
-        <a href="dynalens-assist-page.html" class="link-cta">Give my team answers → Assist</a>
+        <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
       </div>
     </div>
   </div>
@@ -1544,13 +1171,18 @@
 <footer>
   <div class="wrap">
     <div class="foot-in">
-      <div class="logo" style="font-size:17px"><span class="dot"></span>DynaLens</div>
+      <div class="logo" style="font-size:17px"><img src="assets/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</div>
       <div class="foot-links">
-        <a href="#">About</a><a href="#">Contact</a><a href="#">Security</a>
-        <a href="#">Terms</a><a href="#">Privacy</a><a href="#">DPA</a>
+        <a href="index.html">Home</a>
+        <a href="dynalens-finops-page.html">FinOps</a>
+        <a href="dynalens-assist-page.html">Assist</a>
+        <a href="dynalens-faq-page.html">FAQ</a>
       </div>
     </div>
-    <div class="copy" style="margin-top:18px">© 2026 YourCompass. All rights reserved.</div>
+    <div class="foot-brand">
+      <img src="assets/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo">
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
   </div>
 </footer>
 
@@ -1596,33 +1228,53 @@
     }));
   })();
 
+  // ---------- PARTNER BADGE CAROUSEL ----------
+  document.querySelectorAll("[data-carousel]").forEach(track=>{
+    const wrap = track.parentElement;
+    const slides = Array.from(track.querySelectorAll(".ps-slide"));
+    const dots = Array.from(wrap.querySelectorAll(".ps-dot"));
+    if(!slides.length) return;
+    let idx = 0, timer = null;
+    function show(i){
+      slides[idx].classList.remove("active");
+      dots[idx] && dots[idx].classList.remove("active");
+      idx = (i + slides.length) % slides.length;
+      slides[idx].classList.add("active");
+      dots[idx] && dots[idx].classList.add("active");
+    }
+    function next(){ show(idx + 1); }
+    function startAutoplay(){ stopAutoplay(); timer = setInterval(next, 4000); }
+    function stopAutoplay(){ if(timer) clearInterval(timer); }
+    dots.forEach(d=>d.addEventListener("click", ()=>{
+      show(parseInt(d.dataset.idx, 10));
+      startAutoplay();
+    }));
+    startAutoplay();
+  });
+
   // fire dash counters on load
   let dashDone=false;
   window.addEventListener('load',()=>{ if(!dashDone){animateDash();dashDone=true;} });
 
 
 
-  // ---------- FAQ ACCORDION ----------
-  (function(){
-    const items=document.querySelectorAll('#faqAcc .acc-item');
-    items.forEach(it=>{
-      it.querySelector('.acc-q').addEventListener('click',()=>{
-        const isOpen=it.classList.contains('open');
-        items.forEach(x=>{x.classList.remove('open');x.querySelector('.acc-q').setAttribute('aria-expanded','false');});
-        if(!isOpen){it.classList.add('open');it.querySelector('.acc-q').setAttribute('aria-expanded','true');}
-      });
-    });
-  })();
   // ---------- PROBLEM TABS ----------
   (function(){
-    const tabs=document.querySelectorAll('#ptabList .ptab-item');
-    const panels=document.querySelectorAll('#ppanel .ppanel-item');
+    const tabs=document.querySelectorAll('#ptabs .ptab-item');
+    const panels=document.querySelectorAll('#ptabs .ppanel-item');
     if(!tabs.length) return;
+    const isAccordion=()=>window.matchMedia('(max-width:860px)').matches;
     tabs.forEach(t=>t.addEventListener('click',()=>{
+      const idx=parseInt(t.dataset.idx);
+      if(isAccordion() && t.classList.contains('active')){
+        t.classList.remove('active');
+        panels[idx].classList.remove('active');
+        return;
+      }
       tabs.forEach(x=>x.classList.remove('active'));
       panels.forEach(p=>p.classList.remove('active'));
       t.classList.add('active');
-      panels[parseInt(t.dataset.idx)].classList.add('active');
+      panels[idx].classList.add('active');
     }));
   })();
 </script>
