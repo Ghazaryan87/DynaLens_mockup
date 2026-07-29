@@ -229,6 +229,8 @@
   .fan-bar .d1{background:#FF5F57}.fan-bar .d2{background:#FEBC2E}.fan-bar .d3{background:#28C840}
   .fan-ph{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:left;padding:10px 16px;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint)}
   .fan-ph span{font-family:'Space Grotesk';font-size:17px;font-weight:700;color:var(--text-dim);letter-spacing:0;flex-shrink:0}
+  .hc-shot{flex:1;overflow:hidden}
+  .hc-shot img{width:100%;height:100%;display:block;object-fit:cover;object-position:top}
   .hc-dots{display:none;justify-content:center;gap:4px;margin-top:18px}
   .hc-dot{width:24px;height:24px;background:transparent;border:none;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
   .hc-dot::after{content:"";width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.28);transition:all .25s ease}
@@ -318,9 +320,22 @@
   .finops-visual{background:linear-gradient(160deg, rgba(255,181,70,.06), rgba(7,11,46,.85));border:1px solid var(--line-strong);border-radius:22px;padding:24px;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
   .finops-visual .big-save{font-family:'JetBrains Mono';font-weight:700;font-size:54px;color:var(--amber);line-height:1;margin:6px 0 4px}
   .finops-visual .save-cap{font-size:13px;color:var(--text-dim);margin-bottom:22px}
-  /* finops-visual.finops-shot: real product screenshot variant (edge-to-edge, no stat-panel padding) */
-  .finops-visual.finops-shot{padding:0;overflow:hidden;line-height:0}
-  .finops-visual.finops-shot img{display:block;width:100%;height:auto;border-radius:20px}
+  /* finops-visual.finops-shot: real product screenshots (edge-to-edge, no stat-panel padding).
+     Desktop: two shots stacked. Tablet: two shots side by side. Mobile: one shot only. */
+  .finops-visual.finops-shot{padding:0;overflow:hidden;line-height:0;display:flex;flex-direction:column;gap:4px}
+  .finops-visual.finops-shot img{display:block;width:100%;height:auto;object-fit:cover}
+  .finops-visual.finops-shot .fv-shot-1{border-radius:20px 20px 0 0}
+  .finops-visual.finops-shot .fv-shot-2{border-radius:0 0 20px 20px}
+  @media(max-width:880px){
+    .finops-visual.finops-shot{flex-direction:row}
+    .finops-visual.finops-shot img{width:50%;height:auto;aspect-ratio:4/3}
+    .finops-visual.finops-shot .fv-shot-1{border-radius:20px 0 0 20px}
+    .finops-visual.finops-shot .fv-shot-2{border-radius:0 20px 20px 0}
+  }
+  @media(max-width:460px){
+    .finops-visual.finops-shot .fv-shot-2{display:none}
+    .finops-visual.finops-shot .fv-shot-1{width:100%;aspect-ratio:16/9;border-radius:20px}
+  }
   .fv-row{display:flex;gap:10px}
   .fv-stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px}
   .fv-stat .l{font-size:10.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
@@ -906,7 +921,7 @@
         <div class="hc-stage" id="hcStage" aria-hidden="true">
           <div class="hc-slide" data-idx="0">
             <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-            <div class="fan-ph"><span>01</span>Screenshot coming soon</div>
+            <div class="hc-shot"><img src="assets/images/finops/full_1.webp" alt="DynaLens FinOps dashboard screenshot" width="3108" height="1376" loading="lazy"></div>
           </div>
           <div class="hc-slide" data-idx="1">
             <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
@@ -914,7 +929,7 @@
           </div>
           <div class="hc-slide" data-idx="2">
             <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-            <div class="fan-ph"><span>03</span>Screenshot coming soon</div>
+            <div class="hc-shot"><img src="assets/images/finops/full_2.webp" alt="DynaLens FinOps dashboard screenshot" width="3108" height="1376" loading="lazy"></div>
           </div>
           <div class="hc-slide" data-idx="3">
             <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
@@ -1105,7 +1120,8 @@
       </div>
       <div>
         <div class="finops-visual finops-shot">
-          <img src="assets/images/finops_1.jpg" alt="DynaLens FinOps dashboard — DPS cost attribution and forecasting" width="1200" height="675" loading="lazy">
+          <img class="fv-shot fv-shot-1" src="assets/images/finops/1.png" alt="DynaLens FinOps dashboard — cost overview and potential savings" width="949" height="549" loading="lazy">
+          <img class="fv-shot fv-shot-2" src="assets/images/finops/2.png" alt="DynaLens FinOps dashboard — commitment utilization table" width="1215" height="692" loading="lazy">
         </div>
       </div>
     </div>
