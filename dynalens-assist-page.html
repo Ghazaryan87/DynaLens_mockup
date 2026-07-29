@@ -552,10 +552,8 @@
   .soon-rows{margin-top:14px;display:flex;flex-direction:column;gap:0}
 
   /* editorial app card: header / problem / solution / capabilities / cta */
-  .soonapp{display:flex;flex-direction:column;align-items:stretch;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card);transition:transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s, border-color .3s;position:relative}
-  .soonapp::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
-  .soonapp:hover{border-color:var(--line-strong);transform:translateY(-4px);box-shadow:0 30px 70px -34px rgba(0,0,0,.5)}
-  .soonapp:hover::before{opacity:.7}
+  .soonapp{display:flex;flex-direction:column;align-items:stretch;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card);position:relative}
+  .soonapp::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0}
 
   /* header zone */
   .sa-hd{padding:26px 28px 0;display:flex;align-items:flex-start;gap:15px}
@@ -809,7 +807,7 @@
     backdrop-filter:blur(18px) saturate(150%);
     -webkit-backdrop-filter:blur(18px) saturate(150%);
     border-color:rgba(255,255,255,.14)}
-  .scard:hover:not(.soon-card),.seccard:hover,.soonapp:hover,.clip:hover{background:rgba(255,255,255,.09)}
+  .scard:hover:not(.soon-card),.seccard:hover,.clip:hover{background:rgba(255,255,255,.09)}
   .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
   .btn-ghost{
     background:rgba(255,255,255,.06);
@@ -830,7 +828,7 @@
     -webkit-backdrop-filter:blur(16px) saturate(170%);
     border-color:rgba(255,255,255,.85);
     box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
-  .section-light .scard:hover:not(.soon-card),.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .scard:hover:not(.soon-card),.section-light .seccard:hover,
   .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
   .section-light .btn-ghost{
     background:rgba(255,255,255,.5);
@@ -1282,7 +1280,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-in">
-      <div class="logo" style="font-size:17px"><img src="assets/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</div>
+      <a href="index.html" class="logo" style="font-size:17px;text-decoration:none;color:inherit"><img src="assets/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
       <div class="foot-links">
         <a href="index.html">Home</a>
         <a href="dynalens-finops-page.html">FinOps</a>
@@ -1291,7 +1289,7 @@
       </div>
     </div>
     <div class="foot-brand">
-      <img src="assets/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo">
+      <a href="index.html"><img src="assets/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
       <div class="copy">© 2026 YourCompass. All rights reserved.</div>
     </div>
   </div>
