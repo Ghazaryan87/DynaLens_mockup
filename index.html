@@ -237,13 +237,27 @@
 
   /* ---------- HERO CAROUSEL — desktop (fan) ---------- */
   @media(min-width:901px){
-    .hc-stage{perspective:600px;height:460px}
-    .hc-slide{width:440px;aspect-ratio:16/9}
-    .hc-slide.hc-pos-0{transform:translate(-50%,-50%) translateY(-92px) translateX(0) translateZ(15px) rotateY(-24deg);z-index:5}
-    .hc-slide.hc-pos-1{transform:translate(-50%,-50%) translateY(-46px) translateX(-23px) translateZ(7px) rotateY(-24deg);z-index:4}
-    .hc-slide.hc-pos-2{transform:translate(-50%,-50%) translateY(0) translateX(-46px) translateZ(0) rotateY(-24deg);z-index:3}
-    .hc-slide.hc-pos-3{transform:translate(-50%,-50%) translateY(46px) translateX(-69px) translateZ(-7px) rotateY(-24deg);z-index:2}
-    .hc-slide.hc-pos-4{transform:translate(-50%,-50%) translateY(92px) translateX(-92px) translateZ(-15px) rotateY(-24deg);z-index:1}
+    .hero-visual.hero-carousel{position:relative}
+    /* Bigger cards can reach into the copy column at narrower desktop widths;
+       this fade "shadows" the overlap from the text side so it reads as an
+       intentional blend instead of a hard collision, without dimming the
+       cards' own visibility elsewhere on the stage. */
+    .hero-visual.hero-carousel::before{
+      content:"";
+      position:absolute;
+      top:0;bottom:0;left:-40px;
+      width:220px;
+      background:linear-gradient(to right, var(--navy-900) 0%, var(--navy-900) 20%, transparent 100%);
+      z-index:8;
+      pointer-events:none;
+    }
+    .hc-stage{perspective:600px;height:560px}
+    .hc-slide{width:540px;aspect-ratio:16/9}
+    .hc-slide.hc-pos-0{transform:translate(-50%,-50%) translateY(-113px) translateX(0) translateZ(18px) rotateY(-24deg);z-index:5}
+    .hc-slide.hc-pos-1{transform:translate(-50%,-50%) translateY(-56px) translateX(-28px) translateZ(9px) rotateY(-24deg);z-index:4}
+    .hc-slide.hc-pos-2{transform:translate(-50%,-50%) translateY(0) translateX(-56px) translateZ(0) rotateY(-24deg);z-index:3}
+    .hc-slide.hc-pos-3{transform:translate(-50%,-50%) translateY(56px) translateX(-85px) translateZ(-9px) rotateY(-24deg);z-index:2}
+    .hc-slide.hc-pos-4{transform:translate(-50%,-50%) translateY(113px) translateX(-113px) translateZ(-18px) rotateY(-24deg);z-index:1}
   }
 
   /* ---------- HERO CAROUSEL — tablet (3-across, center emphasized) ---------- */
