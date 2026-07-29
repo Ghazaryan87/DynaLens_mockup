@@ -244,6 +244,17 @@
     .hc-slide.hc-pos-4{transform:translate(-50%,-50%) translateY(92px) translateX(-92px) translateZ(-15px) rotateY(-24deg);z-index:1}
   }
 
+  /* ---------- HERO CAROUSEL — tablet (3-across, center emphasized) ---------- */
+  @media(max-width:900px){
+    .hc-stage{position:static;display:flex;align-items:center;justify-content:center;gap:14px;perspective:none;height:auto}
+    .hc-slide{position:static;top:auto;left:auto;width:220px;aspect-ratio:4/3;transform:none!important;display:none;flex-shrink:0;opacity:.75}
+    .hc-slide.hc-t-vis{display:flex}
+    .hc-slide.hc-t-center{opacity:1;width:250px;order:2}
+    .hc-slide.hc-t-left{order:1}
+    .hc-slide.hc-t-right{order:3}
+    .hc-dots{display:flex}
+  }
+
   /* ---------- HERO CAROUSEL ---------- */
   .carousel{position:relative}
   .slides{position:relative}
