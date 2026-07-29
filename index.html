@@ -199,7 +199,7 @@
   .hero{padding:60px 0 48px;position:relative}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.25);padding:6px 13px;border-radius:100px;margin-bottom:26px}
   .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"intro visual" "cta visual";column-gap:54px;row-gap:0;align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;grid-template-areas:"intro visual" "cta visual";column-gap:36px;row-gap:0;align-items:center}
   .hero-intro{grid-area:intro}
   .hero-cta{grid-area:cta}
   h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;margin-bottom:22px}
@@ -218,38 +218,30 @@
   @media(max-width:900px){.hero-visual{min-height:660px}}
   @media(max-width:400px){.hero-visual{min-height:700px}}
 
-  /* ---------- HERO CARD FAN (5-up perspective deck, vertical stack) ---------- */
-  .card-fan{position:relative;perspective:500px}
-  .fan-card{position:absolute;top:50%;left:50%;width:380px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(165deg,rgba(20,30,110,.92),rgba(7,11,46,.97));border:1px solid var(--line-strong);box-shadow:0 30px 60px -20px rgba(0,0,0,.65);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease;will-change:transform}
-  .fan-card:hover{box-shadow:0 40px 80px -20px rgba(0,0,0,.75)}
-  .fan-card:nth-child(1){transform:translate(-50%,-50%) translateY(-80px) translateX(0) translateZ(15px) rotateY(-26deg);z-index:5}
-  .fan-card:nth-child(2){transform:translate(-50%,-50%) translateY(-40px) translateX(-20px) translateZ(7px) rotateY(-26deg);z-index:4}
-  .fan-card:nth-child(3){transform:translate(-50%,-50%) translateY(0) translateX(-40px) translateZ(0) rotateY(-26deg);z-index:3}
-  .fan-card:nth-child(4){transform:translate(-50%,-50%) translateY(40px) translateX(-60px) translateZ(-7px) rotateY(-26deg);z-index:2}
-  .fan-card:nth-child(5){transform:translate(-50%,-50%) translateY(80px) translateX(-80px) translateZ(-15px) rotateY(-26deg);z-index:1}
+  /* ---------- HERO CAROUSEL (shared) ---------- */
+  .hc-stage{position:relative}
+  .hc-slide{position:absolute;top:50%;left:50%;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(165deg,rgba(20,30,110,.92),rgba(7,11,46,.97));border:1px solid var(--line-strong);box-shadow:0 30px 60px -20px rgba(0,0,0,.65);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease;will-change:transform}
+  .hc-slide:hover{box-shadow:0 40px 80px -20px rgba(0,0,0,.75)}
   .fan-bar{display:flex;gap:5px;padding:9px 12px;border-bottom:1px solid var(--line);flex-shrink:0}
   .fan-bar .d{width:6px;height:6px;border-radius:50%}
   .fan-bar .d1{background:#FF5F57}.fan-bar .d2{background:#FEBC2E}.fan-bar .d3{background:#28C840}
   .fan-ph{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:left;padding:10px 16px;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint)}
   .fan-ph span{font-family:'Space Grotesk';font-size:17px;font-weight:700;color:var(--text-dim);letter-spacing:0;flex-shrink:0}
-  @media(max-width:900px){
-    .fan-card{width:320px}
-    .fan-card:nth-child(1){transform:translate(-50%,-50%) translateY(-67px) translateX(0) translateZ(12px) rotateY(-26deg)}
-    .fan-card:nth-child(2){transform:translate(-50%,-50%) translateY(-33px) translateX(-17px) translateZ(5px) rotateY(-26deg)}
-    .fan-card:nth-child(3){transform:translate(-50%,-50%) translateY(0) translateX(-35px) translateZ(0) rotateY(-26deg)}
-    .fan-card:nth-child(4){transform:translate(-50%,-50%) translateY(33px) translateX(-51px) translateZ(-5px) rotateY(-26deg)}
-    .fan-card:nth-child(5){transform:translate(-50%,-50%) translateY(67px) translateX(-68px) translateZ(-12px) rotateY(-26deg)}
-  }
-  @media(max-width:460px){
-    .fan-card{width:230px}
-    .fan-bar{padding:7px 10px}
-    .fan-ph{padding:8px 12px;font-size:8.5px;gap:7px}
-    .fan-ph span{font-size:14px}
-    .fan-card:nth-child(1){transform:translate(-50%,-50%) translateY(-49px) translateX(0) translateZ(9px) rotateY(-26deg)}
-    .fan-card:nth-child(2){transform:translate(-50%,-50%) translateY(-24px) translateX(-12px) translateZ(4px) rotateY(-26deg)}
-    .fan-card:nth-child(3){transform:translate(-50%,-50%) translateY(0) translateX(-24px) translateZ(0) rotateY(-26deg)}
-    .fan-card:nth-child(4){transform:translate(-50%,-50%) translateY(24px) translateX(-37px) translateZ(-4px) rotateY(-26deg)}
-    .fan-card:nth-child(5){transform:translate(-50%,-50%) translateY(49px) translateX(-49px) translateZ(-9px) rotateY(-26deg)}
+  .hc-dots{display:none;justify-content:center;gap:4px;margin-top:18px}
+  .hc-dot{width:24px;height:24px;background:transparent;border:none;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .hc-dot::after{content:"";width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.28);transition:all .25s ease}
+  .hc-dot:hover::after{background:rgba(255,255,255,.45)}
+  .hc-dot.active::after{background:var(--cyan);width:20px}
+
+  /* ---------- HERO CAROUSEL — desktop (fan) ---------- */
+  @media(min-width:901px){
+    .hc-stage{perspective:600px;height:460px}
+    .hc-slide{width:440px;aspect-ratio:16/9}
+    .hc-slide.hc-pos-0{transform:translate(-50%,-50%) translateY(-92px) translateX(0) translateZ(15px) rotateY(-24deg);z-index:5}
+    .hc-slide.hc-pos-1{transform:translate(-50%,-50%) translateY(-46px) translateX(-23px) translateZ(7px) rotateY(-24deg);z-index:4}
+    .hc-slide.hc-pos-2{transform:translate(-50%,-50%) translateY(0) translateX(-46px) translateZ(0) rotateY(-24deg);z-index:3}
+    .hc-slide.hc-pos-3{transform:translate(-50%,-50%) translateY(46px) translateX(-69px) translateZ(-7px) rotateY(-24deg);z-index:2}
+    .hc-slide.hc-pos-4{transform:translate(-50%,-50%) translateY(92px) translateX(-92px) translateZ(-15px) rotateY(-24deg);z-index:1}
   }
 
   /* ---------- HERO CAROUSEL ---------- */
@@ -864,26 +856,35 @@
         <p class="hero-lede">DynaLens extends the platform you already trust — plain-English answers, automated workflows, deeper insight, all from your existing estate.</p>
         <p class="hero-sub" style="max-width:480px">Optimize DPS consumption. Ask your estate anything in plain English. Automate the manual work. Read-only by design — SaaS to air-gapped, from a Dynatrace Premier Partner.</p>
       </div>
-      <div class="card-fan hero-visual reveal">
-        <div class="fan-card">
-          <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-          <div class="fan-ph"><span>01</span>Screenshot coming soon</div>
+      <div class="hero-visual hero-carousel reveal" id="heroCarousel">
+        <div class="hc-stage" id="hcStage" aria-hidden="true">
+          <div class="hc-slide" data-idx="0">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="fan-ph"><span>01</span>Screenshot coming soon</div>
+          </div>
+          <div class="hc-slide" data-idx="1">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="fan-ph"><span>02</span>Screenshot coming soon</div>
+          </div>
+          <div class="hc-slide" data-idx="2">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="fan-ph"><span>03</span>Screenshot coming soon</div>
+          </div>
+          <div class="hc-slide" data-idx="3">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="fan-ph"><span>04</span>Screenshot coming soon</div>
+          </div>
+          <div class="hc-slide" data-idx="4">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="fan-ph"><span>05</span>Screenshot coming soon</div>
+          </div>
         </div>
-        <div class="fan-card">
-          <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-          <div class="fan-ph"><span>02</span>Screenshot coming soon</div>
-        </div>
-        <div class="fan-card">
-          <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-          <div class="fan-ph"><span>03</span>Screenshot coming soon</div>
-        </div>
-        <div class="fan-card">
-          <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-          <div class="fan-ph"><span>04</span>Screenshot coming soon</div>
-        </div>
-        <div class="fan-card">
-          <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-          <div class="fan-ph"><span>05</span>Screenshot coming soon</div>
+        <div class="hc-dots" id="hcDots">
+          <button class="hc-dot active" data-idx="0" aria-label="Slide 1 of 5"></button>
+          <button class="hc-dot" data-idx="1" aria-label="Slide 2 of 5"></button>
+          <button class="hc-dot" data-idx="2" aria-label="Slide 3 of 5"></button>
+          <button class="hc-dot" data-idx="3" aria-label="Slide 4 of 5"></button>
+          <button class="hc-dot" data-idx="4" aria-label="Slide 5 of 5"></button>
         </div>
       </div>
       <div class="hero-cta reveal">
@@ -1266,6 +1267,124 @@
       panel.classList.remove('open');
       burger.setAttribute('aria-expanded','false');
     }));
+  })();
+
+  // ---------- HERO CAROUSEL ----------
+  (function(){
+    const root = document.getElementById('heroCarousel');
+    if(!root) return;
+    const stage = document.getElementById('hcStage');
+    const slides = Array.from(root.querySelectorAll('.hc-slide'));
+    const dots = Array.from(root.querySelectorAll('.hc-dot'));
+    const n = slides.length;
+    if(!n) return;
+    let active = 0;
+    let autoplayTimer = null;
+    let idleTimer = null;
+
+    function mode(){
+      if(window.matchMedia('(min-width:901px)').matches) return 'desktop';
+      if(window.matchMedia('(max-width:460px)').matches) return 'mobile';
+      return 'tablet';
+    }
+
+    function reducedMotion(){
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
+    function clearStateClasses(el){
+      el.classList.remove('hc-pos-0','hc-pos-1','hc-pos-2','hc-pos-3','hc-pos-4',
+        'hc-t-vis','hc-t-center','hc-t-left','hc-t-right','hc-m-vis');
+    }
+
+    function render(){
+      const m = mode();
+      slides.forEach((el,i)=>{
+        clearStateClasses(el);
+        const offset = (i - active + n) % n;
+        if(m === 'desktop'){
+          el.classList.add('hc-pos-'+offset);
+        } else if(m === 'tablet'){
+          if(offset === 0){ el.classList.add('hc-t-vis','hc-t-center'); }
+          else if(offset === 1){ el.classList.add('hc-t-vis','hc-t-right'); }
+          else if(offset === n-1){ el.classList.add('hc-t-vis','hc-t-left'); }
+        } else {
+          if(offset === 0){ el.classList.add('hc-m-vis'); }
+        }
+      });
+      dots.forEach((d,i)=>d.classList.toggle('active', i === active));
+    }
+
+    function goTo(i){
+      active = (i + n) % n;
+      render();
+    }
+    function next(){ goTo(active + 1); }
+    function prev(){ goTo(active - 1); }
+
+    function startAutoplay(){
+      stopAutoplay();
+      if(reducedMotion()) return;
+      autoplayTimer = setInterval(next, 4000);
+    }
+    function stopAutoplay(){
+      if(autoplayTimer) clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+    function pauseThenResume(){
+      stopAutoplay();
+      if(idleTimer) clearTimeout(idleTimer);
+      idleTimer = setTimeout(startAutoplay, 1500);
+    }
+
+    dots.forEach(d=>d.addEventListener('click', ()=>{
+      goTo(parseInt(d.dataset.idx, 10));
+      pauseThenResume();
+    }));
+
+    // ---- desktop scroll-scrub (wired here, populated fully in Task 2) ----
+    let scrubStartY = null;
+    let scrollIdleTimer = null;
+    let rafPending = false;
+    function onScroll(){
+      if(mode() !== 'desktop') return;
+      if(scrubStartY === null){
+        const rect = root.getBoundingClientRect();
+        scrubStartY = window.scrollY + rect.top;
+      }
+      if(rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(()=>{
+        rafPending = false;
+        const progress = Math.min(1, Math.max(0, (window.scrollY - scrubStartY) / 600));
+        const idx = Math.min(n - 1, Math.floor(progress * n));
+        stopAutoplay();
+        goTo(idx);
+        if(scrollIdleTimer) clearTimeout(scrollIdleTimer);
+        scrollIdleTimer = setTimeout(()=>{ setTimeout(startAutoplay, 1500); }, 150);
+      });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    // ---- touch swipe (tablet + mobile; populated fully in Tasks 2-3) ----
+    let touchStartX = null;
+    stage.addEventListener('touchstart', (e)=>{
+      if(mode() === 'desktop') return;
+      touchStartX = e.touches[0].clientX;
+    }, {passive:true});
+    stage.addEventListener('touchend', (e)=>{
+      if(mode() === 'desktop' || touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if(Math.abs(dx) < 40) return;
+      if(dx < 0){ next(); } else { prev(); }
+      pauseThenResume();
+    }, {passive:true});
+
+    window.addEventListener('resize', render);
+
+    render();
+    startAutoplay();
   })();
 
   // ---------- PARTNER BADGE CAROUSEL ----------
