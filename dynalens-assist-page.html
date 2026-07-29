@@ -93,7 +93,7 @@
   .section-light .sa-problem{background:rgba(165,92,0,.06);border-color:rgba(165,92,0,.18)}
   .section-light .sa-problem .pl{color:var(--amber)}
   .section-light .sa-problem::before{background:var(--amber)}
-  .section-light .sa-caps li::before{background:var(--cyan-soft);border-color:var(--cyan)}
+  .section-light .sa-caps li::before{background:var(--cyan)}
   .section-light .btn-notify{border-color:var(--cyan);background:var(--cyan-soft);color:var(--cyan)}
 
   /* Carousel controls on light */
@@ -397,6 +397,7 @@
   section.blk{padding:72px 0;position:relative}
   @media(max-width:760px){section.blk{padding:52px 0}}
   .sec-head{max-width:640px;margin-bottom:48px}
+  @media(min-width:1024px){.sec-head{max-width:70%}}
   .sec-eye{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;display:block}
   h2{font-size:clamp(28px,3.6vw,42px);font-weight:700;margin-bottom:16px}
   .sec-sub{font-size:17px;color:var(--text-dim)}
@@ -433,7 +434,7 @@
   .app-intro{font-size:16px;color:var(--text-dim);margin-bottom:22px;max-width:460px}
   .app-list{list-style:none;margin-bottom:26px}
   .app-list li{position:relative;padding-left:26px;margin-bottom:13px;font-size:14.5px;color:var(--text-dim);max-width:470px}
-  .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--cyan-soft);border:1px solid var(--cyan)}
+  .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
   .app-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
   .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s}
   .link-cta:hover{gap:11px}
@@ -585,7 +586,7 @@
   .sa-caps ul{list-style:none}
   .sa-caps li{position:relative;padding-left:24px;margin-bottom:10px;font-size:13.5px;color:var(--text-dim);line-height:1.45}
   .sa-caps li:last-child{margin-bottom:0}
-  .sa-caps li::before{content:"";position:absolute;left:2px;top:6px;width:9px;height:9px;border-radius:2px;background:var(--cyan-soft);border:1.5px solid var(--cyan)}
+  .sa-caps li::before{content:"";position:absolute;left:2px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--cyan)}
 
   /* unified prominent CTA footer */
   .sa-foot{margin-top:22px;padding:18px 28px;border-top:1px solid var(--line);background:var(--card-hover);display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -598,7 +599,7 @@
   .roadmap-zone{--cyan:#6E5CE0;--cyan-soft:rgba(110,92,224,.10)}
   .roadmap-zone .sa-glyph{background:linear-gradient(150deg,#fff,rgba(110,92,224,.10));border-color:rgba(110,92,224,.25);color:#6E5CE0}
   .roadmap-zone .sa-cat{color:#6E5CE0}
-  .roadmap-zone .sa-caps li::before{background:rgba(110,92,224,.12);border-color:#6E5CE0}
+  .roadmap-zone .sa-caps li::before{background:#6E5CE0}
   .roadmap-zone .sec-eye{color:#6E5CE0}
   .roadmap-zone .soonapp::before{background:linear-gradient(90deg,#6E5CE0,transparent)}
   .roadmap-zone .rm-dot.active{background:#6E5CE0}
@@ -648,10 +649,10 @@
   .final .hero-actions{justify-content:center;position:relative}
 
   /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--line);padding:28px 0;margin-top:40px;background:rgba(7,11,46,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  footer{border-top:1px solid var(--line);padding:28px 0;margin-top:40px;background:var(--navy-900)}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
   .foot-in .copy{font-size:13px;color:var(--text)}
-  .foot-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);text-align:center}
+  .foot-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:22px;text-align:center}
   .foot-yc-logo{height:60px;width:auto}
   .foot-brand .copy{font-size:13px;color:var(--text)}
   @media(max-width:900px){.foot-yc-logo{height:53px}}

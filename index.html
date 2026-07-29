@@ -420,6 +420,7 @@
   section.blk{padding:72px 0;position:relative}
   @media(max-width:760px){section.blk{padding:52px 0}}
   .sec-head{max-width:640px;margin-bottom:48px}
+  @media(min-width:1024px){.sec-head{max-width:70%}}
   .sec-eye{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;display:block}
   h2{font-size:clamp(28px,3.6vw,42px);font-weight:700;margin-bottom:16px}
   .sec-sub{font-size:17px;color:var(--text-dim)}
@@ -456,7 +457,7 @@
   .app-intro{font-size:16px;color:var(--text-dim);margin-bottom:22px;max-width:460px}
   .app-list{list-style:none;margin-bottom:26px}
   .app-list li{position:relative;padding-left:26px;margin-bottom:13px;font-size:14.5px;color:var(--text-dim);max-width:470px}
-  .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--cyan-soft);border:1px solid var(--cyan)}
+  .app-list li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
   .app-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
   .link-cta{color:var(--cyan);text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:center;transition:gap .2s;cursor:pointer}
   .link-cta:hover{gap:11px}
@@ -588,10 +589,10 @@
   .final .hero-actions{justify-content:center;position:relative}
 
   /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--line);padding:28px 0;margin-top:40px;background:rgba(7,11,46,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  footer{border-top:1px solid var(--line);padding:28px 0;margin-top:40px;background:var(--navy-900)}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
   .foot-in .copy{font-size:13px;color:var(--text)}
-  .foot-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);text-align:center}
+  .foot-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:22px;text-align:center}
   .foot-yc-logo{height:60px;width:auto}
   .foot-brand .copy{font-size:13px;color:var(--text)}
   @media(max-width:900px){.foot-yc-logo{height:53px}}
@@ -978,7 +979,7 @@
 <!-- THE PROBLEMS -->
 <section class="blk section-light">
   <div class="wrap">
-    <div class="sec-head reveal" style="max-width:760px">
+    <div class="sec-head reveal">
       <span class="sec-eye">Why DynaLens</span>
       <h2>Opportunities we've seen. Tools we've built.</h2>
       <p class="sec-sub">Every estate we've managed revealed the same opportunities to take Dynatrace further — deeper insight, faster answers, less manual work. DynaLens turns each one into a capability. Pick an opportunity; see how it works.</p>
@@ -1072,30 +1073,30 @@
         </div>
         <p>An AI teammate for your day-to-day Dynatrace operations.</p>
       </a>
-      <a href="#" class="scard soon-card">
+      <div class="scard soon-card">
         <span class="badge soon">Coming soon</span>
         <div class="scard-head">
           <div class="scard-ico placeholder">S</div>
           <h3>Signal</h3>
         </div>
         <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
-      </a>
-      <a href="#" class="scard soon-card">
+      </div>
+      <div class="scard soon-card">
         <span class="badge soon">Coming soon</span>
         <div class="scard-head">
           <div class="scard-ico placeholder">F</div>
           <h3>Flow</h3>
         </div>
         <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
-      </a>
-      <a href="#" class="scard soon-card">
+      </div>
+      <div class="scard soon-card">
         <span class="badge soon">Coming soon</span>
         <div class="scard-head">
           <div class="scard-ico placeholder">M</div>
           <h3>Map</h3>
         </div>
         <p>Business-service views built on top of Smartscape topology.</p>
-      </a>
+      </div>
     </div>
   </div>
 </section>
