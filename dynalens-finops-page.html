@@ -76,7 +76,7 @@
   /* ===== Premium light-mode component refinements ===== */
   /* Suite cards: white, elevated, with a refined hover lift */
   .section-light .scard{background:var(--surface-1);box-shadow:var(--shadow-sm);border-color:var(--line)}
-  .section-light .scard:hover{background:var(--surface-1);box-shadow:var(--shadow-md);transform:translateY(-5px)}
+  .section-light .scard:hover:not(.soon-card){background:var(--surface-1);box-shadow:var(--shadow-md);transform:translateY(-5px)}
   .section-light .scard.live{background:linear-gradient(165deg,#fff,#F2FAFC);border-color:rgba(12,123,158,.30);box-shadow:0 4px 10px rgba(12,123,158,.10), 0 20px 44px -16px rgba(12,123,158,.22)}
   .section-light .scard.live::after{background:linear-gradient(90deg,var(--cyan),transparent)}
   .section-light .badge.now{background:var(--cyan);color:#fff}
@@ -407,21 +407,21 @@
 
   /* ---------- SUITE GRID ---------- */
   .suite{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-  .scard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:inherit;transition:all .25s ease;position:relative;overflow:hidden}
-  .scard:hover{transform:translateY(-4px);border-color:var(--line-strong);background:var(--card-hover)}
-  .scard.live{border-color:rgba(34,211,238,.4);background:linear-gradient(160deg,rgba(34,211,238,.07),var(--card))}
+  .scard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:48px 22px 22px;text-decoration:none;color:inherit;transition:all .25s ease;position:relative;overflow:hidden}
+  .scard:hover:not(.soon-card){transform:translateY(-4px);border-color:var(--line-strong);background:var(--card-hover)}
+  .scard.live{border:1.5px solid rgba(34,211,238,.55);background:linear-gradient(160deg,rgba(34,211,238,.07),var(--card))}
   .scard.live::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
-  .scard-ico{width:44px;height:44px;border-radius:12px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+  .scard-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .scard-ico{width:44px;height:44px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--line)}
   .scard-ico img{width:100%;height:100%;object-fit:cover}
   .scard-ico.placeholder{font-family:'Space Grotesk';font-weight:700;font-size:17px;color:var(--text-dim)}
   .section-light .scard-ico{background:var(--surface-2);border-color:var(--line)}
-  .badge{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;display:inline-block;margin-bottom:14px}
+  .badge{position:absolute;top:18px;right:18px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px;display:inline-block}
   .badge.now{background:var(--cyan);color:var(--navy-900)}
   .badge.soon{background:rgba(255,255,255,.06);color:var(--text-faint);border:1px solid var(--line)}
-  .scard h3{font-size:19px;font-weight:600;margin-bottom:8px}
+  .scard-head h3{font-size:19px;font-weight:600;margin:0}
   .scard p{font-size:13.5px;color:var(--text-dim);line-height:1.5}
   .scard.soon-card{opacity:.78;cursor:default}
-  .scard.soon-card:hover{opacity:1}
 
   /* ---------- APP MINI SECTIONS ---------- */
   .app{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;padding:46px 0;border-top:1px solid var(--line)}
@@ -791,7 +791,7 @@
 
   /* ---------- RELATED APPS (compact suite strip) ---------- */
   .suite.compact{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-  .suite.compact .scard{padding:18px}
+  .suite.compact .scard{padding:44px 18px 18px}
   .suite.compact h3{font-size:16.5px}
   .suite.compact p{font-size:12.5px}
 
@@ -830,7 +830,7 @@
     backdrop-filter:blur(18px) saturate(150%);
     -webkit-backdrop-filter:blur(18px) saturate(150%);
     border-color:rgba(255,255,255,.14)}
-  .scard:hover,.seccard:hover,.soonapp:hover,.clip:hover{background:rgba(255,255,255,.09)}
+  .scard:hover:not(.soon-card),.seccard:hover,.soonapp:hover,.clip:hover{background:rgba(255,255,255,.09)}
   .faq details[open]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
   .btn-ghost{
     background:rgba(255,255,255,.06);
@@ -851,7 +851,7 @@
     -webkit-backdrop-filter:blur(16px) saturate(170%);
     border-color:rgba(255,255,255,.85);
     box-shadow:0 2px 6px rgba(16,24,64,.05), 0 20px 44px -18px rgba(16,24,64,.16), inset 0 1px 0 rgba(255,255,255,.95)}
-  .section-light .scard:hover,.section-light .seccard:hover,.section-light .soonapp:hover,
+  .section-light .scard:hover:not(.soon-card),.section-light .seccard:hover,.section-light .soonapp:hover,
   .section-light .faq details[open]{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.95)}
   .section-light .btn-ghost{
     background:rgba(255,255,255,.5);
@@ -1463,27 +1463,35 @@
     </div>
     <div class="suite compact reveal">
       <a href="dynalens-assist-page.html" class="scard live">
-        <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
         <span class="badge now">Available now</span>
-        <h3>Assist</h3>
+        <div class="scard-head">
+          <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
+          <h3>Assist</h3>
+        </div>
         <p>An AI teammate for your day-to-day Dynatrace operations.</p>
       </a>
       <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">S</div>
         <span class="badge soon">Coming soon</span>
-        <h3>Signal</h3>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">S</div>
+          <h3>Signal</h3>
+        </div>
         <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
       </a>
       <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">F</div>
         <span class="badge soon">Coming soon</span>
-        <h3>Flow</h3>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">F</div>
+          <h3>Flow</h3>
+        </div>
         <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
       </a>
       <a href="#" class="scard soon-card">
-        <div class="scard-ico placeholder">M</div>
         <span class="badge soon">Coming soon</span>
-        <h3>Map</h3>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">M</div>
+          <h3>Map</h3>
+        </div>
         <p>Business-service views built on top of Smartscape topology.</p>
       </a>
     </div>
