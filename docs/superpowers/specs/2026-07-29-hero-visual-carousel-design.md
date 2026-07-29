@@ -39,11 +39,13 @@ Reuse the site's existing hero-visual breakpoints:
 
 ## Tablet layout & behavior (461–900px)
 
-- No perspective/rotation. 3 cards in a flat row (`display:grid; grid-template-columns:repeat(3,1fr)`), each ~4:3.
-- The 3 visible cards are a sliding window over the 5 slides, keyed off `activeIndex`: visible = `[activeIndex, activeIndex+1, activeIndex+2] mod 5`.
+- No perspective/rotation tilt. 3 cards horizontally aligned in a row (flex or grid, all sharing the same vertical center — no stagger), sliding window over the 5 slides keyed off `activeIndex`: visible = `[activeIndex-1, activeIndex, activeIndex+1] mod 5`.
+- **Center card is the active one, and it's visually emphasized**: sized ~1.12–1.15× the two side cards and horizontally centered in the row; the two side (neighbor) cards are the same smaller size as each other, optionally slightly dimmed (lower opacity, e.g. ~0.75) to reinforce which one is active. All three still share one common vertical center line (per the "horizontally aligned" requirement — the size difference is handled by the center card growing symmetrically, not by shifting the row's alignment).
 - 5 dots below the row show position; the dot matching `activeIndex` is highlighted (elongated pill, matching existing dot patterns used elsewhere on the site, e.g. `.ps-dots`).
-- **Autoplay only** (no scroll-scrub on tablet — avoids fighting with normal touch-scroll of the page). Advances `activeIndex` every 4s, same loop.
-- Dots are decorative/status-only at this breakpoint (not required to be clickable, but harmless if made so later).
+- **Autoplay:** advances `activeIndex` every 4s, same loop as desktop/mobile.
+- **Touch swipe, in addition to autoplay:** drag left/right on the card row (`touchstart`/`touchmove`/`touchend`, ~40px horizontal threshold, same mechanics as mobile) advances/reverses `activeIndex` by 1, wrapping at the ends. A swipe pauses autoplay, which resumes ~1.5s after the last swipe (same idle-resume pattern used elsewhere). The swipe listener is scoped to the card row itself (not the full page) so it doesn't collide with normal vertical page-scroll touch gestures.
+- No scroll-scrub on tablet (unchanged from before — scroll-scrub stays a desktop-only behavior; touch-scroll of the page and touch-swipe of the carousel are two distinct, non-conflicting gestures here since swipe is horizontal and page-scroll is vertical).
+- Dots are clickable in addition to being status indicators, consistent with adding direct touch interaction at this breakpoint.
 
 ## Mobile layout & behavior (≤460px)
 
