@@ -289,6 +289,9 @@
   .finops-visual{background:linear-gradient(160deg, rgba(255,181,70,.06), rgba(7,11,46,.85));border:1px solid var(--line-strong);border-radius:22px;padding:24px;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
   .finops-visual .big-save{font-family:'JetBrains Mono';font-weight:700;font-size:54px;color:var(--amber);line-height:1;margin:6px 0 4px}
   .finops-visual .save-cap{font-size:13px;color:var(--text-dim);margin-bottom:22px}
+  /* finops-visual.finops-shot: real product screenshot variant (edge-to-edge, no stat-panel padding) */
+  .finops-visual.finops-shot{padding:0;overflow:hidden;line-height:0}
+  .finops-visual.finops-shot img{display:block;width:100%;height:auto;border-radius:20px}
   .fv-row{display:flex;gap:10px}
   .fv-stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px}
   .fv-stat .l{font-size:10.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
@@ -693,7 +696,8 @@
   @media(min-width:1100px){.ptabs{min-height:506px}}
   @media(min-width:1200px){.ptabs{min-height:485px}}
   @media(min-width:1280px){.ptabs{min-height:465px}}
-  .ptab-item{grid-column:1;position:relative;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
+  .ptab-item{grid-column:1;position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
+  .ptab-item .pt-txt{flex:1;min-width:0}
   .ptab-item::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background .2s}
   .ptab-item:hover{background:rgba(255,255,255,.07);color:var(--text)}
   .ptab-item.active{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);color:var(--text)}
@@ -787,10 +791,15 @@
   .ptab-item.active[data-app="as"] .pt-app{background:rgba(34,211,238,.22);border-color:rgba(34,211,238,.65)}
   .ptab-item.active[data-app="rm"] .pt-app{background:rgba(155,140,255,.22);border-color:rgba(155,140,255,.65)}
 
-  /* ---- rebalance: problems loud, tags whisper, panel prominent ---- */
-  /* tags: barely visible */
-  .ptab-item[data-app] .pt-app{color:#7E87B8!important;background:none!important;border:none!important;padding:0;border-radius:0;font-size:9.5px;font-weight:500;letter-spacing:.09em;margin-top:8px;opacity:.6}
-  .ptab-item.active[data-app] .pt-app{color:#9AA4D6!important;background:none!important;border:none!important;opacity:.75}
+  /* ---- rebalance: problems loud, tags legible against dark tab background ---- */
+  .ptab-item[data-app] .pt-app{background:none!important;border:none!important;padding:0;border-radius:0;font-size:9.5px;font-weight:600;letter-spacing:.09em;margin-top:0;flex-shrink:0;white-space:nowrap;opacity:.9}
+  .ptab-item[data-app="fo"] .pt-app{color:#FFCB80!important}
+  .ptab-item[data-app="as"] .pt-app{color:#7DE6F7!important}
+  .ptab-item[data-app="rm"] .pt-app{color:#C2B8FF!important}
+  .ptab-item.active[data-app] .pt-app{background:none!important;border:none!important;opacity:1}
+  .ptab-item.active[data-app="fo"] .pt-app{color:#FFB546!important}
+  .ptab-item.active[data-app="as"] .pt-app{color:#22D3EE!important}
+  .ptab-item.active[data-app="rm"] .pt-app{color:#9B8CFF!important}
   /* problem statements: immediately readable */
   .section-light .ptab-item{color:#EDF0FF;font-size:16px;line-height:1.35}
   .section-light .ptab-item:hover{color:#FFFFFF}
@@ -923,7 +932,7 @@
     </div>
 
     <div class="ptabs reveal" id="ptabs">
-      <div class="ptab-item active" data-app="fo" data-idx="0">Know your DPS position months ahead.<span class="pt-app">FinOps · Live</span></div>
+      <div class="ptab-item active" data-app="fo" data-idx="0"><span class="pt-txt">Know your DPS position months ahead.</span><span class="pt-app">FinOps · Live</span></div>
       <div class="ppanel-item active">
         <span class="ppanel-kick fo">FinOps · Available now</span>
         <h3>See where consumption is heading — long before the invoice.</h3>
@@ -935,7 +944,7 @@
         </div>
         <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
       </div>
-      <div class="ptab-item" data-app="fo" data-idx="1">Turn consumption insight into applied optimization.<span class="pt-app">FinOps · Live</span></div>
+      <div class="ptab-item" data-app="fo" data-idx="1"><span class="pt-txt">Turn consumption insight into applied optimization.</span><span class="pt-app">FinOps · Live</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick fo">FinOps · Available now</span>
         <h3>From insight to an applied optimization — in one click.</h3>
@@ -947,7 +956,7 @@
         </div>
         <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
       </div>
-      <div class="ptab-item" data-app="as" data-idx="2">Put Dynatrace answers in everyone's hands.<span class="pt-app">Assist · Live</span></div>
+      <div class="ptab-item" data-app="as" data-idx="2"><span class="pt-txt">Put Dynatrace answers in everyone's hands.</span><span class="pt-app">Assist · Live</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick as">Assist · Available now</span>
         <h3>Everyone gets to ask. In plain English.</h3>
@@ -959,7 +968,7 @@
         </div>
         <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
       </div>
-      <div class="ptab-item" data-app="rm" data-idx="3">Keep every stakeholder informed — automatically.<span class="pt-app">Signal · Coming soon</span></div>
+      <div class="ptab-item" data-app="rm" data-idx="3"><span class="pt-txt">Keep every stakeholder informed — automatically.</span><span class="pt-app">Signal · Coming soon</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick rm">Signal · Coming soon</span>
         <h3>Incident briefs that write themselves.</h3>
@@ -970,7 +979,7 @@
         </div>
         <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
       </div>
-      <div class="ptab-item" data-app="rm" data-idx="4">Connect Dynatrace and your ITSM into one flow.<span class="pt-app">Flow · Coming soon</span></div>
+      <div class="ptab-item" data-app="rm" data-idx="4"><span class="pt-txt">Connect Dynatrace and your ITSM into one flow.</span><span class="pt-app">Flow · Coming soon</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick rm">Flow · Coming soon</span>
         <h3>One loop from Dynatrace problem to closed ticket.</h3>
@@ -1057,19 +1066,8 @@
         </div>
       </div>
       <div>
-        <div class="finops-visual">
-          <div style="font-size:12px;color:#6B73A0;text-transform:uppercase;letter-spacing:.08em">Savings identified · YTD</div>
-          <div class="big-save">$184K</div>
-          <div class="save-cap">across 3 tenants — validated in-platform</div>
-          <div class="fv-row" style="margin-bottom:10px">
-            <div class="fv-stat"><div class="l">DPS tracked</div><div class="v">2.4M</div></div>
-            <div class="fv-stat"><div class="l">Forecast EOY</div><div class="v" style="color:var(--cyan)">$1.1M</div></div>
-          </div>
-          <div class="fv-row">
-            <div class="fv-stat"><div class="l">Actions ready</div><div class="v">12</div></div>
-            <div class="fv-stat"><div class="l">Vs forecast</div><div class="v" style="color:var(--green)">−12%</div></div>
-          </div>
-          <div style="margin-top:10px;font-size:10.5px;color:#6B73A0;text-align:right">Illustrative data</div>
+        <div class="finops-visual finops-shot">
+          <img src="assets/images/finops_1.jpg" alt="DynaLens FinOps dashboard — DPS cost attribution and forecasting" width="1200" height="675" loading="lazy">
         </div>
       </div>
     </div>
