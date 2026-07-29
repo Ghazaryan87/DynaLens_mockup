@@ -3,6 +3,8 @@
 Date: 2026-07-29
 Scope: `index.html` hero section (`.card-fan` / `.fan-card` visual, currently a static 5-card perspective fan with "Screenshot coming soon" placeholders).
 
+**Status:** Implemented — see `docs/superpowers/plans/2026-07-29-hero-visual-carousel.md`.
+
 ## Goal
 
 Replace the current static fan deck with a responsive, cycling image system:
