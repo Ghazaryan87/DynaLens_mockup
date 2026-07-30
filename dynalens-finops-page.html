@@ -904,23 +904,9 @@
   .why-pts{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
   .why-pts span{font-size:14px;color:var(--text-dim);line-height:1.5;padding-left:24px;position:relative}
   .why-pts span::before{content:"✓";position:absolute;left:0;top:0;color:#A55C00;font-weight:700}
-  /* illustration: capability cost breakdown */
-  .cost-viz{background:linear-gradient(160deg,rgba(14,26,102,.94),rgba(7,11,46,.96));border:1px solid rgba(120,140,255,.3);border-radius:20px;padding:24px 26px;box-shadow:var(--shadow-lg)}
-  .cv-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-  .cv-head .t{font-size:12px;color:#6B73A0;text-transform:uppercase;letter-spacing:.08em}
-  .cv-head .b{font-family:'JetBrains Mono';font-size:11px;color:#F87171;background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.4);border-radius:100px;padding:4px 11px}
-  .cv-row{display:grid;grid-template-columns:96px 1fr 58px;gap:12px;align-items:center;margin-bottom:13px}
-  .cv-row .l{font-size:12px;color:#A6AED6}
-  .cv-row .track{height:9px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
-  .cv-row .track i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,rgba(255,181,70,.55),#FFB546)}
-  .cv-row .v{font-family:'JetBrains Mono';font-size:11.5px;color:#F5F7FF;text-align:right}
-  .cv-row.hot .l{color:#F5F7FF;font-weight:600}
-  .cv-row.hot .track i{background:linear-gradient(90deg,rgba(248,113,113,.6),#F87171)}
-  .cv-row.hot .v{color:#F87171}
-  .cv-foot{margin-top:18px;padding-top:14px;border-top:1px solid rgba(120,140,255,.16);display:flex;justify-content:space-between;align-items:center}
-  .cv-foot .fl{font-size:12px;color:#6B73A0}
-  .cv-foot .fv{font-family:'JetBrains Mono';font-size:12px;color:#FFB546}
-  .cv-cap{margin-top:10px;font-size:10.5px;color:#6B73A0;text-align:right}
+  /* illustration: real recommendations screenshot */
+  .why-shot{line-height:0}
+  .why-shot img{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover}
   @media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
@@ -1056,21 +1042,8 @@
           <a href="#" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px">Book a Demo</a>
         </div>
       </div>
-      <div class="cost-viz">
-        <div class="cv-head">
-          <span class="t">DPS consumption · by capability</span>
-          <span class="b">▲ 38% vs forecast</span>
-        </div>
-        <div class="cv-row"><span class="l">Full-Stack</span><span class="track"><i style="width:78%"></i></span><span class="v">$412K</span></div>
-        <div class="cv-row hot"><span class="l">Log Mgmt</span><span class="track"><i style="width:96%"></i></span><span class="v">$517K</span></div>
-        <div class="cv-row"><span class="l">Kubernetes</span><span class="track"><i style="width:52%"></i></span><span class="v">$274K</span></div>
-        <div class="cv-row"><span class="l">RUM</span><span class="track"><i style="width:34%"></i></span><span class="v">$181K</span></div>
-        <div class="cv-row"><span class="l">Synthetic</span><span class="track"><i style="width:21%"></i></span><span class="v">$112K</span></div>
-        <div class="cv-foot">
-          <span class="fl">Top recommendation: trim log retention on prod-eu</span>
-          <span class="fv">saves $42K/yr</span>
-        </div>
-        <div class="cv-cap">Illustrative data</div>
+      <div class="why-shot">
+        <img src="assets/images/finops/4.png" alt="DynaLens FinOps recommendations — potential savings, impact, and priority score" width="1307" height="787" loading="lazy">
       </div>
     </div>
   </div>
