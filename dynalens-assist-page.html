@@ -52,31 +52,9 @@
         <h1>Ask <span class="hl">Assist</span> a question. <span class="hl">Get an answer.</span></h1>
         <p class="hero-sub">Assist answers observability questions in plain English, grounded in your live Dynatrace environment — in Microsoft Teams or a dedicated web UI, with the LLM running entirely on your premises.</p>
       </div>
-      <div class="assist-visual hero-visual reveal">
-        <div class="dash-bar">
-          <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-          <span class="dash-url mono">dynalens.ai/assist — ask anything</span>
-        </div>
-        <div class="av-block">
-          <span class="av-label me">You asked</span>
-          <p class="av-text q">"Why did checkout latency spike in prod-eu last night?"</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label ai">Assist</span>
-          <p class="av-text">Payment-service p95 latency rose 3.2× at 02:14 UTC after a dependent Redis node failed over. Traffic rerouted automatically within 40s — no customer-facing errors recorded.</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label me">You asked</span>
-          <p class="av-text q">"/rca PROBLEM-4821"</p>
-        </div>
-        <div class="av-block">
-          <span class="av-label ai">Assist</span>
-          <p class="av-text">RCA report ready — top hypothesis (HIGH confidence): Redis failover triggered by node memory exhaustion. Evidence: DEP-1, LOG-2. Two similar past incidents found.</p>
-        </div>
-        <div class="fv-row" style="margin-top:12px">
-          <div class="fv-stat"><div class="l">Answered in</div><div class="v" style="color:var(--cyan)">4.2s</div></div>
-          <div class="fv-stat"><div class="l">Sources queried</div><div class="v">3</div></div>
-        </div>
+      <div class="assist-visual hero-visual assist-shot reveal">
+        <img class="as-shot-1" src="assets/images/assist/executive-summary.png" alt="DynaLens Assist executive summary — open problems needing monitoring" width="1163" height="475" loading="lazy">
+        <img class="as-shot-2" src="assets/images/assist/response-time-chart.png" alt="DynaLens Assist AI Investigator — response time chart with drill-down" width="3440" height="1802" loading="lazy">
       </div>
       <div class="hero-cta reveal">
         <div class="hero-actions">
@@ -183,8 +161,8 @@
         </div>
       </div>
       <div class="why-shot-stack">
-        <img src="assets/images/assist/executive-summary.png" alt="DynaLens Assist executive summary — open problems needing monitoring" width="1163" height="475" loading="lazy">
-        <img src="assets/images/assist/investigation-outcomes.png" alt="DynaLens Assist investigation outcomes — RCA reports, past incidents, resolution stats" width="1173" height="687" loading="lazy">
+        <img src="assets/images/assist/topology-grid.png" alt="DynaLens Assist Topology Analyzer — dependency grid with blast radius" width="3430" height="1796" loading="lazy">
+        <img src="assets/images/assist/error-rate-chart.png" alt="DynaLens Assist AI Investigator — error-rate services chart" width="3438" height="1802" loading="lazy">
       </div>
     </div>
   </div>
