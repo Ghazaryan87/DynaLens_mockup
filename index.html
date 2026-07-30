@@ -344,6 +344,9 @@
 
   /* assist hero-visual: Q&A panel, cyan-tinted (live status) */
   .assist-visual{background:linear-gradient(160deg, rgba(34,211,238,.07), rgba(7,11,46,.85));border:1px solid var(--line-strong);border-radius:22px;padding:24px;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);display:flex;flex-direction:column;justify-content:center}
+  /* assist-visual.assist-shot: real product screenshot, no card frame, own rounded corners */
+  .assist-visual.assist-shot{background:none;border:none;box-shadow:none;padding:0;display:block;line-height:0}
+  .assist-visual.assist-shot img{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover}
   .av-block{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px}
   .av-block:last-of-type{margin-bottom:0}
   .av-label{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;display:block}
@@ -875,6 +878,17 @@
   .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
   .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
   .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
+
+  /* ---------- SCREENSHOT ZOOM + LIGHTBOX ---------- */
+  @media (hover:hover) and (pointer:fine){
+    .hc-shot img,.finops-visual.finops-shot img,.assist-visual.assist-shot img,.why-shot img{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+    .hc-shot img:hover,.finops-visual.finops-shot img:hover,.assist-visual.assist-shot img:hover,.why-shot img:hover{transform:scale(1.045)}
+  }
+  .lightbox{position:fixed;inset:0;background:rgba(4,6,26,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:24px;box-sizing:border-box}
+  .lightbox.open{display:flex}
+  .lightbox-img{max-width:60vw;max-height:60vh;width:auto;height:auto;border-radius:12px;box-shadow:0 40px 90px -20px rgba(0,0,0,.7);cursor:default}
+  .lightbox-close{position:absolute;top:22px;right:28px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .lightbox-close:hover{background:rgba(255,255,255,.18)}
 </style>
 </head>
 <body>
@@ -1149,23 +1163,8 @@
         </div>
       </div>
       <div>
-        <div class="assist-visual">
-          <div class="dash-bar">
-            <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-            <span class="dash-url mono">dynalens.ai/assist — ask anything</span>
-          </div>
-          <div class="av-block">
-            <span class="av-label me">You asked</span>
-            <p class="av-text q">"Why did checkout latency spike in prod-eu last night?"</p>
-          </div>
-          <div class="av-block">
-            <span class="av-label ai">Assist</span>
-            <p class="av-text">Payment-service p95 latency rose 3.2× at 02:14 UTC after a dependent Redis node failed over. Traffic rerouted automatically within 40s — no customer-facing errors recorded.</p>
-          </div>
-          <div class="fv-row" style="margin-top:12px">
-            <div class="fv-stat"><div class="l">Answered in</div><div class="v" style="color:#22D3EE">4.2s</div></div>
-            <div class="fv-stat"><div class="l">Sources queried</div><div class="v">3</div></div>
-          </div>
+        <div class="assist-visual assist-shot">
+          <img src="assets/images/assist/assist_1.webp" alt="DynaLens Assist — AI Investigator answering a question about open problems" width="2222" height="1250" loading="lazy">
         </div>
       </div>
     </div>
@@ -1489,6 +1488,42 @@
       panels[idx].classList.add('active');
     }));
   })();
+</script>
+
+<!-- SCREENSHOT LIGHTBOX -->
+<div class="lightbox" id="shotLightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+<script>
+(function(){
+  var SEL = '.hc-shot img, .finops-visual.finops-shot img, .assist-visual.assist-shot img, .why-shot img';
+  var lb = document.getElementById('shotLightbox');
+  if(!lb) return;
+  var lbImg = lb.querySelector('.lightbox-img');
+  function openLightbox(img){
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var img = e.target.closest(SEL);
+    if(img){ openLightbox(img); return; }
+    if(lb.classList.contains('open') && (e.target === lb || e.target.closest('.lightbox-close'))){
+      closeLightbox();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+})();
 </script>
 
 </body>

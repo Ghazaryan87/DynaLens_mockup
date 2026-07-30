@@ -908,6 +908,17 @@
   .why-shot{line-height:0}
   .why-shot img{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover}
   @media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* ---------- SCREENSHOT ZOOM + LIGHTBOX ---------- */
+  @media (hover:hover) and (pointer:fine){
+    .hc-shot img,.finops-visual.finops-shot img,.assist-visual.assist-shot img,.why-shot img{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+    .hc-shot img:hover,.finops-visual.finops-shot img:hover,.assist-visual.assist-shot img:hover,.why-shot img:hover{transform:scale(1.045)}
+  }
+  .lightbox{position:fixed;inset:0;background:rgba(4,6,26,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:24px;box-sizing:border-box}
+  .lightbox.open{display:flex}
+  .lightbox-img{max-width:60vw;max-height:60vh;width:auto;height:auto;border-radius:12px;box-shadow:0 40px 90px -20px rgba(0,0,0,.7);cursor:default}
+  .lightbox-close{position:absolute;top:22px;right:28px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .lightbox-close:hover{background:rgba(255,255,255,.18)}
 </style>
 </head>
 <body class="theme-finops">
@@ -1583,6 +1594,42 @@
     });
     setPct(50);
   });
+</script>
+
+<!-- SCREENSHOT LIGHTBOX -->
+<div class="lightbox" id="shotLightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+<script>
+(function(){
+  var SEL = '.hc-shot img, .finops-visual.finops-shot img, .assist-visual.assist-shot img, .why-shot img';
+  var lb = document.getElementById('shotLightbox');
+  if(!lb) return;
+  var lbImg = lb.querySelector('.lightbox-img');
+  function openLightbox(img){
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var img = e.target.closest(SEL);
+    if(img){ openLightbox(img); return; }
+    if(lb.classList.contains('open') && (e.target === lb || e.target.closest('.lightbox-close'))){
+      closeLightbox();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+})();
 </script>
 
 </body>
