@@ -203,7 +203,7 @@
   .hero-intro{grid-area:intro}
   .hero-cta{grid-area:cta}
   h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;margin-bottom:22px}
-  h1 .hl{color:var(--cyan)}
+  h1 .hl,.app-copy h3 .hl{color:var(--cyan)}
   .hero-sub{font-size:18.5px;color:var(--text-dim);max-width:540px;margin-bottom:32px}
   .hero-actions{display:flex;gap:14px;margin-bottom:34px;flex-wrap:wrap}
   .btn-lg{padding:14px 26px;font-size:15.5px;border-radius:12px}
@@ -1136,7 +1136,7 @@
     <div class="app flip reveal">
       <div class="app-copy">
         <span class="app-eye now">● Available now · Assist</span>
-        <h3>Ask Assist a question. Get an answer.</h3>
+        <h3>Ask <span class="hl">Assist</span> a question. Get an answer.</h3>
         <p class="app-intro">Assist answers observability questions in plain English, grounded in your live Dynatrace data — so the whole team gets answers without DQL fluency, and incident investigations start from evidence instead of a blank page. The LLM runs entirely on your premises.</p>
         <ul class="app-list">
           <li>Natural-language questions answered from live metrics, problems, logs, and traces</li>
