@@ -289,6 +289,21 @@
   .finops-visual{background:linear-gradient(160deg, rgba(255,181,70,.06), rgba(7,11,46,.85));border:1px solid var(--line-strong);border-radius:22px;padding:24px;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
   .finops-visual .big-save{font-family:'JetBrains Mono';font-weight:700;font-size:54px;color:var(--amber);line-height:1;margin:6px 0 4px}
   .finops-visual .save-cap{font-size:13px;color:var(--text-dim);margin-bottom:22px}
+  /* finops-visual.finops-shot: real product screenshots, no card frame, own rounded corners */
+  .finops-visual.finops-shot{background:none;border:none;box-shadow:none;padding:0;overflow:visible;line-height:0;display:flex;flex-direction:column;gap:16px}
+  .finops-visual.finops-shot img{display:block;width:100%;height:auto;object-fit:cover;border-radius:16px}
+  @media(min-width:901px){
+    .finops-visual.finops-shot{gap:20px}
+    .finops-visual.finops-shot img{width:88%;margin:0 auto}
+  }
+  @media(max-width:900px){
+    .finops-visual.finops-shot{flex-direction:row;gap:12px}
+    .finops-visual.finops-shot img{width:calc(50% - 6px);height:auto;aspect-ratio:4/3}
+  }
+  @media(max-width:460px){
+    .finops-visual.finops-shot .fv-shot-2{display:none}
+    .finops-visual.finops-shot .fv-shot-1{width:100%;aspect-ratio:16/9}
+  }
   .fv-row{display:flex;gap:10px}
   .fv-stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px}
   .fv-stat .l{font-size:10.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
@@ -949,41 +964,9 @@
         <h1>Stop guessing what's driving your <span class="hl">Dynatrace bill.</span></h1>
         <p class="hero-sub">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly inside your live Dynatrace tenant — no separate portal, no guesswork.</p>
       </div>
-      <div class="dash hero-visual reveal" id="dash">
-        <div class="dash-bar">
-          <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
-          <span class="dash-url mono">dynalens.ai/finops — cost overview</span>
-        </div>
-        <div class="stat-row">
-          <div class="stat">
-            <div class="label">DPS consumption</div>
-            <div class="val mono" data-count="2.4" data-suffix="M">0</div>
-            <div class="delta up">▼ 12% vs forecast</div>
-          </div>
-          <div class="stat">
-            <div class="label">Forecast EOY</div>
-            <div class="val mono" data-count="1.1" data-prefix="$" data-suffix="M">0</div>
-            <div class="delta dim">Within commitment</div>
-          </div>
-          <div class="stat">
-            <div class="label">Savings found</div>
-            <div class="val mono amber" data-count="184" data-prefix="$" data-suffix="K">0</div>
-            <div class="delta dim">Across 3 tenants</div>
-          </div>
-        </div>
-        <div class="reco-head">
-          <span class="t">Top recommendations</span>
-          <span class="c">12 actionable</span>
-        </div>
-        <div class="reco" data-delay="0"><span class="name">Reduce log retention on prod-eu</span><span class="save mono">$42K/yr</span></div>
-        <div class="reco" data-delay="150"><span class="name">Disable DDU on legacy hosts</span><span class="save mono">$28K/yr</span></div>
-        <div class="reco" data-delay="300"><span class="name">Consolidate synthetic monitors</span><span class="save mono">$19K/yr</span></div>
-        <div class="tenants">
-          <div class="tenant"><span class="tn">prod-eu</span><span class="tbar"><i data-w="100"></i></span><span class="tval">1.7M</span></div>
-          <div class="tenant"><span class="tn">prod-gcc</span><span class="tbar"><i data-w="65"></i></span><span class="tval">1.1M</span></div>
-          <div class="tenant"><span class="tn">staging</span><span class="tbar"><i data-w="25"></i></span><span class="tval">420K</span></div>
-          <div class="tenant"><span class="tn">dev</span><span class="tbar"><i data-w="16"></i></span><span class="tval">280K</span></div>
-        </div>
+      <div class="finops-visual hero-visual finops-shot reveal">
+        <img class="fv-shot fv-shot-1" src="assets/images/finops/1.png" alt="DynaLens FinOps dashboard — cost overview and potential savings" width="949" height="549" loading="lazy">
+        <img class="fv-shot fv-shot-2" src="assets/images/finops/2.png" alt="DynaLens FinOps dashboard — commitment utilization table" width="1215" height="692" loading="lazy">
       </div>
       <div class="hero-cta reveal">
         <div class="hero-actions">
