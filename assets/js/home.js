@@ -3,6 +3,7 @@
     const root = document.getElementById('heroCarousel');
     if(!root) return;
     const stage = document.getElementById('hcStage');
+    const caption = document.getElementById('hcCaption');
     const slides = Array.from(root.querySelectorAll('.hc-slide'));
     const dots = Array.from(root.querySelectorAll('.hc-dot'));
     const n = slides.length;
@@ -42,6 +43,7 @@
         }
       });
       dots.forEach((d,i)=>d.classList.toggle('active', i === active));
+      if(caption) caption.textContent = slides[active].dataset.caption || '';
     }
 
     function goTo(i){
