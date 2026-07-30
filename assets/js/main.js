@@ -45,7 +45,7 @@
 
   // ---------- SCREENSHOT LIGHTBOX ----------
   (function(){
-    var SEL = '.hc-shot img, .finops-visual.finops-shot img, .assist-visual.assist-shot img, .why-shot img';
+    var SEL = '.hc-shot img, .finops-visual.finops-shot img, .assist-visual.assist-shot img, .why-shot img, .why-shot-stack img';
     var lb = document.getElementById('shotLightbox');
     if(!lb) return;
     var lbImg = lb.querySelector('.lightbox-img');

@@ -142,6 +142,11 @@
   .rm-counter{font-family:'JetBrains Mono';font-size:13px;color:var(--text-faint)}
   .rm-counter b{color:var(--text)}
   .soon-rows{margin-top:14px;display:flex;flex-direction:column;gap:0}
+  /* Why Assist: editorial card + screenshot stack side by side */
+  .why-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+  .why-shot-stack{display:flex;flex-direction:column;gap:16px;line-height:0}
+  .why-shot-stack img{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover}
+  @media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:28px}}
   /* editorial app card: header / problem / solution / capabilities / cta */
   .soonapp{display:flex;flex-direction:column;align-items:stretch;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card);position:relative}
   .soonapp::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0}
@@ -308,8 +313,8 @@
   .theme-finops .section-light .sec-eye{background:rgba(165,92,0,.08);border-color:rgba(165,92,0,.35)}
   /* ---------- SCREENSHOT ZOOM + LIGHTBOX ---------- */
   @media (hover:hover) and (pointer:fine){
-    .hc-shot img,.finops-visual.finops-shot img,.assist-visual.assist-shot img,.why-shot img{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-    .hc-shot img:hover,.finops-visual.finops-shot img:hover,.assist-visual.assist-shot img:hover,.why-shot img:hover{transform:scale(1.045)}
+    .hc-shot img,.finops-visual.finops-shot img,.assist-visual.assist-shot img,.why-shot img,.why-shot-stack img{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+    .hc-shot img:hover,.finops-visual.finops-shot img:hover,.assist-visual.assist-shot img:hover,.why-shot img:hover,.why-shot-stack img:hover{transform:scale(1.045)}
   }
   .lightbox{position:fixed;inset:0;background:rgba(4,6,26,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:24px;box-sizing:border-box}
   .lightbox.open{display:flex}

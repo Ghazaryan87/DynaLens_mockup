@@ -91,9 +91,22 @@
     .finops-visual.finops-shot .fv-shot-2{display:none}
     .finops-visual.finops-shot .fv-shot-1{width:100%;aspect-ratio:16/9}
   }
-  /* assist-visual.assist-shot: real product screenshot, no card frame, own rounded corners */
-  .assist-visual.assist-shot{background:none;border:none;box-shadow:none;padding:0;display:block;line-height:0}
-  .assist-visual.assist-shot img{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover}
+  /* assist-visual.assist-shot: real product screenshots (edge-to-edge, no stat-panel padding).
+     Desktop: two shots stacked. Tablet: two shots side by side. Mobile: one shot only. */
+  .assist-visual.assist-shot{background:none;border:none;box-shadow:none;padding:0;overflow:visible;line-height:0;display:flex;flex-direction:column;gap:16px}
+  .assist-visual.assist-shot img{display:block;width:100%;height:auto;object-fit:cover;border-radius:16px}
+  @media(min-width:881px){
+    .assist-visual.assist-shot{gap:20px}
+    .assist-visual.assist-shot img{width:88%;margin:0 auto}
+  }
+  @media(max-width:880px){
+    .assist-visual.assist-shot{flex-direction:row;gap:12px}
+    .assist-visual.assist-shot img{width:calc(50% - 6px);height:auto;aspect-ratio:4/3}
+  }
+  @media(max-width:460px){
+    .assist-visual.assist-shot .as-shot-2{display:none}
+    .assist-visual.assist-shot .as-shot-1{width:100%;aspect-ratio:16/9}
+  }
   .ps-in{max-width:var(--maxw);margin:0 auto;padding:36px 28px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
   .ps-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
   .ps-track{position:relative;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:28px;width:100%;min-height:118px}
