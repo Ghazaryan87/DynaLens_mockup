@@ -4,7 +4,7 @@
     const handle = slider.querySelector('.ba-handle');
     let dragging = false;
     function setPct(pct){
-      pct = Math.max(2, Math.min(98, pct));
+      pct = Math.max(-3, Math.min(103, pct));
       before.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
       handle.style.left = pct + '%';
       handle.setAttribute('aria-valuenow', Math.round(pct));
