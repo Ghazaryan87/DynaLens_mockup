@@ -222,14 +222,14 @@
 
   /* ---------- HERO CAROUSEL (shared) ---------- */
   .hc-stage{position:relative}
-  .hc-slide{position:absolute;top:50%;left:50%;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(165deg,rgba(20,30,110,.92),rgba(7,11,46,.97));border:1px solid var(--line-strong);box-shadow:0 30px 60px -20px rgba(0,0,0,.65);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease;will-change:transform}
+  .hc-slide{position:absolute;top:50%;left:50%;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(165deg,rgba(20,30,110,.92),rgba(7,11,46,.97));box-shadow:0 30px 60px -20px rgba(0,0,0,.65);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease;will-change:transform}
   .hc-slide:hover{box-shadow:0 40px 80px -20px rgba(0,0,0,.75)}
-  .fan-bar{display:flex;gap:5px;padding:9px 12px;border-bottom:1px solid var(--line);flex-shrink:0}
+  .fan-bar{position:relative;z-index:2;display:flex;gap:5px;padding:9px 12px;flex-shrink:0;background:linear-gradient(180deg,rgba(7,11,46,.55) 0%,rgba(7,11,46,0) 100%)}
   .fan-bar .d{width:6px;height:6px;border-radius:50%}
   .fan-bar .d1{background:#FF5F57}.fan-bar .d2{background:#FEBC2E}.fan-bar .d3{background:#28C840}
   .fan-ph{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:left;padding:10px 16px;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint)}
   .fan-ph span{font-family:'Space Grotesk';font-size:17px;font-weight:700;color:var(--text-dim);letter-spacing:0;flex-shrink:0}
-  .hc-shot{flex:1;overflow:hidden}
+  .hc-shot{position:absolute;inset:0;overflow:hidden;z-index:1}
   .hc-shot img{width:100%;height:100%;display:block;object-fit:cover;object-position:top}
   .hc-dots{display:none;justify-content:center;gap:4px;margin-top:18px}
   .hc-dot{width:24px;height:24px;background:transparent;border:none;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
@@ -265,7 +265,7 @@
   /* ---------- HERO CAROUSEL — tablet (3-across, center emphasized) ---------- */
   @media(max-width:900px){
     .hc-stage{position:static;display:flex;align-items:center;justify-content:center;gap:14px;perspective:none;height:auto}
-    .hc-slide{position:static;top:auto;left:auto;width:220px;aspect-ratio:4/3;transform:none!important;display:none;flex-shrink:0;opacity:.75}
+    .hc-slide{position:relative;top:auto;left:auto;width:220px;aspect-ratio:4/3;transform:none!important;display:none;flex-shrink:0;opacity:.75}
     .hc-slide.hc-t-vis{display:flex}
     .hc-slide.hc-t-center{opacity:1;width:250px;order:2}
     .hc-slide.hc-t-left{order:1}
@@ -741,8 +741,8 @@
   @media(min-width:1100px){.ptabs{min-height:506px}}
   @media(min-width:1200px){.ptabs{min-height:485px}}
   @media(min-width:1280px){.ptabs{min-height:465px}}
-  .ptab-item{grid-column:1;position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px 16px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
-  .ptab-item .pt-txt{flex:1;min-width:0}
+  .ptab-item{grid-column:1;position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 46px 26px 24px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;transition:background .2s,border-color .2s;font-family:'Space Grotesk';font-weight:600;font-size:14.5px;line-height:1.4;color:var(--text-dim);letter-spacing:-.01em}
+  .ptab-item .pt-txt{flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
   .ptab-item::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background .2s}
   .ptab-item:hover{background:rgba(255,255,255,.07);color:var(--text)}
   .ptab-item.active{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);color:var(--text)}
@@ -837,7 +837,7 @@
   .ptab-item.active[data-app="rm"] .pt-app{background:rgba(155,140,255,.22);border-color:rgba(155,140,255,.65)}
 
   /* ---- rebalance: problems loud, tags legible against dark tab background ---- */
-  .ptab-item[data-app] .pt-app{background:none!important;border:none!important;padding:0;border-radius:0;font-size:9.5px;font-weight:600;letter-spacing:.09em;margin-top:0;flex-shrink:0;white-space:nowrap;opacity:.9}
+  .ptab-item[data-app] .pt-app{position:absolute;right:18px;bottom:10px;background:none!important;border:none!important;padding:0;border-radius:0;font-size:9.5px;font-weight:600;letter-spacing:.09em;margin-top:0;flex-shrink:0;white-space:nowrap;opacity:.9}
   .ptab-item[data-app="fo"] .pt-app{color:#FFCB80!important}
   .ptab-item[data-app="as"] .pt-app{color:#7DE6F7!important}
   .ptab-item[data-app="rm"] .pt-app{color:#C2B8FF!important}
@@ -1022,7 +1022,7 @@
         </div>
         <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
       </div>
-      <div class="ptab-item" data-app="rm" data-idx="3"><span class="pt-txt">Keep every stakeholder informed — automatically.</span><span class="pt-app">Signal · Coming soon</span></div>
+      <div class="ptab-item" data-app="rm" data-idx="3"><span class="pt-txt">Keep every stakeholder informed — automatically.</span><span class="pt-app">Signal · Soon</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick rm">Signal · Coming soon</span>
         <h3>Incident briefs that write themselves.</h3>
@@ -1033,7 +1033,7 @@
         </div>
         <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
       </div>
-      <div class="ptab-item" data-app="rm" data-idx="4"><span class="pt-txt">Connect Dynatrace and your ITSM into one flow.</span><span class="pt-app">Flow · Coming soon</span></div>
+      <div class="ptab-item" data-app="rm" data-idx="4"><span class="pt-txt">Connect Dynatrace and your ITSM into one flow.</span><span class="pt-app">Flow · Soon</span></div>
       <div class="ppanel-item">
         <span class="ppanel-kick rm">Flow · Coming soon</span>
         <h3>One loop from Dynatrace problem to closed ticket.</h3>
