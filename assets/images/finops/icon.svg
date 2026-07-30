@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="DynaLens FinOps DPS logo - sidebar optimized">
+  <defs>
+    <linearGradient id="top" x1="32" y1="28" x2="205" y2="115" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#61BAB1"/>
+      <stop offset="1" stop-color="#47AE8F"/>
+    </linearGradient>
+    <linearGradient id="bottom" x1="48" y1="126" x2="196" y2="214" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#528DEE"/>
+      <stop offset="1" stop-color="#7D6AFA"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="7" y1="9" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#65A2CE"/>
+      <stop offset="1" stop-color="#528DEE"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="176" y1="174" x2="250" y2="249" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8793AF"/>
+      <stop offset="1" stop-color="#65A2CE"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2d08a"/>
+      <stop offset="1" stop-color="#E9B86E"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eca0b0"/>
+      <stop offset="1" stop-color="#DA7288"/>
+    </linearGradient>
+    <clipPath id="clip"><circle cx="110" cy="112" r="92"/></clipPath>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <g transform="rotate(-45 205 205)">
+      <rect x="187" y="153" width="36" height="104" rx="18" fill="url(#handle)" stroke="#528DEE" stroke-width="2.5"/>
+      <rect x="201" y="168" width="9" height="69" rx="4.5" fill="#8793AF" opacity="0.55"/>
+    </g>
+
+    <circle cx="110" cy="112" r="105" fill="url(#rim)"/>
+    <circle cx="110" cy="112" r="96" fill="#2a3d52"/>
+    <circle cx="110" cy="112" r="92" fill="#1a2840"/>
+
+    <g clip-path="url(#clip)">
+      <rect x="18" y="20" width="184" height="108" fill="url(#top)"/>
+      <path d="M14 132 C58 139 104 124 140 96 C167 75 189 60 212 51 L212 216 L14 216 Z" fill="url(#bottom)"/>
+      <path d="M10 127 C63 141 113 124 151 94 C177 74 194 64 216 55" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+
+      <rect x="54" y="92" width="18" height="43" rx="4" fill="url(#warm)" stroke="#fff" stroke-width="2" stroke-opacity="0.35"/>
+      <rect x="85" y="75" width="19" height="60" rx="4" fill="url(#coral)" stroke="#fff" stroke-width="2" stroke-opacity="0.35"/>
+      <rect x="116" y="55" width="20" height="80" rx="4" fill="url(#warm)" stroke="#fff" stroke-width="2" stroke-opacity="0.35"/>
+      <rect x="148" y="38" width="21" height="97" rx="4" fill="url(#coral)" stroke="#fff" stroke-width="2" stroke-opacity="0.35"/>
+
+      <path d="M48 54 C82 27 133 29 170 50 C130 51 91 65 62 92 Z" fill="#fff" opacity="0.12"/>
+    </g>
+
+    <circle cx="110" cy="112" r="105" fill="none" stroke="#8793AF" stroke-width="2.5" opacity="0.55"/>
+    <circle cx="110" cy="112" r="92" fill="none" stroke="#65A2CE" stroke-width="2" opacity="0.7"/>
+
+    <g transform="translate(28 143)">
+      <text x="82" y="34" text-anchor="middle"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="52" font-weight="900"
+            letter-spacing="-2.5"
+            fill="#ffffff"
+            stroke="#8261CF" stroke-width="2"
+            paint-order="stroke fill">DPS</text>
+    </g>
+  </g>
+</svg>

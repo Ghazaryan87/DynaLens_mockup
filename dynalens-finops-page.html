@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DynaLens FinOps — Dynatrace Platform Subscription Cost Intelligence</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/finops.css">
+</head>
+<body class="theme-finops">
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo nav-current--fo">FinOps</a>
+      <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo nav-current--fo">FinOps</a>
+    <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero phero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-intro reveal">
+        <span class="eyebrow">Available now · Cost intelligence</span>
+        <h1>Stop guessing what's driving your <span class="hl">Dynatrace bill.</span></h1>
+        <p class="hero-sub">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly inside your live Dynatrace tenant — no separate portal, no guesswork.</p>
+      </div>
+      <div class="finops-visual hero-visual finops-shot reveal">
+        <img class="fv-shot fv-shot-1" src="assets/images/finops/cost-overview.png" alt="DynaLens FinOps dashboard — cost overview and potential savings" width="949" height="549" loading="lazy">
+        <img class="fv-shot fv-shot-2" src="assets/images/finops/commitment-table.png" alt="DynaLens FinOps dashboard — commitment utilization table" width="1215" height="692" loading="lazy">
+      </div>
+      <div class="hero-cta reveal">
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+          <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+        </div>
+        <div class="trust">
+          <span>Native Dynatrace Platform App</span>
+          <span>Multi-tenant</span>
+          <span>One-click remediation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PARTNER STRIP -->
+<div class="partner-strip">
+  <div class="ps-in">
+    <span class="ps-label">Recognised by Dynatrace</span>
+    <div class="ps-track" data-carousel>
+      <div class="pbadge pbadge-img ps-slide active"><img src="assets/endorsements/dynatrace-premier-sales-partner.png" alt="Dynatrace Premier Sales Partner" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-services-excellence-award.png" alt="Dynatrace EMEA 2025 Services Excellence Award — YourCompass" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-rising-star-award.jpg" alt="Dynatrace Rising Star Award, EMEA 2024–2025 — YourCompass" loading="lazy"></div>
+    </div>
+    <div class="ps-dots">
+      <button class="ps-dot active" data-idx="0" aria-label="Show badge 1 of 3"></button>
+      <button class="ps-dot" data-idx="1" aria-label="Show badge 2 of 3"></button>
+      <button class="ps-dot" data-idx="2" aria-label="Show badge 3 of 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE / AFTER -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">Under the hood</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">What you see. What FinOps actually calculates.</h2>
+      <p class="sec-sub">Drag to reveal the analysis behind every number.</p>
+    </div>
+    <div class="ba-slider reveal" data-ba>
+      <div class="ba-pane ba-after">
+        <span class="ba-kicker am">What you see</span>
+        <div class="ba-stat-row"><span>DPS consumption</span><b>Attributed by capability</b></div>
+        <div class="ba-stat-row"><span>Forecast confidence</span><b>±4% to year end</b></div>
+        <div class="ba-stat-row hot"><span>Top fix ready</span><b>$42K/yr · one click</b></div>
+      </div>
+      <div class="ba-pane ba-before">
+        <span class="ba-kicker">Reasoning</span>
+        <div class="ba-reason">
+          <div class="rline">Attributing consumption: Full-Stack, Kubernetes, RUM, Synthetic, Logs</div>
+          <div class="rline">Query: DPS usage by environment, trailing 30 days</div>
+          <div class="rline">Forecast model: <b>Monte Carlo, 10,000 runs</b> — confidence band ±4%</div>
+          <div class="rline">Recommendation: reduce log retention on prod-eu — <b>$42K/yr</b>, effort LOW</div>
+          <div class="conf">Safety check: PASSED · host confirmed offline</div>
+        </div>
+      </div>
+      <span class="ba-tag ba-tag-before">Reasoning</span>
+      <span class="ba-tag ba-tag-after">What you see</span>
+      <div class="ba-handle"><div class="ba-grip">↔</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEM → SOLUTION -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">Why FinOps</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">The observability bill nobody was watching.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div>
+        <div class="why-prob">
+          <span class="pl">The problem</span>
+          <p>DPS spreads cost across a dozen independently priced capabilities. Most teams discover the overrun when the invoice lands — with no idea which change would safely fix it.</p>
+        </div>
+        <p class="why-sol">FinOps attributes every dollar in real time, forecasts where it's heading, and applies the fix back into your tenant — <b>in one click</b>.</p>
+        <div class="why-pts">
+          <span>Cost attribution and confidence-banded forecasting, with alerts before the budget breaks</span>
+          <span>Recommendations scored by savings, impact, and effort — one-click "Fix" actions included</span>
+          <span>Rate verification and multi-tenant management for teams running many estates</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px;display:none">Start Free Trial →</a>
+          <a href="#" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px">Book a Demo</a>
+        </div>
+      </div>
+      <div class="why-shot">
+        <img src="assets/images/finops/savings-recommendations.png" alt="DynaLens FinOps recommendations — potential savings, impact, and priority score" width="1307" height="787" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. VIDEOS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:30px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
+      <span class="sec-eye">See it in action</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Watch FinOps at work.</h2>
+      <p class="sec-sub">A full walkthrough, plus short focused clips of each key workflow.</p>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-frame">
+        <div class="play">
+          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+        </div>
+        <div class="vt">
+          <b>Full product walkthrough</b>
+          <span>Coming soon — Accounts, forecasting, recommendations, and one-click Fix, end to end</span>
+        </div>
+      </div>
+    </div>
+    <div class="clip-row reveal">
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:45</span>
+        </div>
+        <div class="ccap">Attribution in action — cost by capability, account, and environment</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:60</span>
+        </div>
+        <div class="ccap">Forecasting — confidence bands and budget-threshold alerts</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:30</span>
+        </div>
+        <div class="ccap">One-click Fix — from recommendation to applied change</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">How it works</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">From reactive reporting to a proactive FinOps model.</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="ghost">1</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 L19 6"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 01</span><span class="sline"></span></div>
+        <h4>Inform</h4>
+        <p>Centralised visibility across every tenant. Workload-level attribution across hosts, applications, and environments — so you know exactly what drives spend.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">2</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2.4" fill="var(--surface-1,#0A1247)"/><circle cx="15" cy="17" r="2.4" fill="var(--surface-1,#0A1247)"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 02</span><span class="sline"></span></div>
+        <h4>Optimise</h4>
+        <p>Identify high-cost drivers, apply optimisation actions, and see the projected financial impact the moment you act — before and after, in one place.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">3</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.6"/><path d="M20 5v6h-6"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 03</span><span class="sline"></span></div>
+        <h4>Operate</h4>
+        <p>Budget tracking, forecasting, threshold alerts, and automated workflows. Cost control that runs continuously — not a quarterly reporting exercise.</p>
+      </div>
+    </div>
+    <div class="hiw-cta reveal">
+      <div class="txt">See your own DPS spend mapped this way — <span>in minutes.</span></div>
+      <div class="acts">
+        <a href="#" class="btn btn-primary" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FEATURES -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:30px">
+      <span class="sec-eye">Capabilities</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Everything needed to close the loop on DPS spend.</h2>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+        </div>
+        <h4>Real-time cost &amp; usage analytics</h4>
+        <p>Continuous sync of subscription, cost, and usage data, broken down by capability — Full-Stack Monitoring, Kubernetes, RUM, Synthetic, Security, Logs, Business Events, and Davis AI.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h4>Account &amp; subscription drill-down</h4>
+        <p>Configurable time range up to a full year, live Dynatrace sync-status, budget donut, cost-by-capability breakdown, and CSV/report export.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/><path d="M15 5h5v5"/></svg>
+        </div>
+        <h4>AI-assisted forecasting</h4>
+        <p>Confidence-banded linear and Monte Carlo forecasting flags forecasts crossing 25/50/75/90% of budget, or predicted exhaustion, before it becomes an overage.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg>
+        </div>
+        <h4>Automated optimisation recommendations</h4>
+        <p>A built-in catalog proposes capability-specific actions — monitoring mode, namespace scoping, sampling, retention — scored by savings, impact, and effort.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h4>One-click remediation</h4>
+        <p>Selected recommendations write configuration changes directly back into your live Dynatrace tenant, gated behind permissions and safety checks — no context switching.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+        </div>
+        <h4>Rate verification</h4>
+        <p>Billed rates are checked against Dynatrace's official rate card, so pricing discrepancies don't go unnoticed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5b. DPS COVERAGE TABLE (app-specific addition) -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">Full coverage</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Every DPS dimension, attributed and optimisable.</h2>
+      <p class="sec-sub">FinOps reads every capability unit that drives your bill — across every tenant you operate.</p>
+    </div>
+    <div class="dps-table-wrap reveal">
+      <table class="dps-table">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th>Metering unit</th>
+            <th class="drv">Typical cost driver</th>
+            <th style="text-align:center">Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cap">Full-Stack Monitoring</td><td class="unit">GiB-hour / host</td><td class="drv">Instrumented hosts × memory class</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Infrastructure Monitoring</td><td class="unit">GiB-hour / host</td><td class="drv">Hosts without deep-stack agent</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Kubernetes Operations</td><td class="unit">Pod-hour</td><td class="drv">Monitored namespaces &amp; pods</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Real User Monitoring</td><td class="unit">Sessions</td><td class="drv">Web &amp; mobile user sessions</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Session Replay</td><td class="unit">Sessions captured</td><td class="drv">Replay-enabled user funnels</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Synthetic Monitoring</td><td class="unit">Actions</td><td class="drv">Scheduled browser &amp; HTTP checks</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Application Security</td><td class="unit">Scan hours</td><td class="drv">Runtime vulnerability scanning</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Log Management</td><td class="unit">GiB ingested + queried</td><td class="drv">Log volume + DQL queries</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Business Events</td><td class="unit">Events ingested</td><td class="drv">Custom domain events pushed</td><td class="chk">✓</td></tr>
+          <tr><td class="cap">Davis AI</td><td class="unit">GiB scanned</td><td class="drv">Problem detection + root-cause analysis</td><td class="chk">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dps-accordion reveal" id="dpsAccordion">
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Full-Stack Monitoring</span>
+          <span class="dpsa-unit">GiB-hour / host</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Instrumented hosts × memory class</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Infrastructure Monitoring</span>
+          <span class="dpsa-unit">GiB-hour / host</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Hosts without deep-stack agent</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Kubernetes Operations</span>
+          <span class="dpsa-unit">Pod-hour</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Monitored namespaces &amp; pods</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Real User Monitoring</span>
+          <span class="dpsa-unit">Sessions</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Web &amp; mobile user sessions</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Session Replay</span>
+          <span class="dpsa-unit">Sessions captured</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Replay-enabled user funnels</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Synthetic Monitoring</span>
+          <span class="dpsa-unit">Actions</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Scheduled browser &amp; HTTP checks</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Application Security</span>
+          <span class="dpsa-unit">Scan hours</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Runtime vulnerability scanning</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Log Management</span>
+          <span class="dpsa-unit">GiB ingested + queried</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Log volume + DQL queries</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Business Events</span>
+          <span class="dpsa-unit">Events ingested</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Custom domain events pushed</p>
+        </div></div>
+      </div>
+      <div class="dpsa-item">
+        <button class="dpsa-q">
+          <span class="dpsa-cap">Davis AI</span>
+          <span class="dpsa-unit">GiB scanned</span>
+          <span class="dpsa-chk">✓</span>
+          <span class="dpsa-toggle">+</span>
+        </button>
+        <div class="dpsa-body"><div class="dpsa-body-in">
+          <span class="dpsa-lbl">Typical cost driver</span>
+          <p>Problem detection + root-cause analysis</p>
+        </div></div>
+      </div>
+    </div>
+    <div class="dps-foot-row reveal">
+      <p class="dps-foot" style="margin-top:0">Representative dimensions. FinOps tracks the full DPS capability set plus custom cost-attribution overlays.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. INTEGRATIONS -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:22px">
+      <span class="sec-eye">Integrations</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Reads from Dynatrace. Fits your stack.</h2>
+    </div>
+    <div class="integ-row reveal">
+      <span>Dynatrace Platform API — cost, usage &amp; config write-back</span>
+      <span>Keycloak — SSO / OpenID Connect</span>
+      <span>Stripe — billing &amp; licensing</span>
+      <span>Microsoft Graph / Office 365 — notifications</span>
+      <span>SMTP email — notifications</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SECURITY NOTE -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:24px">
+      <span class="sec-eye">Security</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Enterprise-grade by default.</h2>
+      <p class="sec-sub">Keycloak/OIDC authentication, fine-grained role- and permission-based access control, and an immutable audit log covering every sensitive action — from an applied Fix to a licence override.</p>
+    </div>
+    <div class="sec-mini-row reveal">
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+        <p><b>Scoped access.</b> OAuth2 client-credentials per account, secrets stored in Azure Key Vault, revocable at any time.</p>
+      </div>
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg></div>
+        <p><b>Isolated by design.</b> Multi-tenant customer &amp; environment separation — your data never touches another tenant's.</p>
+      </div>
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div>
+        <p><b>Auditable.</b> Every sensitive mutation logged with actor, before/after diff, IP, and request ID.</p>
+      </div>
+    </div>
+    <a href="index.html#security" class="link-cta reveal">See the full security architecture →</a>
+  </div>
+</section>
+
+<!-- 10. CTA FOOTER -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <h2>Start using FinOps today.</h2>
+      <p>Free trial in minutes, or talk to our FinOps team about your DPS footprint.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. RELATED APPS -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:22px">
+      <span class="sec-eye">Also in the suite</span>
+      <h2 style="font-size:clamp(22px,2.6vw,30px)">FinOps is one of five.</h2>
+    </div>
+    <div class="suite compact reveal">
+      <a href="dynalens-assist-page.html" class="scard live">
+        <span class="badge now">Available now</span>
+        <div class="scard-head">
+          <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
+          <h3>Assist</h3>
+        </div>
+        <p>An AI teammate for your day-to-day Dynatrace operations.</p>
+      </a>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">S</div>
+          <h3>Signal</h3>
+        </div>
+        <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">F</div>
+          <h3>Flow</h3>
+        </div>
+        <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">M</div>
+          <h3>Map</h3>
+        </div>
+        <p>Business-service views built on top of Smartscape topology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo" style="font-size:17px;text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="dynalens-finops-page.html">FinOps</a>
+        <a href="dynalens-assist-page.html">Assist</a>
+        <a href="dynalens-faq-page.html">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <a href="index.html"><img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCREENSHOT LIGHTBOX -->
+<div class="lightbox" id="shotLightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/finops.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — DynaLens | Dynatrace Apps for Cost Optimization & AI-Assisted Operations</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<meta name="description" content="Answers to common questions about DynaLens: the FinOps and Assist apps for Dynatrace, pricing, deployment, security, data residency, and licensing.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is DynaLens?","acceptedAnswer":{"@type":"Answer","text":"A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner."}},{"@type":"Question","name":"How does DynaLens reduce Dynatrace costs?","acceptedAnswer":{"@type":"Answer","text":"FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it."}},{"@type":"Question","name":"Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?","acceptedAnswer":{"@type":"Answer","text":"Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM."}},{"@type":"Question","name":"We're a Dynatrace partner — can we manage multiple customers?","acceptedAnswer":{"@type":"Answer","text":"That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate."}},{"@type":"Question","name":"Does our data leave our environment?","acceptedAnswer":{"@type":"Answer","text":"Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA."}},{"@type":"Question","name":"How is DynaLens licensed?","acceptedAnswer":{"@type":"Answer","text":"Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team."}},{"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates."}},{"@type":"Question","name":"How is FinOps priced?","acceptedAnswer":{"@type":"Answer","text":"Free trial and demo tiers are available so you can evaluate the product before committing. Beyond that, pricing is arranged per engagement — talk to us for a quote based on your tenant count and DPS spend."}},{"@type":"Question","name":"How long does FinOps setup take?","acceptedAnswer":{"@type":"Answer","text":"FinOps installs as a native Dynatrace Platform App. A guided onboarding flow authenticates your Dynatrace connection, validates it, and automatically queues the initial data sync — most customers are seeing data within the same day."}},{"@type":"Question","name":"What data access does FinOps need?","acceptedAnswer":{"@type":"Answer","text":"Authentication is OAuth2 client-credentials, scoped per account. FinOps reads subscription, cost, and usage data by default; write-back is limited to the specific configuration changes behind an applied \"Fix\" action, and is gated by permission and safety checks (e.g. confirming a host is offline before switching its monitoring mode)."}},{"@type":"Question","name":"Can FinOps manage multiple Dynatrace tenants?","acceptedAnswer":{"@type":"Answer","text":"Yes. FinOps is built for teams and partners managing many customers at once — full CRUD customer management, per-account OAuth credentials, and role-based access so each user only sees what they're permitted to."}},{"@type":"Question","name":"What deployment options are available for FinOps?","acceptedAnswer":{"@type":"Answer","text":"FinOps ships as a native Dynatrace Platform App on the frontend, backed by a service you can run via Docker Compose or deploy to Kubernetes — including on-premises and air-gapped environments for regulated customers."}},{"@type":"Question","name":"Does any of our data leave our environment when using Assist?","acceptedAnswer":{"@type":"Answer","text":"No. Assist is designed for on-prem deployment: the LLM runs locally on your infrastructure, all persistence is in your own PostgreSQL, and Dynatrace access is read-only. Air-gapped environments are fully supported."}},{"@type":"Question","name":"Do we need Dynatrace to start using Assist?","acceptedAnswer":{"@type":"Answer","text":"Dynatrace connectivity is optional for bring-up — without it, Assist still works as a knowledge-base chat assistant. Connect Dynatrace Managed and the live-data features (NL Query, RCA, topology) light up."}},{"@type":"Question","name":"Does Assist work in Teams, web, or both?","acceptedAnswer":{"@type":"Answer","text":"Three modes: Microsoft Teams (Entra ID identity), an on-prem web UI (LDAP identity), or hybrid running both at once. Same capabilities behind every surface."}},{"@type":"Question","name":"How is access controlled in Assist?","acceptedAnswer":{"@type":"Answer","text":"Three roles — viewer, SRE, and admin — assigned from your directory groups (Entra ID or LDAP). Sensitive capabilities like RCA, model switching, and administration are gated per role, and every action is rate-limited and audit-logged."}},{"@type":"Question","name":"How does Assist deploy?","acceptedAnswer":{"@type":"Answer","text":"Docker Compose for a fast on-prem start, with a Helm chart for Kubernetes. Secrets live in HashiCorp Vault, and health, metrics, and OpenTelemetry endpoints are built in for your own monitoring."}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/faq.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+      <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+      <a href="dynalens-faq-page.html" style="color:var(--cyan)">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+    <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+    <a href="dynalens-faq-page.html" style="color:var(--cyan)">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:8px">
+  <div class="wrap">
+    <div class="reveal" style="max-width:720px">
+      <span class="eyebrow">FAQ</span>
+      <h1>Questions, answered.</h1>
+      <p class="hero-sub">Everything platform teams and partners ask when evaluating DynaLens — general, FinOps, and Assist — in one place.</p>
+    </div>
+  </div>
+</header>
+
+<section class="blk" style="padding-top:24px">
+  <div class="wrap">
+    <div class="faqx">
+      <div class="faqx-left reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="sec-eye">All questions</span>
+          <h2 style="font-size:clamp(22px,2.6vw,30px)">Browse by topic.</h2>
+          <p class="sec-sub">General questions about DynaLens, plus everything specific to FinOps and Assist.</p>
+        </div>
+        <div class="faqx-cta">
+          <b>Still have questions?</b>
+          <p>Talk directly to the engineers who build and run DynaLens — no sales script.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">General</span>
+          <div class="faq reveal" id="faqAcc-general">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">01</span>
+                <span class="qt">What is DynaLens?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">A suite of apps that extends Dynatrace with what teams otherwise build by hand: FinOps for DPS cost attribution, forecasting, and optimisation; Assist for plain-English operations backed by an on-prem LLM; and — on the roadmap — Signal, Flow, and Map for incident comms, ITSM automation, and business-service views. Built by YourCompass, a Dynatrace Premier Partner.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">02</span>
+                <span class="qt">How does DynaLens reduce Dynatrace costs?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps attributes DPS consumption by capability, account, and environment, forecasts spend against your annual commitment with confidence bands, and proposes optimisation actions scored by savings, impact, and effort — several applicable back into your tenant with one click. You see the overrun months before the invoice, and you know exactly which change fixes it.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">03</span>
+                <span class="qt">Does DynaLens work with Dynatrace SaaS and Dynatrace Managed?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes — different apps target different estates. FinOps manages Dynatrace Platform Subscription (DPS) consumption for SaaS tenants; Assist is built for Dynatrace Managed and fully on-prem environments, including air-gapped deployments with a locally hosted LLM.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">04</span>
+                <span class="qt">We're a Dynatrace partner — can we manage multiple customers?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">That's a core design goal. FinOps is multi-tenant from the ground up: customer and environment management, per-account credentials, role-based access, and consolidated forecasting digests across every customer you operate.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">05</span>
+                <span class="qt">Does our data leave our environment?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace access is read-only by default, isolated per customer, and revocable at any time. On-premises deployment offers full feature parity — Assist runs its LLM entirely on your own infrastructure, so nothing reaches external AI services. GCC data residency is available in the UAE and KSA.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">06</span>
+                <span class="qt">How is DynaLens licensed?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Each app is licensed as a subscription, with free trial and demo tiers so you can evaluate before committing. Enterprise and partner arrangements — multi-tenant, volume, or bespoke terms — are handled directly with our team.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">07</span>
+                <span class="qt">How do we get started?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Start a free trial and connect your Dynatrace tenant in minutes, or book a demo and we'll walk through your estate together — whichever suits how your team evaluates.</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">FinOps</span>
+          <div class="faq reveal" id="faqAcc-finops">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">08</span>
+                <span class="qt">How is FinOps priced?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Free trial and demo tiers are available so you can evaluate the product before committing. Beyond that, pricing is arranged per engagement — talk to us for a quote based on your tenant count and DPS spend.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">09</span>
+                <span class="qt">How long does setup take?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps installs as a native Dynatrace Platform App. A guided onboarding flow authenticates your Dynatrace connection, validates it, and automatically queues the initial data sync — most customers are seeing data within the same day.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">10</span>
+                <span class="qt">What data access does FinOps need?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Authentication is OAuth2 client-credentials, scoped per account. FinOps reads subscription, cost, and usage data by default; write-back is limited to the specific configuration changes behind an applied "Fix" action, and is gated by permission and safety checks (e.g. confirming a host is offline before switching its monitoring mode).</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">11</span>
+                <span class="qt">Can FinOps manage multiple Dynatrace tenants?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Yes. FinOps is built for teams and partners managing many customers at once — full CRUD customer management, per-account OAuth credentials, and role-based access so each user only sees what they're permitted to.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">12</span>
+                <span class="qt">What deployment options are available?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">FinOps ships as a native Dynatrace Platform App on the frontend, backed by a service you can run via Docker Compose or deploy to Kubernetes — including on-premises and air-gapped environments for regulated customers.</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-group">
+          <span class="sec-eye faq-group-eye">Assist</span>
+          <div class="faq reveal" id="faqAcc-assist">
+            <div class="acc-item open">
+              <button class="acc-q" aria-expanded="true">
+                <span class="qn">13</span>
+                <span class="qt">Does any of our data leave our environment?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">No. Assist is designed for on-prem deployment: the LLM runs locally on your infrastructure, all persistence is in your own PostgreSQL, and Dynatrace access is read-only. Air-gapped environments are fully supported.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">14</span>
+                <span class="qt">Do we need Dynatrace to start?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Dynatrace connectivity is optional for bring-up — without it, Assist still works as a knowledge-base chat assistant. Connect Dynatrace Managed and the live-data features (NL Query, RCA, topology) light up.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">15</span>
+                <span class="qt">Teams, web, or both?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Three modes: Microsoft Teams (Entra ID identity), an on-prem web UI (LDAP identity), or hybrid running both at once. Same capabilities behind every surface.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">16</span>
+                <span class="qt">How is access controlled?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Three roles — viewer, SRE, and admin — assigned from your directory groups (Entra ID or LDAP). Sensitive capabilities like RCA, model switching, and administration are gated per role, and every action is rate-limited and audit-logged.</div></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-q" aria-expanded="false">
+                <span class="qn">17</span>
+                <span class="qt">How does it deploy?</span>
+                <span class="acc-x"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+              </button>
+              <div class="acc-body"><div class="acc-a"><div class="acc-a-in">Docker Compose for a fast on-prem start, with a Helm chart for Kubernetes. Secrets live in HashiCorp Vault, and health, metrics, and OpenTelemetry endpoints are built in for your own monitoring.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <h2>Didn't find your answer?</h2>
+      <p>Talk to the team that builds and runs DynaLens, or start a free trial and see for yourself.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo" style="font-size:17px;text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="dynalens-finops-page.html">FinOps</a>
+        <a href="dynalens-assist-page.html">Assist</a>
+        <a href="dynalens-faq-page.html">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <a href="index.html"><img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/faq.js"></script>
+</body>
+</html>

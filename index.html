@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DynaLens — Dynatrace Apps for Cost Optimization & AI-Assisted Operations | YourCompass</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<meta name="description" content="DynaLens is a suite of Dynatrace apps by YourCompass: FinOps for DPS cost optimization and forecasting, Assist for AI-assisted operations in plain English — SaaS or fully on-prem, with GCC data residency. Built by a Dynatrace Premier Partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <div class="logo"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+      <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+    <a href="dynalens-assist-page.html" class="nav-status nav-status--as">Assist</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-intro reveal">
+        <span class="slide-tag t-suite">DynaLens by YourCompass — the Dynatrace app suite</span>
+        <h1>Your Dynatrace estate, <span class="hl">at full value.</span></h1>
+        <p class="hero-lede">DynaLens extends the platform you already trust — plain-English answers, automated workflows, deeper insight, all from your existing estate.</p>
+        <p class="hero-sub" style="max-width:480px">Optimize DPS consumption. Ask your estate anything in plain English. Automate the manual work. Read-only by design — SaaS to air-gapped, from a Dynatrace Premier Partner.</p>
+      </div>
+      <div class="hero-visual hero-carousel reveal" id="heroCarousel">
+        <div class="hc-stage" id="hcStage" aria-hidden="true">
+          <div class="hc-slide" data-idx="0" data-caption="FinOps — cost overview and potential savings, at a glance">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="hc-shot"><img src="assets/images/finops/hero-1.webp" alt="DynaLens FinOps dashboard screenshot" width="3108" height="1376" loading="lazy"></div>
+          </div>
+          <div class="hc-slide" data-idx="1" data-caption="Assist — 3D topology map of your Dynatrace estate">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="hc-shot"><img src="assets/images/assist/topology-3d.webp" alt="DynaLens Assist 3D Topology Analyzer — dependency map and blast radius" width="3452" height="1812" loading="lazy"></div>
+          </div>
+          <div class="hc-slide" data-idx="2" data-caption="FinOps — commitment utilization by tenant">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="hc-shot"><img src="assets/images/finops/hero-2.webp" alt="DynaLens FinOps dashboard screenshot" width="3108" height="1376" loading="lazy"></div>
+          </div>
+          <div class="hc-slide" data-idx="3" data-caption="Assist — natural-language answers, charted instantly">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="hc-shot"><img src="assets/images/assist/response-time-chart.webp" alt="DynaLens Assist AI Investigator — response time chart with drill-down" width="3440" height="1802" loading="lazy"></div>
+          </div>
+          <div class="hc-slide" data-idx="4" data-caption="Assist — spot error-rate spikes across every service">
+            <div class="fan-bar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
+            <div class="hc-shot"><img src="assets/images/assist/error-rate-chart.webp" alt="DynaLens Assist AI Investigator — error-rate services chart" width="3438" height="1802" loading="lazy"></div>
+          </div>
+        </div>
+        <div class="hc-dots" id="hcDots">
+          <button class="hc-dot active" data-idx="0" aria-label="Slide 1 of 5"></button>
+          <button class="hc-dot" data-idx="1" aria-label="Slide 2 of 5"></button>
+          <button class="hc-dot" data-idx="2" aria-label="Slide 3 of 5"></button>
+          <button class="hc-dot" data-idx="3" aria-label="Slide 4 of 5"></button>
+          <button class="hc-dot" data-idx="4" aria-label="Slide 5 of 5"></button>
+        </div>
+        <p class="hc-caption" id="hcCaption" aria-live="polite">FinOps — cost overview and potential savings, at a glance</p>
+      </div>
+      <div class="hero-cta reveal">
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+          <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PARTNER STRIP -->
+<div class="partner-strip">
+  <div class="ps-in">
+    <span class="ps-label">Recognised by Dynatrace</span>
+    <div class="ps-track" data-carousel>
+      <div class="pbadge pbadge-img ps-slide active"><img src="assets/endorsements/dynatrace-premier-sales-partner.png" alt="Dynatrace Premier Sales Partner" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-services-excellence-award.png" alt="Dynatrace EMEA 2025 Services Excellence Award — YourCompass" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-rising-star-award.jpg" alt="Dynatrace Rising Star Award, EMEA 2024–2025 — YourCompass" loading="lazy"></div>
+    </div>
+    <div class="ps-dots">
+      <button class="ps-dot active" data-idx="0" aria-label="Show badge 1 of 3"></button>
+      <button class="ps-dot" data-idx="1" aria-label="Show badge 2 of 3"></button>
+      <button class="ps-dot" data-idx="2" aria-label="Show badge 3 of 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEMS -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eye">Why DynaLens</span>
+      <h2>Opportunities we've seen. Tools we've built.</h2>
+      <p class="sec-sub">Every estate we've managed revealed the same opportunities to take Dynatrace further — deeper insight, faster answers, less manual work. DynaLens turns each one into a capability. Pick an opportunity; see how it works.</p>
+    </div>
+
+    <div class="ptabs reveal" id="ptabs">
+      <div class="ptab-item active" data-app="fo" data-idx="0"><span class="pt-txt">Know your DPS position months ahead.</span><span class="pt-app">FinOps · Live</span></div>
+      <div class="ppanel-item active">
+        <span class="ppanel-kick fo">FinOps · Available now</span>
+        <h3>See where consumption is heading — long before the invoice.</h3>
+        <p class="pp-sol">DPS consumption is attributed <b>continuously</b> — by capability, account, and environment — so every line item has an owner. Monte Carlo forecasting projects spend against your annual commitment with confidence bands, and alerts fire the moment a forecast crosses 25, 50, 75, or 90% of budget.</p>
+        <div class="pp-pts" style="color:#FFB546">
+          <span>Cost broken down by Full-Stack, Kubernetes, RUM, Synthetic, Logs, and every other DPS capability</span>
+          <span>Predicted exhaustion date when you're on track to run out early</span>
+          <span>Weekly digest across every tenant you operate</span>
+        </div>
+        <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+      </div>
+      <div class="ptab-item" data-app="fo" data-idx="1"><span class="pt-txt">Turn consumption insight into applied optimization.</span><span class="pt-app">FinOps · Live</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick fo">FinOps · Available now</span>
+        <h3>From insight to an applied optimization — in one click.</h3>
+        <p class="pp-sol">A recommendation catalog evaluates each environment and proposes concrete actions — monitoring modes, namespace scoping, session sampling, synthetic frequency — each scored by <b>savings, impact, and effort</b>. Selected optimizations are written back into your live tenant with one click, gated behind permissions and safety checks.</p>
+        <div class="pp-pts" style="color:#FFB546">
+          <span>Every recommendation priced in dollars and % of licence value</span>
+          <span>Safety checks before any change — e.g. confirming a host is offline first</span>
+          <span>Full audit trail: actor, action, before/after diff</span>
+        </div>
+        <a href="dynalens-finops-page.html" class="pp-cta pp-cta-fo">Explore FinOps →</a>
+      </div>
+      <div class="ptab-item" data-app="as" data-idx="2"><span class="pt-txt">Put Dynatrace answers in everyone's hands.</span><span class="pt-app">Assist · Live</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick as">Assist · Available now</span>
+        <h3>Everyone gets to ask. In plain English.</h3>
+        <p class="pp-sol">Assist plans and executes the right Dynatrace API calls from a natural-language question — in Microsoft Teams or a dedicated web UI — and answers with charts and evidence. Incident investigations start from ranked, cited hypotheses instead of a blank page. And the LLM runs <b>entirely on your own hardware</b>.</p>
+        <div class="pp-pts" style="color:#22D3EE">
+          <span>No DQL or dashboard fluency required</span>
+          <span>RCA co-pilot recalls similar past incidents automatically</span>
+          <span>On-prem or air-gapped — nothing sent to external AI services</span>
+        </div>
+        <a href="dynalens-assist-page.html" class="pp-cta pp-cta-as">Explore Assist →</a>
+      </div>
+      <div class="ptab-item" data-app="rm" data-idx="3"><span class="pt-txt">Keep every stakeholder informed — automatically.</span><span class="pt-app">Signal · Soon</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick rm">Signal · Coming soon</span>
+        <h3>Incident briefs that write themselves.</h3>
+        <p class="pp-sol">While your team works the incident, Signal turns the Dynatrace problem feed into <b>plain-language updates</b> — what broke, who's affected, what's being done — ready for stakeholders, status pages, and post-incident review. Your engineers stay on the fix; the comms take care of themselves.</p>
+        <div class="pp-pts" style="color:#9B8CFF">
+          <span>Stakeholder-ready summaries from the live problem feed</span>
+          <span>Consistent comms across every incident and every team</span>
+        </div>
+        <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
+      </div>
+      <div class="ptab-item" data-app="rm" data-idx="4"><span class="pt-txt">Connect Dynatrace and your ITSM into one flow.</span><span class="pt-app">Flow · Soon</span></div>
+      <div class="ppanel-item">
+        <span class="ppanel-kick rm">Flow · Coming soon</span>
+        <h3>One loop from Dynatrace problem to closed ticket.</h3>
+        <p class="pp-sol">Flow keeps Dynatrace problems and ServiceNow/Jira tickets in sync <b>automatically</b> — created, enriched with context, updated, and resolved without copy-paste. The audit trail your process requires, with none of the manual glue.</p>
+        <div class="pp-pts" style="color:#9B8CFF">
+          <span>Tickets created and enriched from Dynatrace problems automatically</span>
+          <span>Status flows both ways — resolve once, closed everywhere</span>
+        </div>
+        <a href="#suite" class="pp-cta pp-cta-rm">Get notified →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUITE OVERVIEW -->
+<section class="blk" id="suite">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eye">The Suite — the answer</span>
+      <h2>One app suite. Every problem covered.</h2>
+      <p class="sec-sub"><b>FinOps</b> owns the cost problems — attribution, forecasting, one-click optimisation. <b>Assist</b> owns the knowledge problems — plain-English answers, RCA, automated briefings. <b>Signal</b>, <b>Flow</b>, and <b>Map</b> will own the remaining manual work — incident comms, ITSM sync, business-service views. Every app works for a single estate or across many customer tenants.</p>
+    </div>
+    <div class="suite reveal">
+      <a href="dynalens-finops-page.html" class="scard live">
+        <span class="badge now">Available now</span>
+        <div class="scard-head">
+          <div class="scard-ico"><img src="assets/images/finops/icon.svg" alt=""></div>
+          <h3>FinOps</h3>
+        </div>
+        <p>Attribute, optimise, and control your Dynatrace DPS spend.</p>
+      </a>
+      <a href="dynalens-assist-page.html" class="scard live">
+        <span class="badge now">Available now</span>
+        <div class="scard-head">
+          <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
+          <h3>Assist</h3>
+        </div>
+        <p>An AI teammate for your day-to-day Dynatrace operations.</p>
+      </a>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">S</div>
+          <h3>Signal</h3>
+        </div>
+        <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">F</div>
+          <h3>Flow</h3>
+        </div>
+        <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">M</div>
+          <h3>Map</h3>
+        </div>
+        <p>Business-service views built on top of Smartscape topology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINOPS — LIVE PRODUCT SECTION -->
+<section class="blk section-light app-sec" id="finops">
+  <div class="wrap">
+    <div class="app reveal">
+      <div class="app-copy">
+        <span class="app-eye fo">● Available now · FinOps</span>
+        <h3>Stop guessing what's driving your Dynatrace bill.</h3>
+        <p class="app-intro">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly back into your live tenant — so you find out about overruns before the invoice, not after. Built for platform teams running one estate — and partners managing many.</p>
+        <ul class="app-list">
+          <li class="fo">Real-time cost &amp; usage attribution across every DPS capability and tenant</li>
+          <li class="fo">Forecasting with proactive alerts at 25/50/75/90% of budget</li>
+          <li class="fo">One-click "Fix" actions applied inside your Dynatrace environment</li>
+        </ul>
+        <div class="app-actions">
+          <a href="dynalens-finops-page.html" class="btn btn-fo">Explore FinOps →</a>
+          <a href="#" class="btn btn-ghost" style="display:none">Start Free Trial</a>
+        </div>
+      </div>
+      <div>
+        <div class="finops-visual finops-shot">
+          <img class="fv-shot fv-shot-1" src="assets/images/finops/cost-overview.png" alt="DynaLens FinOps dashboard — cost overview and potential savings" width="949" height="549" loading="lazy">
+          <img class="fv-shot fv-shot-2" src="assets/images/finops/commitment-table.png" alt="DynaLens FinOps dashboard — commitment utilization table" width="1215" height="692" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSIST — LIVE PRODUCT SECTION -->
+<section class="blk app-sec" id="assist">
+  <div class="wrap">
+    <div class="app flip reveal">
+      <div class="app-copy">
+        <span class="app-eye now">● Available now · Assist</span>
+        <h3>Ask <span class="hl">Assist</span> a question. Get an answer.</h3>
+        <p class="app-intro">Assist answers observability questions in plain English, grounded in your live Dynatrace data — so the whole team gets answers without DQL fluency, and incident investigations start from evidence instead of a blank page. The LLM runs entirely on your premises.</p>
+        <ul class="app-list">
+          <li>Natural-language questions answered from live metrics, problems, logs, and traces</li>
+          <li>Guided root-cause analysis with ranked, evidence-cited hypotheses</li>
+          <li>In Microsoft Teams and a dedicated web UI — with role-based access</li>
+        </ul>
+        <div class="app-actions">
+          <a href="dynalens-assist-page.html" class="btn btn-primary">Explore Assist →</a>
+          <a href="#" class="btn btn-ghost" style="display:none">Start Free Trial</a>
+        </div>
+      </div>
+      <div>
+        <div class="assist-visual assist-shot">
+          <img class="as-shot-1" src="assets/images/assist/executive-summary.webp" alt="DynaLens Assist executive summary — open problems needing monitoring" width="1163" height="475" loading="lazy">
+          <img class="as-shot-2" src="assets/images/assist/topology-grid.webp" alt="DynaLens Assist Topology Analyzer — dependency grid with blast radius" width="3430" height="1796" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOY -->
+
+
+
+
+<!-- SECURITY -->
+<section class="blk" id="security">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eye">Security &amp; Sovereignty</span>
+      <h2>Your data stays yours.</h2>
+      <p class="sec-sub">Designed for GCC enterprise and public-sector buyers from day one — and deployable wherever your data has to live.</p>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="seccard">
+        <div class="ico">
+          <!-- lock: read-only -->
+          <svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h4>Read-only access</h4>
+        <p>We never write to your Dynatrace environment. You provide an API token — and you can revoke it at any time.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <!-- shield: isolation -->
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg>
+        </div>
+        <h4>Isolated by design</h4>
+        <p>One Keycloak realm per customer. Schema-level data separation in PostgreSQL. Your data never touches another tenant's.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <!-- globe + pin: sovereignty -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9z"/></svg>
+        </div>
+        <h4>Sovereignty options</h4>
+        <p>GCC data residency in UAE and KSA. On-premises deployment available for air-gapped and regulated environments.</p>
+      </div>
+    </div>
+    <div class="sec-head reveal" style="margin-top:44px;margin-bottom:18px">
+      <h3 style="font-family:'Space Grotesk';font-size:clamp(18px,2vw,23px)">Deploy where your data lives.</h3>
+    </div>
+    <div class="deploy reveal">
+      <div class="dcard"><div class="dt">SaaS</div><p>Fully managed. Sign up, connect your Dynatrace tenant, start optimising. No infrastructure to manage.</p></div>
+      <div class="dcard"><div class="dt">On-premises</div><p>Air-gapped deployment for regulated workloads and sovereign environments. Full feature parity.</p></div>
+      <div class="dcard"><div class="dt">GCC Data Residency</div><p>UAE and KSA regions available for Enterprise. Built for public-sector and financial-services customers.</p></div>
+    </div>
+    <div class="sec-foot reveal" style="display:none">
+      <div class="sec-foot-note">
+        <span class="cl">Aligned with</span> UAE PDPL &amp; KSA PDPPL · SOC 2 Type II in progress (bridge letter on request) · encryption in transit and at rest.
+      </div>
+      <a href="#" class="link-cta">See the full security architecture →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BUILT BY -->
+<section class="blk section-light" id="built">
+  <div class="wrap">
+    <div class="built reveal">
+      <div>
+        <span class="sec-eye">Built by YourCompass</span>
+        <h2>Built by the people who run Dynatrace for a living.</h2>
+        <p>DynaLens is the product line from YourCompass — a Dynatrace Premier Partner and Services Endorsed Partner operating across the GCC. We've spent years deploying, tuning, and running Dynatrace for enterprises and governments across the UAE and KSA. We've seen, up close, the gaps that customers paper over with scripts, spreadsheets, and runbooks — and built the software to close them.</p>
+      </div>
+      <div class="built-stats">
+        <div class="bstat"><div class="bn">10<span class="u">+</span></div><div class="bl">Years deploying Dynatrace across the region</div></div>
+        <div class="bstat"><div class="bn">2</div><div class="bl">GCC markets served — UAE &amp; KSA</div></div>
+        <div class="bstat"><div class="bn">Premier</div><div class="bl">Highest Dynatrace partner tier</div></div>
+        <div class="bstat"><div class="bn">100<span class="u">%</span></div><div class="bl">Read-only — we never write to your environment</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <h2>Get more out of Dynatrace — starting today.</h2>
+      <p>Start a free trial in minutes, or book a demo with the team that builds and runs it.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="logo" style="font-size:17px"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</div>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="dynalens-finops-page.html">FinOps</a>
+        <a href="dynalens-assist-page.html">Assist</a>
+        <a href="dynalens-faq-page.html">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo">
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCREENSHOT LIGHTBOX -->
+<div class="lightbox" id="shotLightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
+
+</body>
+</html>

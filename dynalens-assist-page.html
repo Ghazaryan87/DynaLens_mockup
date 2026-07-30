@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DynaLens Assist — AI Operations Teammate for Dynatrace</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/assist.css">
+</head>
+<body>
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+      <a href="dynalens-assist-page.html" class="nav-status nav-status--as nav-current--as">Assist</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+    <a href="dynalens-assist-page.html" class="nav-status nav-status--as nav-current--as">Assist</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero phero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-intro reveal">
+        <span class="eyebrow">Available now · AI operations teammate</span>
+        <h1>Ask <span class="hl">Assist</span> a question. <span class="hl">Get an answer.</span></h1>
+        <p class="hero-sub">Assist answers observability questions in plain English, grounded in your live Dynatrace environment — in Microsoft Teams or a dedicated web UI, with the LLM running entirely on your premises.</p>
+      </div>
+      <div class="assist-visual hero-visual assist-shot reveal">
+        <img class="as-shot-1" src="assets/images/assist/executive-summary.webp" alt="DynaLens Assist executive summary — open problems needing monitoring" width="1163" height="475" loading="lazy">
+        <img class="as-shot-2" src="assets/images/assist/response-time-chart.webp" alt="DynaLens Assist AI Investigator — response time chart with drill-down" width="3440" height="1802" loading="lazy">
+      </div>
+      <div class="hero-cta reveal">
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+          <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+        </div>
+        <div class="trust">
+          <span>Runs fully on-prem</span>
+          <span>Read-only Dynatrace access</span>
+          <span>Teams + Web UI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PARTNER STRIP -->
+<div class="partner-strip">
+  <div class="ps-in">
+    <span class="ps-label">Recognised by Dynatrace</span>
+    <div class="ps-track" data-carousel>
+      <div class="pbadge pbadge-img ps-slide active"><img src="assets/endorsements/dynatrace-premier-sales-partner.png" alt="Dynatrace Premier Sales Partner" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-services-excellence-award.png" alt="Dynatrace EMEA 2025 Services Excellence Award — YourCompass" loading="lazy"></div>
+      <div class="pbadge pbadge-img ps-slide"><img src="assets/endorsements/dynatrace-rising-star-award.jpg" alt="Dynatrace Rising Star Award, EMEA 2024–2025 — YourCompass" loading="lazy"></div>
+    </div>
+    <div class="ps-dots">
+      <button class="ps-dot active" data-idx="0" aria-label="Show badge 1 of 3"></button>
+      <button class="ps-dot" data-idx="1" aria-label="Show badge 2 of 3"></button>
+      <button class="ps-dot" data-idx="2" aria-label="Show badge 3 of 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE / AFTER -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">Under the hood</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">What you ask. What Assist actually does.</h2>
+      <p class="sec-sub">Drag to reveal the reasoning behind every answer.</p>
+    </div>
+    <div class="ba-slider reveal" data-ba>
+      <div class="ba-pane ba-after">
+        <span class="ba-kicker cy">What you see</span>
+        <div class="ba-chat">
+          <span class="q">"Why did checkout latency spike in prod-eu last night?"</span>
+          <span class="a">Redis failover triggered at 02:14 UTC — traffic rerouted in 40s, no customer impact.</span>
+        </div>
+      </div>
+      <div class="ba-pane ba-before">
+        <span class="ba-kicker">Reasoning</span>
+        <div class="ba-reason">
+          <div class="rline">Classifying intent: <b>performance investigation</b></div>
+          <div class="rline">Query: p95 latency, payment-service, last 2h</div>
+          <div class="rline">Correlating: Redis dependency health, deployment events</div>
+          <div class="rline">Key finding: <b>Redis failover at 02:14 UTC</b> — memory exhaustion trigger</div>
+          <div class="conf">Confidence: HIGH · 2 similar past incidents matched</div>
+        </div>
+      </div>
+      <span class="ba-tag ba-tag-before">Reasoning</span>
+      <span class="ba-tag ba-tag-after">What you see</span>
+      <div class="ba-handle"><div class="ba-grip">↔</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEM → SOLUTION -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">Why Assist</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">The answers are in Dynatrace. Getting them out is the job.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="soonapp">
+        <div class="sa-hd">
+          <span class="sa-glyph">AS</span>
+          <span class="sa-title">
+            <div class="top"><span class="nm">Assist</span><span class="sa-pill now">Available now</span></div>
+            <span class="sa-cat">AI operations teammate for SREs &amp; operations teams</span>
+          </span>
+        </div>
+        <div class="sa-body">
+          <div class="sa-problem">
+            <span class="pl">The problem</span>
+            <p>The answers are all in Dynatrace — but they're locked behind DQL and dashboard fluency. So the same two people field every "what's going on with X?" question, incident investigations start from a blank page every time, and the knowledge from past incidents lives in people's heads, not in the tooling.</p>
+          </div>
+          <p class="sa-sol">Assist opens that knowledge to everyone: <b>ask your environment a question in plain English and get a grounded answer</b> — in Teams or the web UI. It classifies the question, plans and executes the right Dynatrace API calls, recalls similar past incidents and your own runbooks, and answers with evidence — <b>while the LLM runs entirely on your premises</b>.</p>
+          <div class="sa-caps">
+            <div class="ch">What you get</div>
+            <ul>
+              <li>Natural-language questions answered from live Dynatrace data — metrics, problems, logs, traces, topology</li>
+              <li>Guided root-cause analysis with ranked hypotheses, confidence levels, and evidence citations</li>
+              <li>A 3D Smartscape-style service topology map of your environment</li>
+              <li>LLM-generated operational briefings with PDF export and scheduled email reports</li>
+              <li>Knowledge-base RAG — upload runbooks and SOPs, get answers grounded in them</li>
+              <li>ServiceNow incident search straight from chat</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sa-foot">
+          <a href="#" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px;display:none">Start Free Trial →</a>
+          <a href="#" class="link-cta">Book a Demo →</a>
+        </div>
+      </div>
+      <div class="why-shot-stack">
+        <img src="assets/images/assist/topology-grid.webp" alt="DynaLens Assist Topology Analyzer — dependency grid with blast radius" width="3430" height="1796" loading="lazy">
+        <img src="assets/images/assist/error-rate-chart.webp" alt="DynaLens Assist AI Investigator — error-rate services chart" width="3438" height="1802" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. VIDEOS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:30px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
+      <span class="sec-eye">See it in action</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Watch Assist at work.</h2>
+      <p class="sec-sub">A full walkthrough, plus short focused clips of each key workflow.</p>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-frame">
+        <div class="play">
+          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
+        </div>
+        <div class="vt">
+          <b>Full product walkthrough</b>
+          <span>Coming soon — NL Query, RCA co-pilot, topology, and briefings, end to end</span>
+        </div>
+      </div>
+    </div>
+    <div class="clip-row reveal">
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:45</span>
+        </div>
+        <div class="ccap">NL Query — from plain-English question to a grounded, charted answer</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:60</span>
+        </div>
+        <div class="ccap">RCA co-pilot — ranked hypotheses with evidence in under a minute</div>
+      </div>
+      <div class="clip">
+        <div class="cframe">
+          <span class="cplay"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span class="cdur">0:30</span>
+        </div>
+        <div class="ccap">Topology — flying through the 3D service map</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FEATURES -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:30px">
+      <span class="sec-eye">Capabilities</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">One teammate, six jobs.</h2>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 1 1-3.1-6.3"/><path d="M9 11l2.5 2.5L17 8"/></svg>
+        </div>
+        <h4>Natural-language query</h4>
+        <p>"Show open problems." "Error rate last hour." Assist classifies the question, plans the Dynatrace API calls, executes them, and formats the answer — with interactive charts in the web UI.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+        </div>
+        <h4>RCA co-pilot</h4>
+        <p>Enriches a Dynatrace problem with topology, deployments, logs, and traces in parallel, recalls the most similar past incidents, and produces an executive-style report with ranked, evidence-cited hypotheses.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.2l7.5.6M7.2 8.2l3.6 7.6M16.8 10.2l-3.4 5.8"/></svg>
+        </div>
+        <h4>3D service topology</h4>
+        <p>A live, Smartscape-style 3D map of your Dynatrace entities — explore services, hosts, and dependencies visually instead of through query results.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        </div>
+        <h4>Briefings &amp; scheduled reports</h4>
+        <p>LLM-generated operational summaries over any time window, exportable to PDF and deliverable on a schedule by email — your weekly ops review, written for you.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M19 17H6a2 2 0 0 0-2 2"/></svg>
+        </div>
+        <h4>Knowledge-base RAG</h4>
+        <p>Upload runbooks, SOPs, and postmortems — answers get grounded in your own documentation, and every RCA builds an incident memory the next one learns from.</p>
+      </div>
+      <div class="seccard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M8 10a4 4 0 1 1 8 0c0 2-1 3-2 4l-2 2-2-2c-1-1-2-2-2-4z" transform="translate(0,-1)"/><path d="M4 20c1.5-2.5 4.5-4 8-4s6.5 1.5 8 4"/></svg>
+        </div>
+        <h4>Works where your team works</h4>
+        <p>A Microsoft Teams bot with slash commands, plus a dedicated web UI for on-prem deployments — with viewer, SRE, and admin roles mapped from your directory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:26px">
+      <span class="sec-eye">How it works</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Ask. Ground. Answer.</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="ghost">1</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H5l-2 2V11a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 01</span><span class="sline"></span></div>
+        <h4>Ask</h4>
+        <p>A plain-English question in Teams or the web UI. Intent classification routes it to the right pipeline — live query, root-cause analysis, or knowledge-base chat.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">2</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 02</span><span class="sline"></span></div>
+        <h4>Ground</h4>
+        <p>Assist plans and executes the right Dynatrace API calls, and pulls in your runbooks and similar past incidents — so the answer comes from your environment, not the model's imagination.</p>
+      </div>
+      <div class="step">
+        <span class="ghost">3</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="slabel"><span class="snum">STEP 03</span><span class="sline"></span></div>
+        <h4>Answer</h4>
+        <p>A formatted, evidence-backed reply — charted metrics, an RCA report, or a briefing — with every LLM call passing through an audited security gateway.</p>
+      </div>
+    </div>
+    <div class="hiw-cta reveal">
+      <div class="txt">Put your environment's answers within everyone's reach — <span>today.</span></div>
+      <div class="acts">
+        <a href="#" class="btn btn-primary" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. INTEGRATIONS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:22px">
+      <span class="sec-eye">Integrations</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Plugs into the stack you already run.</h2>
+    </div>
+    <div class="integ-row reveal">
+      <span>Dynatrace Managed — read-only API access</span>
+      <span>Microsoft Teams — native bot</span>
+      <span>ServiceNow — ITSM incident search</span>
+      <span>LDAP / Entra ID — identity &amp; SSO</span>
+      <span>Ollama — local LLM runtime</span>
+      <span>HashiCorp Vault — secrets management</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SECURITY NOTE -->
+<section class="blk section-light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:24px">
+      <span class="sec-eye">Security</span>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Your data never leaves the building.</h2>
+      <p class="sec-sub">Assist is built for on-prem and air-gapped deployments — the LLM runs locally, Dynatrace access is read-only by design, and every LLM call passes through a single audited gateway.</p>
+    </div>
+    <div class="sec-mini-row reveal">
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+        <p><b>On-prem by design.</b> LLM inference runs locally — no observability data or prompts sent to external AI services.</p>
+      </div>
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="M9.2 12l2 2 3.6-4"/></svg></div>
+        <p><b>Gated &amp; audited.</b> Injection scanning, PII redaction, and audit logging on every LLM call — to file and database.</p>
+      </div>
+      <div class="sec-mini">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c.8-3 2.9-5 5.5-5s4.7 2 5.5 5"/><path d="M16 8h5M16 12h5M16 16h3"/></svg></div>
+        <p><b>Role-based access.</b> Viewer, SRE, and admin roles mapped from your directory — sensitive actions gated per role.</p>
+      </div>
+    </div>
+    <a href="index.html#security" class="link-cta reveal">See the full security architecture →</a>
+  </div>
+</section>
+
+<!-- 10. CTA FOOTER -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <h2>Start using Assist today.</h2>
+      <p>Free trial in minutes, or talk to us about a pilot in your environment.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="display:none">Start Free Trial →</a>
+        <a href="#" class="btn btn-primary btn-lg">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. RELATED APPS -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:22px">
+      <span class="sec-eye">Also in the suite</span>
+      <h2 style="font-size:clamp(22px,2.6vw,30px)">Assist is one of five.</h2>
+    </div>
+    <div class="suite compact reveal">
+      <a href="dynalens-finops-page.html" class="scard live">
+        <span class="badge now">Available now</span>
+        <div class="scard-head">
+          <div class="scard-ico"><img src="assets/images/finops/icon.svg" alt=""></div>
+          <h3>FinOps</h3>
+        </div>
+        <p>Attribute, optimise, and control your Dynatrace DPS spend.</p>
+      </a>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">S</div>
+          <h3>Signal</h3>
+        </div>
+        <p>Plain-language incident summaries from your Dynatrace problem feed.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">F</div>
+          <h3>Flow</h3>
+        </div>
+        <p>Close the loop between Dynatrace and your ITSM stack — automatically.</p>
+      </div>
+      <div class="scard soon-card">
+        <span class="badge soon">Coming soon</span>
+        <div class="scard-head">
+          <div class="scard-ico placeholder">M</div>
+          <h3>Map</h3>
+        </div>
+        <p>Business-service views built on top of Smartscape topology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo" style="font-size:17px;text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="dynalens-finops-page.html">FinOps</a>
+        <a href="dynalens-assist-page.html">Assist</a>
+        <a href="dynalens-faq-page.html">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <a href="index.html"><img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCREENSHOT LIGHTBOX -->
+<div class="lightbox" id="shotLightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/assist.js"></script>
+
+</body>
+</html>
