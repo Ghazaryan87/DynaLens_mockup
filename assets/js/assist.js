@@ -2,12 +2,25 @@
   document.querySelectorAll('[data-ba]').forEach(slider=>{
     const before = slider.querySelector('.ba-before');
     const handle = slider.querySelector('.ba-handle');
+    const tagBefore = slider.querySelector('.ba-tag-before');
+    const tagAfter = slider.querySelector('.ba-tag-after');
     let dragging = false;
+    function updateTags(pct){
+      const boundaryX = slider.clientWidth * (pct / 100);
+      if(tagBefore){
+        const coveredUpTo = tagBefore.offsetLeft + tagBefore.offsetWidth;
+        tagBefore.classList.toggle('ba-tag-covered', boundaryX < coveredUpTo);
+      }
+      if(tagAfter){
+        tagAfter.classList.toggle('ba-tag-covered', boundaryX > tagAfter.offsetLeft);
+      }
+    }
     function setPct(pct){
       pct = Math.max(-3, Math.min(103, pct));
       before.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
       handle.style.left = pct + '%';
       handle.setAttribute('aria-valuenow', Math.round(pct));
+      updateTags(pct);
     }
     function pctFromClientX(clientX){
       const rect = slider.getBoundingClientRect();

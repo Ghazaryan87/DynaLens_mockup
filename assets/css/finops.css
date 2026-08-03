@@ -86,7 +86,8 @@
   .ba-handle{position:absolute;top:-14px;bottom:-14px;left:50%;width:0;transform:translateX(-50%);cursor:ew-resize;z-index:3;display:flex;align-items:center;justify-content:center;touch-action:none}
   .ba-handle::before{content:"";position:absolute;top:0;bottom:0;left:0;width:2px;background:rgba(255,255,255,.6);transform:translateX(-50%);box-shadow:0 0 24px 6px rgba(255,255,255,.2)}
   .ba-grip{width:42px;height:42px;border-radius:50%;background:#FFB546;color:#070B2E;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;box-shadow:0 8px 20px rgba(255,181,70,.4);border:3px solid rgba(255,255,255,.9);touch-action:none}
-  .ba-tag{position:absolute;top:16px;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:100px;z-index:2;pointer-events:none}
+  .ba-tag{position:absolute;top:16px;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:100px;z-index:2;pointer-events:none;transition:opacity .2s ease}
+  .ba-tag.ba-tag-covered{opacity:0}
   .ba-tag-before{left:16px;background:rgba(0,0,0,.4);color:#fff;border:1px solid rgba(255,255,255,.25)}
   .ba-tag-after{right:16px;background:rgba(255,181,70,.14);color:#FFB546;border:1px solid rgba(255,181,70,.4)}
   @media(min-width:901px){

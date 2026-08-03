@@ -4,6 +4,19 @@
   },{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+  // ---------- HIDE TOP NAV WHILE FOOTER IS ON SCREEN ----------
+  (function(){
+    var nav = document.querySelector('nav');
+    var footer = document.querySelector('footer');
+    if(!nav || !footer) return;
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        nav.classList.toggle('site-nav-hidden', entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    observer.observe(footer);
+  })();
+
   // ---------- MOBILE NAV TOGGLE ----------
   (function(){
     const burger=document.getElementById('navBurger');
@@ -42,6 +55,42 @@
     }));
     startAutoplay();
   });
+
+  // ---------- HIDE NAV "BOOK A DEMO" WHILE A BODY "BOOK A DEMO" CTA IS ON SCREEN ----------
+  (function(){
+    var navCta = document.querySelector('nav .nav-cta a.btn-primary');
+    if(!navCta) return;
+
+    var bodyCtas = Array.from(document.querySelectorAll('a')).filter(function(el){
+      return !el.closest('nav') && /book a demo/i.test((el.textContent||'').trim());
+    });
+    if(!bodyCtas.length) return;
+
+    var visible = new Set();
+    function sync(){ navCta.classList.toggle('nav-cta-suppressed', visible.size > 0); }
+
+    var observer, navEl = document.querySelector('nav');
+    function build(){
+      if(observer) observer.disconnect();
+      visible.clear();
+      var navHeight = navEl ? navEl.offsetHeight : 0;
+      observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        });
+        sync();
+      }, { rootMargin: (-navHeight) + 'px 0px 0px 0px', threshold: 0 });
+      bodyCtas.forEach(function(el){ observer.observe(el); });
+    }
+    build();
+
+    var resizeTimer;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 200);
+    });
+  })();
 
   // ---------- SCREENSHOT LIGHTBOX ----------
   (function(){
