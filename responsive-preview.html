@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DynaLens — Responsive Preview</title>
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box}
+  /* hovering a device iframe traps the mouse wheel inside that iframe's own scroll,
+     so the outer page needs an always-visible, always-draggable scrollbar to stay reachable */
+  html{overflow-y:scroll}
+  body{margin:0;background:#0b0f2e;font-family:system-ui,sans-serif;color:#e8ebff;min-height:100vh}
+  header{display:flex;align-items:center;gap:14px;padding:12px 18px;background:#10173f;border-bottom:1px solid #262f6b;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+  header h1{font-size:14px;font-weight:600;margin:0;color:#8fa3ff;letter-spacing:.02em;text-transform:uppercase}
+  .pages,.reload,.pan{display:flex;gap:8px;flex-wrap:wrap}
+  .pan{margin-left:auto}
+  button{background:#1a2358;border:1px solid #2f3b82;color:#cdd6ff;padding:7px 14px;border-radius:8px;font-size:13px;cursor:pointer;font-weight:500}
+  button:hover{background:#232e6e}
+  button.active{background:#22D3EE;color:#06122b;border-color:#22D3EE}
+  .row{display:flex;gap:22px;padding:22px;padding-bottom:34px;align-items:flex-start;overflow-x:auto;cursor:grab;scrollbar-width:auto;scrollbar-color:#3f4da3 #10173f}
+  .row.dragging{cursor:grabbing;user-select:none}
+  .row::-webkit-scrollbar{height:14px}
+  .row::-webkit-scrollbar-track{background:#10173f}
+  .row::-webkit-scrollbar-thumb{background:#3f4da3;border-radius:7px;border:3px solid #10173f}
+  .row::-webkit-scrollbar-thumb:hover{background:#8fa3ff}
+  .device{display:flex;flex-direction:column;gap:8px;flex:none}
+  .device-label{font-size:12px;color:#8fa3ff;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+  .device-label span.dim{color:#5c6699;font-weight:400}
+  .frame-wrap{background:#000;border-radius:10px;overflow:hidden;border:1px solid #262f6b;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+  iframe{border:0;display:block}
+</style>
+</head>
+<body>
+<header>
+  <h1>DynaLens Responsive Preview</h1>
+  <div class="pages" id="pages">
+    <button data-page="index.html" class="active">Home</button>
+    <button data-page="dynalens-finops-page.html">FinOps</button>
+    <button data-page="dynalens-assist-page.html">Assist</button>
+    <button data-page="dynalens-faq-page.html">FAQ</button>
+  </div>
+  <div class="reload"><button id="reload">Reload all</button></div>
+  <div class="pan">
+    <button id="panLeft" title="Scroll left">&larr;</button>
+    <button id="panRight" title="Scroll right">&rarr;</button>
+  </div>
+</header>
+
+<div class="row" id="row"></div>
+
+<script>
+  var DEVICES = [
+    {name:"Desktop", w:1440, h:900},
+    {name:"Tablet",  w:768,  h:1024},
+    {name:"Mobile",  w:390,  h:844}
+  ];
+  var SCALE = 1; // native size — row scrolls horizontally instead of shrinking to fit
+  var page = "index.html";
+  var row = document.getElementById('row');
+
+  function build(){
+    row.innerHTML = "";
+    DEVICES.forEach(function(d){
+      var dispW = Math.round(d.w * SCALE);
+      var dispH = Math.round(d.h * SCALE);
+
+      var device = document.createElement('div');
+      device.className = 'device';
+
+      var label = document.createElement('div');
+      label.className = 'device-label';
+      label.innerHTML = '<span>' + d.name + '</span><span class="dim">' + d.w + '×' + d.h + '</span>';
+
+      var wrap = document.createElement('div');
+      wrap.className = 'frame-wrap';
+      wrap.style.width = dispW + 'px';
+      wrap.style.height = dispH + 'px';
+
+      var iframe = document.createElement('iframe');
+      iframe.src = page + '?_=' + Date.now();
+      iframe.style.width = d.w + 'px';
+      iframe.style.height = d.h + 'px';
+      iframe.style.transform = 'scale(' + SCALE + ')';
+      iframe.style.transformOrigin = 'top left';
+
+      wrap.appendChild(iframe);
+      device.appendChild(label);
+      device.appendChild(wrap);
+      row.appendChild(device);
+    });
+  }
+
+  document.getElementById('pages').addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-page]');
+    if(!btn) return;
+    page = btn.dataset.page;
+    document.querySelectorAll('#pages button').forEach(function(b){ b.classList.toggle('active', b === btn); });
+    build();
+  });
+  document.getElementById('reload').addEventListener('click', build);
+
+  // horizontal scrollbar sits below the fold on tall devices and hovering an
+  // iframe traps the wheel, so give a click-drag pan and explicit buttons too
+  document.getElementById('panLeft').addEventListener('click', function(){
+    row.scrollBy({left: -500, behavior: 'smooth'});
+  });
+  document.getElementById('panRight').addEventListener('click', function(){
+    row.scrollBy({left: 500, behavior: 'smooth'});
+  });
+
+  var dragging = false, dragStartX = 0, dragStartScroll = 0;
+  row.addEventListener('mousedown', function(e){
+    if(e.target.closest('iframe, button')) return;
+    dragging = true;
+    dragStartX = e.clientX;
+    dragStartScroll = row.scrollLeft;
+    row.classList.add('dragging');
+  });
+  window.addEventListener('mousemove', function(e){
+    if(!dragging) return;
+    row.scrollLeft = dragStartScroll - (e.clientX - dragStartX);
+  });
+  window.addEventListener('mouseup', function(){
+    dragging = false;
+    row.classList.remove('dragging');
+  });
+
+  build();
+</script>
+</body>
+</html>

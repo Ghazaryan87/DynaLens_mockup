@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation, DynaLens | FinOps Setup Guides & Reference</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<meta name="description" content="DynaLens documentation: connect your Dynatrace tenant, understand cost attribution, set up forecasting and budget alerts, and use one-click Fix actions in FinOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/docs.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="#" class="btn btn-primary">Book a Demo</a>
+      <a href="#" class="btn btn-primary" style="display:none">Start Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:8px">
+  <div class="wrap">
+    <div class="reveal" style="max-width:720px">
+      <span class="eyebrow">Docs</span>
+      <h1>FinOps documentation.</h1>
+      <p class="hero-sub">Everything you need to connect your Dynatrace tenant, understand cost attribution, and set up forecasting and budget alerts.</p>
+      <span class="app-eye now" style="margin-top:6px">FinOps · Available now</span>
+    </div>
+  </div>
+</header>
+
+<section class="blk" style="padding-top:24px">
+  <div class="wrap">
+    <div class="doc-shell">
+      <aside class="doc-toc reveal">
+        <div class="sec-eye doc-toc-title">Contents</div>
+        <ul>
+          <li><a href="#connect-your-dynatrace-tenant">Connect your Dynatrace tenant</a></li>
+          <li><a href="#first-login">First login</a></li>
+          <li><a href="#cost-attribution">Cost attribution</a></li>
+          <li><a href="#forecasting--budget-alerts">Forecasting &amp; budget alerts</a></li>
+          <li><a href="#one-click-fix">One-click Fix</a></li>
+          <li><a href="#dps-capability-coverage">DPS capability coverage</a></li>
+          <li><a href="#deployment--security">Deployment &amp; security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
+      </aside>
+
+      <article class="doc-body reveal">
+
+        <h2 id="connect-your-dynatrace-tenant">Connect your Dynatrace tenant</h2>
+        <p class="doc-kicker">Getting started · ~5 minutes</p>
+
+        <p><strong>1. Generate a read-only API token</strong><br>
+        In your Dynatrace environment, create a new API token scoped to read-only access. FinOps never requests write scopes — if a setup screen asks for anything beyond read access, that's not FinOps.</p>
+
+        <p><strong>2. Enter your tenant URL and token</strong><br>
+        From your DynaLens account, add a new tenant connection and paste in your Dynatrace environment URL and the token generated in step 1.</p>
+
+        <p><strong>3. Wait for the first sync</strong><br>
+        FinOps pulls DPS consumption history for your tenant. Initial sync typically completes within a few minutes, depending on estate size.</p>
+
+        <p>Managing multiple tenants — as a platform team or a partner? Repeat the same steps for each tenant; every tenant you connect appears in the same account, with its own isolated attribution and forecasting.</p>
+
+        <h2 id="first-login">First login</h2>
+        <p class="doc-kicker">What you'll see</p>
+        <p>Once your tenant syncs, the FinOps dashboard opens on the cost overview: current DPS consumption, forecast against your annual commitment, and savings already identified. From there, the <strong>Attribution</strong> tab breaks spend down by capability and environment, and <strong>Recommendations</strong> lists one-click Fix actions ranked by savings impact.</p>
+
+        <h2 id="cost-attribution">Cost attribution</h2>
+        <p class="doc-kicker">Core concept</p>
+        <p>FinOps attributes DPS consumption <strong>continuously</strong>, by capability, account, and environment, so every line item has an owner. Attribution covers every metered DPS capability — Full-Stack, Infrastructure, Kubernetes, RUM, Synthetic, Log Management, Application Security, Business Events, and Davis AI — not a subset.</p>
+        <p>Attribution updates as consumption happens; there's no batch delay waiting for the next invoice cycle to see where spend is heading.</p>
+
+        <h2 id="forecasting--budget-alerts">Forecasting &amp; budget alerts</h2>
+        <p class="doc-kicker">Core concept</p>
+        <p>FinOps uses Monte Carlo forecasting to project spend against your annual commitment, with confidence bands rather than a single point estimate — so you see a realistic range, not false precision.</p>
+        <p>Budget alerts fire automatically the moment a forecast crosses <strong>25%, 50%, 75%, or 90%</strong> of budget, and FinOps surfaces a predicted exhaustion date whenever you're on track to run out of commitment early. A weekly digest summarizes position across every tenant you operate.</p>
+
+        <h2 id="one-click-fix">One-click Fix</h2>
+        <p class="doc-kicker">Core concept</p>
+        <p>Recommendations aren't just advisory — each one includes a <strong>Fix</strong> action that applies the change directly back into your live Dynatrace tenant (for example, adjusting a retention setting), so resolving a cost recommendation doesn't require leaving FinOps to go make the change by hand.</p>
+        <p>Every Fix action is logged, and because FinOps only ever holds read-only tenant access for monitoring, Fix actions operate through the same scoped, auditable path — nothing happens in your environment without a specific, visible action on your part.</p>
+
+        <h2 id="dps-capability-coverage">DPS capability coverage</h2>
+        <p class="doc-kicker">Reference</p>
+        <div class="doc-table-wrap">
+          <table>
+            <thead>
+              <tr><th>Capability</th><th>Attribution</th><th>Forecasting</th><th>One-click Fix</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Full-Stack Monitoring</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+              <tr><td>Infrastructure Monitoring</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+              <tr><td>Kubernetes</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+              <tr><td>Real User Monitoring</td><td class="chk">✓</td><td class="chk">✓</td><td class="dash">—</td></tr>
+              <tr><td>Synthetic Monitoring</td><td class="chk">✓</td><td class="chk">✓</td><td class="dash">—</td></tr>
+              <tr><td>Log Management</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+              <tr><td>Application Security</td><td class="chk">✓</td><td class="chk">✓</td><td class="dash">—</td></tr>
+              <tr><td>Davis AI</td><td class="chk">✓</td><td class="chk">✓</td><td class="dash">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><em>One-click Fix availability depends on the capability having a directly configurable retention/sampling setting; coverage expands as new Fix actions ship.</em></p>
+
+        <h2 id="deployment--security">Deployment &amp; security</h2>
+        <p class="doc-kicker">Reference</p>
+        <ul>
+          <li><strong>Read-only, always</strong> — FinOps never writes to your Dynatrace environment outside of an explicit, logged Fix action you initiate.</li>
+          <li><strong>Tenant isolation</strong> — One Keycloak realm per customer; schema-level data separation in PostgreSQL.</li>
+          <li><strong>SaaS or on-premises</strong> — Fully managed SaaS, or air-gapped on-premises deployment with full feature parity.</li>
+          <li><strong>Classic or DPS licensing</strong> — Works across Dynatrace SaaS and Managed, Classic and DPS consumption models.</li>
+        </ul>
+        <p>Full architecture details are on the <a href="dynalens-finops-page.html#security">Security section</a> of the FinOps page.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <p><strong>Does FinOps require a specific Dynatrace licensing model?</strong><br>
+        FinOps works with both Classic and DPS consumption licensing, and with SaaS or Managed deployments.</p>
+        <p><strong>Can I connect more than one Dynatrace tenant?</strong><br>
+        Yes — FinOps is built for both single-estate platform teams and partners managing many customer tenants from one account.</p>
+        <p><strong>What happens if I revoke the API token?</strong><br>
+        FinOps immediately loses access to that tenant. Historical attribution and forecasting data already synced remains available in your account; consumption stops updating until a new token is provided.</p>
+        <p><strong>Does a Fix action require approval, or does it apply automatically?</strong><br>
+        Fix actions are applied only when you explicitly trigger them — recommendations are advisory until you choose to act on one.</p>
+
+        <h2 id="changelog">Changelog</h2>
+        <p><em>Changelog will populate here as FinOps releases ship. Check back after the next release.</em></p>
+
+        <div class="doc-related">Related: <a href="dynalens-terms-of-service.html">Terms of Service</a> · <a href="dynalens-privacy-policy.html">Privacy Policy</a> · <a href="dynalens-finops-page.html#security">Security</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo" style="font-size:25px;text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+      <div class="foot-nav">
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="dynalens-finops-page.html">FinOps</a>
+          <a href="dynalens-faq-page.html">FAQ</a>
+        </div>
+        <div class="foot-legal">
+          <a href="dynalens-docs.html">Docs</a>
+          <a href="dynalens-privacy-policy.html">Privacy Policy</a>
+          <a href="dynalens-terms-of-service.html">Terms of Service</a>
+          <a href="dynalens-website-terms-of-use.html">Website Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <a href="https://yourcompass.ca" target="_blank" rel="noopener"><img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
