@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Demo, DynaLens | Talk to Us</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon-maskable.svg">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.svg">
+<meta name="description" content="Questions, demos, or partnership inquiries about DynaLens FinOps and Assist. We respond within one business day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+      <a href="dynalens-faq-page.html">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="dynalens-book-a-demo.html?from=contact" class="btn btn-primary">Book a Demo</a>
+      <a href="dynalens-book-a-demo.html?from=contact" class="btn btn-primary" style="display:none">Sign Up</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="dynalens-finops-page.html" class="nav-status nav-status--fo">FinOps</a>
+    <a href="dynalens-faq-page.html">FAQ</a>
+    <div class="nav-mobile-cta">
+      <a href="dynalens-book-a-demo.html?from=contact" class="btn btn-primary">Book a Demo</a>
+      <a href="dynalens-book-a-demo.html?from=contact" class="btn btn-primary" style="display:none">Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <span class="eyebrow">Contact</span>
+        <h1>Talk to us.</h1>
+        <p class="hero-sub">Questions, demos, partnerships. We respond within one business day.</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-first">First name<span class="req">*</span></label>
+              <input type="text" id="cf-first" name="firstName" autocomplete="given-name" required>
+            </div>
+            <div class="form-field">
+              <label for="cf-last">Last name<span class="req">*</span></label>
+              <input type="text" id="cf-last" name="lastName" autocomplete="family-name" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-email">Work email<span class="req">*</span></label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-company">Company</label>
+              <input type="text" id="cf-company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-field">
+              <label for="cf-role">Role / job title</label>
+              <input type="text" id="cf-role" name="role" autocomplete="organization-title">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-country">Country</label>
+            <select id="cf-country" name="country">
+              <option>United States</option>
+              <option>United Arab Emirates</option>
+              <option>Saudi Arabia</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-customer">Are you a Dynatrace customer?</label>
+            <select id="cf-customer" name="dynatraceCustomer">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="evaluating">Evaluating Dynatrace</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-topic">Topic<span class="req">*</span></label>
+            <select id="cf-topic" name="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="general">General</option>
+              <option value="demo">Sales / Demo</option>
+              <option value="partnership">Partnership</option>
+              <option value="support">Support</option>
+              <option value="security">Security</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us a bit about what you're looking for."></textarea>
+          </div>
+
+          <input type="hidden" id="cf-product" name="product" value="General">
+
+          <button type="submit" class="btn btn-primary btn-lg contact-submit">Send message</button>
+          <p class="contact-note">By submitting this form, you agree to our <a href="dynalens-privacy-policy.html" style="color:var(--cyan)">Privacy Policy</a>.</p>
+        </form>
+
+        <div class="contact-success" id="contactSuccess">
+          <div class="ico">✓</div>
+          <h3>Message sent.</h3>
+          <p>Thanks for reaching out — we'll be in touch within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="index.html" class="logo" style="font-size:25px;text-decoration:none;color:inherit"><img src="assets/brand/apple-touch-icon.svg" alt="" class="logo-icon">DynaLens</a>
+      <div class="foot-nav">
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="dynalens-finops-page.html">FinOps</a>
+          <a href="dynalens-assist-page.html">Assist</a>
+          <a href="dynalens-faq-page.html">FAQ</a>
+        </div>
+        <div class="foot-legal">
+          <a href="dynalens-docs.html">Docs</a>
+          <a href="dynalens-privacy-policy.html">Privacy Policy</a>
+          <a href="dynalens-terms-of-service.html">Terms of Service</a>
+          <a href="dynalens-website-terms-of-use.html">Website Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-brand">
+      <a href="https://yourcompass.ca" target="_blank" rel="noopener"><img src="assets/brand/yourcompass_logo_text.png" alt="YourCompass" class="foot-yc-logo"></a>
+      <div class="copy">© 2026 YourCompass. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Referrer-based product context: which page's "Book a Demo" sent someone here.
+  // Carries through as ?from=<slug> and drives both the accent color (matching
+  // that product's theme) and a hidden field so a real submission remembers it.
+  (function(){
+    var labels = {
+      home: 'Home', finops: 'FinOps', assist: 'Assist', faq: 'FAQ',
+      docs: 'Docs', privacy: 'Privacy Policy', tos: 'Terms of Service',
+      webtou: 'Website Terms of Use', contact: 'Contact page'
+    };
+    var from = new URLSearchParams(window.location.search).get('from');
+    var productField = document.getElementById('cf-product');
+    if(productField) productField.value = labels[from] || 'General';
+    if(from === 'finops') document.body.classList.add('theme-finops');
+  })();
+
+  (function(){
+    var form = document.getElementById('contactForm');
+    var success = document.getElementById('contactSuccess');
+    if(!form || !success) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      form.classList.add('hide');
+      success.classList.add('show');
+    });
+  })();
+</script>
+</body>
+</html>

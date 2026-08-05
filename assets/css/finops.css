@@ -60,6 +60,13 @@
   .ps-dot.active{background:var(--cyan);width:22px}
   .pbadge.pbadge-img{padding:10px 14px}
   .pbadge-img img{height:118px;width:auto;max-width:392px;max-height:100%;object-fit:contain;border-radius:8px;display:block}
+  @media(min-width:641px) and (max-width:1024px){
+    .ps-track{min-height:100px;flex-wrap:nowrap;gap:20px}
+    .pbadge.ps-slide{display:none}
+    .pbadge.ps-slide.active{display:flex}
+    .pbadge-img img{height:100px;max-width:300px}
+    .ps-dots{display:flex}
+  }
   @media(max-width:640px){
     .ps-track{min-height:73px;flex-wrap:nowrap}
     .pbadge.ps-slide{display:none}

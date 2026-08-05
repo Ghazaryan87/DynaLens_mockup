@@ -5,16 +5,22 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
   // ---------- HIDE TOP NAV WHILE FOOTER IS ON SCREEN ----------
+  // Only hides once the user has actually scrolled down — otherwise short pages
+  // (where the footer is visible without scrolling, e.g. the contact form) would
+  // have their nav hidden from the moment the page loads.
   (function(){
     var nav = document.querySelector('nav');
     var footer = document.querySelector('footer');
     if(!nav || !footer) return;
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
-        nav.classList.toggle('site-nav-hidden', entry.isIntersecting);
+        nav.classList.toggle('site-nav-hidden', entry.isIntersecting && window.scrollY > 20);
       });
     }, { threshold: 0 });
     observer.observe(footer);
+    window.addEventListener('scroll', function(){
+      if(window.scrollY <= 20) nav.classList.remove('site-nav-hidden');
+    }, { passive: true });
   })();
 
   // ---------- MOBILE NAV TOGGLE ----------
@@ -33,26 +39,44 @@
   })();
 
   // ---------- PARTNER BADGE CAROUSEL ----------
+  // Visible-window size varies by breakpoint: mobile shows 1 badge, tablet shows
+  // 3 in a sliding window, desktop shows all of them (no sliding needed).
   document.querySelectorAll("[data-carousel]").forEach(track=>{
     const wrap = track.parentElement;
     const slides = Array.from(track.querySelectorAll(".ps-slide"));
     const dots = Array.from(wrap.querySelectorAll(".ps-dot"));
     if(!slides.length) return;
     let idx = 0, timer = null;
-    function show(i){
-      slides[idx].classList.remove("active");
-      dots[idx] && dots[idx].classList.remove("active");
-      idx = (i + slides.length) % slides.length;
-      slides[idx].classList.add("active");
-      dots[idx] && dots[idx].classList.add("active");
+
+    function visibleCount(){
+      const w = window.innerWidth;
+      if(w <= 640) return 1;
+      if(w <= 1024) return 3;
+      return slides.length;
     }
-    function next(){ show(idx + 1); }
+    function render(){
+      const n = slides.length;
+      const vc = Math.min(visibleCount(), n);
+      slides.forEach((s, i)=>{
+        const rel = (i - idx + n) % n;
+        s.classList.toggle("active", rel < vc);
+      });
+      dots.forEach((d, i)=> d.classList.toggle("active", i === idx));
+    }
+    function next(){ idx = (idx + 1) % slides.length; render(); }
     function startAutoplay(){ stopAutoplay(); timer = setInterval(next, 4000); }
     function stopAutoplay(){ if(timer) clearInterval(timer); }
     dots.forEach(d=>d.addEventListener("click", ()=>{
-      show(parseInt(d.dataset.idx, 10));
+      idx = parseInt(d.dataset.idx, 10);
+      render();
       startAutoplay();
     }));
+    let resizeTimer;
+    window.addEventListener("resize", ()=>{
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(render, 150);
+    });
+    render();
     startAutoplay();
   });
 

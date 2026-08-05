@@ -506,3 +506,16 @@
   .sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(34,211,238,.28);padding:7px 15px;border-radius:100px;margin-bottom:16px}
   .sec-eye::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor;flex-shrink:0}
   .section-light .sec-eye{background:rgba(12,123,158,.08);border-color:rgba(12,123,158,.32)}
+
+  /* ---------- LARGE-SCREEN PASS (wide monitors) ---------- */
+  /* --maxw drives both .wrap and .nav-in, so content and nav widen together
+     instead of leaving huge empty margins on large displays. */
+  @media(min-width:1600px){
+    :root{--maxw:1360px}
+  }
+  @media(min-width:1920px){
+    :root{--maxw:1520px}
+  }
+  @media(min-width:2400px){
+    :root{--maxw:1680px}
+  }

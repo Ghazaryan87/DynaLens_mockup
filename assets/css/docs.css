@@ -1,5 +1,17 @@
   /* ---------- DOCS / LEGAL PAGES ---------- */
   .doc-meta{font-size:13px;color:var(--text-faint);margin-bottom:0}
+
+  .doc-product-switch{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .doc-product-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--text-dim);text-decoration:none;transition:all .2s ease}
+  .doc-product-pill:hover{border-color:var(--line-strong);color:var(--text)}
+  .doc-product-pill .tag{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-faint);background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:2px 8px;line-height:1.5}
+  .doc-product-pill.active{background:var(--cyan);color:var(--navy-900);border-color:var(--cyan);cursor:default;pointer-events:none}
+  .doc-product-pill.active .tag{color:var(--navy-900);background:rgba(0,0,0,.15);border-color:transparent}
+
+  .doc-soon-card{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);padding:40px;max-width:640px}
+  .doc-soon-card h2{font-family:'Space Grotesk';font-weight:700;font-size:22px;margin:0 0 10px;color:var(--text)}
+  .doc-soon-card p{font-size:15px;line-height:1.7;color:var(--text-dim);margin:0 0 22px}
+  .doc-soon-card .hero-actions{margin:0}
   .doc-callout{border:1px solid rgba(255,181,70,.32);background:rgba(255,181,70,.07);border-radius:14px;padding:18px 20px;font-size:13.5px;line-height:1.65;color:var(--text-dim);margin-bottom:8px}
   .doc-callout b{color:var(--amber)}
 
