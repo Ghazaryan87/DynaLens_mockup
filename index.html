@@ -47,12 +47,16 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div class="hero-intro reveal">
-        <span class="slide-tag t-suite">DynaLens by YourCompass, the Dynatrace app suite</span>
-        <h1>Your Dynatrace estate, <span class="hl">at full value.</span></h1>
-        <p class="hero-lede">DynaLens is a growing suite of value-added tools designed to help you get more from the Dynatrace platform you already trust. From FinOps and natural-language assistance to intelligent automation and deeper operational insight.</p>
-        <p class="hero-sub" style="max-width:480px">Launching first with FinOps, expanding to optimize consumption, interrogate your estate in plain English, automate manual work, and unlock more value across your organization.</p>
-        <p class="hero-sub" style="max-width:480px">Built for every Dynatrace estate — SaaS or Managed, cloud-connected or air-gapped, Classic or DPS licensing — read-only by design, from a Dynatrace Premier Partner.</p>
+      <div class="hero-intro">
+        <div class="hero-title reveal">
+          <span class="slide-tag t-suite">DynaLens by YourCompass, the Dynatrace app suite</span>
+          <h1>Your Dynatrace estate, <span class="hl">at full value.</span></h1>
+        </div>
+        <div class="hero-body reveal">
+          <p class="hero-lede">DynaLens is a growing suite of value-added tools designed to help you get more from the Dynatrace platform you already trust. From FinOps and natural-language assistance to intelligent automation and deeper operational insight, each DynaLens capability works with your existing environment, data, and investments.</p>
+          <p class="hero-sub">Available now with DynaLens FinOps, with Assist launching soon and more tools on the roadmap.</p>
+          <p class="hero-sub">Built for every Dynatrace estate — SaaS or Managed, cloud-connected or air-gapped, with Classic or DPS licensing. Read-only by design and developed by a Dynatrace Premier Partner.</p>
+        </div>
       </div>
       <div class="hero-visual hero-carousel reveal" id="heroCarousel">
         <div class="hc-stage" id="hcStage" aria-hidden="true">
@@ -210,7 +214,7 @@
           <div class="scard-ico"><img src="assets/images/assist/icon.png" alt=""></div>
           <h3>Assist</h3>
         </div>
-        <p>An AI teammate for your day-to-day Dynatrace operations.</p>
+        <p>Assist connects you to Dynatrace, in plain English — no dashboards, no DQL.</p>
       </div>
       <div class="scard soon-card">
         <span class="badge soon">Coming soon</span>
@@ -244,21 +248,25 @@
 <section class="blk section-light app-sec" id="finops">
   <div class="wrap">
     <div class="app reveal">
-      <div class="app-copy">
-        <span class="app-eye fo">● Available now · FinOps</span>
-        <h3>Stop guessing what's driving your Dynatrace bill.</h3>
-        <p class="app-intro">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly back into your live tenant, so you find out about overruns before the invoice, not after. Built for platform teams running one estate, and partners managing many.</p>
-        <ul class="app-list">
-          <li class="fo">Real-time cost &amp; usage attribution across every DPS capability and tenant</li>
-          <li class="fo">Forecasting with proactive alerts at 25/50/75/90% of budget</li>
-          <li class="fo">One-click "Fix" actions applied inside your Dynatrace environment</li>
-        </ul>
-        <div class="app-actions">
-          <a href="dynalens-finops-page.html" class="btn btn-fo">Explore FinOps →</a>
-          <a href="#" class="btn btn-ghost" style="display:none">Sign Up</a>
+      <div class="app-copy-wrap">
+        <div class="app-title">
+          <span class="app-eye fo">● Available now · FinOps</span>
+          <h3>Stop guessing what's driving your Dynatrace bill.</h3>
+        </div>
+        <div class="app-copy">
+          <p class="app-intro">FinOps attributes every dollar of DPS spend by capability, account, and environment, forecasts where it's heading with confidence bands, and applies the fix directly back into your live tenant, so you find out about overruns before the invoice, not after. Built for platform teams running one estate, and partners managing many.</p>
+          <ul class="app-list">
+            <li class="fo">Real-time cost &amp; usage attribution across every DPS capability and tenant</li>
+            <li class="fo">Forecasting with proactive alerts at 25/50/75/90% of budget</li>
+            <li class="fo">One-click "Fix" actions applied inside your Dynatrace environment</li>
+          </ul>
+          <div class="app-actions">
+            <a href="dynalens-finops-page.html" class="btn btn-fo">Explore FinOps →</a>
+            <a href="#" class="btn btn-ghost" style="display:none">Sign Up</a>
+          </div>
         </div>
       </div>
-      <div>
+      <div class="app-visual-wrap">
         <div class="finops-visual finops-shot">
           <img class="fv-shot fv-shot-1" src="assets/images/finops/cost-overview.png" alt="DynaLens FinOps dashboard, cost overview and potential savings" width="949" height="549" loading="lazy">
           <img class="fv-shot fv-shot-2" src="assets/images/finops/commitment-table.png" alt="DynaLens FinOps dashboard, commitment utilization table" width="1215" height="692" loading="lazy">
@@ -272,21 +280,25 @@
 <section class="blk app-sec" id="assist">
   <div class="wrap">
     <div class="app flip reveal">
-      <div class="app-copy">
-        <span class="app-eye launching">● Launching soon · Assist</span>
-        <h3>No DQL. No dashboards. <span class="hl">You ask in English, and Dynatrace answers.</span></h3>
-        <p class="app-intro">Assist answers observability questions in plain English, grounded in your live Dynatrace data, so the whole team gets answers without DQL fluency, and incident investigations start from evidence instead of a blank page. The LLM runs entirely on your premises.</p>
-        <ul class="app-list">
-          <li>Natural-language questions answered from live metrics, problems, logs, and traces</li>
-          <li>Guided root-cause analysis with ranked, evidence-cited hypotheses</li>
-          <li>In Microsoft Teams and a dedicated web UI, with role-based access</li>
-        </ul>
-        <div class="app-actions">
-          <a href="dynalens-assist-page.html" class="btn btn-primary">Get notified →</a>
-          <a href="#" class="btn btn-ghost" style="display:none">Sign Up</a>
+      <div class="app-copy-wrap">
+        <div class="app-title">
+          <span class="app-eye launching">● Launching soon · Assist</span>
+          <h3>Assist connects you to Dynatrace, in plain English: <span class="hl">no DQL, no dashboards, no gatekeepers</span></h3>
+        </div>
+        <div class="app-copy">
+          <p class="app-intro">Assist answers observability questions in plain English, grounded in your live Dynatrace data, so the whole team gets answers without DQL fluency, and incident investigations start from evidence instead of a blank page. The LLM runs entirely on your premises.</p>
+          <ul class="app-list">
+            <li>Natural-language questions answered from live metrics, problems, logs, and traces</li>
+            <li>Guided root-cause analysis with ranked, evidence-cited hypotheses</li>
+            <li>In Microsoft Teams and a dedicated web UI, with role-based access</li>
+          </ul>
+          <div class="app-actions">
+            <a href="dynalens-assist-page.html" class="btn btn-primary">Get notified →</a>
+            <a href="#" class="btn btn-ghost" style="display:none">Sign Up</a>
+          </div>
         </div>
       </div>
-      <div>
+      <div class="app-visual-wrap">
         <div class="assist-visual assist-shot">
           <img class="as-shot-1" src="assets/images/assist/executive-summary.webp" alt="DynaLens Assist executive summary, open problems needing monitoring" width="1163" height="475" loading="lazy">
           <img class="as-shot-2" src="assets/images/assist/topology-grid.webp" alt="DynaLens Assist Topology Analyzer, dependency grid with blast radius" width="3430" height="1796" loading="lazy">

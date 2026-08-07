@@ -9,8 +9,8 @@
   .doc-product-pill.active .tag{color:var(--navy-900);background:rgba(0,0,0,.15);border-color:transparent}
 
   .doc-soon-card{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);padding:40px;max-width:640px}
-  .doc-soon-card h2{font-family:'Space Grotesk';font-weight:700;font-size:22px;margin:0 0 10px;color:var(--text)}
-  .doc-soon-card p{font-size:15px;line-height:1.7;color:var(--text-dim);margin:0 0 22px}
+  .doc-soon-card h2{font-family:'Space Grotesk';font-weight:700;font-size:var(--fs-h3-card);margin:0 0 10px;color:var(--text)}
+  .doc-soon-card p{font-size:var(--fs-body-sm);line-height:1.7;color:var(--text-dim);margin:0 0 22px}
   .doc-soon-card .hero-actions{margin:0}
   .doc-callout{border:1px solid rgba(255,181,70,.32);background:rgba(255,181,70,.07);border-radius:14px;padding:18px 20px;font-size:13.5px;line-height:1.65;color:var(--text-dim);margin-bottom:8px}
   .doc-callout b{color:var(--amber)}
@@ -23,17 +23,17 @@
   .doc-toc a:hover{background:var(--card-hover);color:var(--text)}
 
   .doc-body{max-width:720px}
-  .doc-body h2{font-family:'Space Grotesk';font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--text);margin:46px 0 14px;scroll-margin-top:96px}
+  .doc-body h2{font-family:'Space Grotesk';font-weight:700;font-size:var(--fs-h3-card);letter-spacing:-.01em;color:var(--text);margin:46px 0 14px;scroll-margin-top:96px}
   .doc-body > h2:first-child{margin-top:0}
   .doc-body h3{font-family:'Space Grotesk';font-weight:600;font-size:16.5px;color:var(--text);margin:24px 0 8px;scroll-margin-top:96px}
-  .doc-body p{font-size:15px;line-height:1.75;color:var(--text-dim);margin-bottom:14px}
+  .doc-body p{font-size:var(--fs-body-sm);line-height:1.75;color:var(--text-dim);margin-bottom:14px}
   .doc-body p:last-child{margin-bottom:0}
   .doc-body strong{color:var(--text);font-weight:600}
   .doc-body em{color:var(--text-dim)}
   .doc-body a{color:var(--cyan);text-decoration:underline;text-decoration-color:rgba(34,211,238,.35);text-underline-offset:2px}
   .doc-body a:hover{text-decoration-color:var(--cyan)}
   .doc-body ul,.doc-body ol{margin:0 0 16px;padding-left:22px;display:flex;flex-direction:column;gap:7px}
-  .doc-body li{font-size:15px;line-height:1.65;color:var(--text-dim)}
+  .doc-body li{font-size:var(--fs-body-sm);line-height:1.65;color:var(--text-dim)}
   .doc-body li::marker{color:var(--text-faint)}
   .doc-body hr{border:0;border-top:1px solid var(--line);margin:36px 0}
   .doc-body blockquote{border-left:2px solid var(--line-strong);padding-left:16px;margin:0 0 16px;color:var(--text-faint);font-size:14px}
